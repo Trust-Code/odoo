@@ -260,7 +260,7 @@ class mail_compose_message(osv.TransientModel):
                 elif mass_mail_mode:  # mass mail: is a log pushed to recipients, author not added
                     subtype = False
                     context = dict(context, mail_create_nosubscribe=True)  # add context key to avoid subscribing the author
-                msg_id = active_model_pool.message_post(cr, uid, [res_id], type='comment', subtype=subtype, context=context, **post_values)
+                msg_id = active_model_pool.message_post(cr, uid, [res_id], type='email', subtype=subtype, context=context, **post_values)
                 # mass_mailing: notify specific partners, because subtype was False, and no-one was notified
                 if mass_mail_mode and post_values['partner_ids']:
                     self.pool.get('mail.notification')._notify(cr, uid, msg_id, post_values['partner_ids'], context=context)
