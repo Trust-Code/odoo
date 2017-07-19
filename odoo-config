@@ -1,0 +1,13 @@
+[options]
+addons_path=addons/,openerp/addons/,../l10n-brazil,../lets-keep-open,../webkit-tools
+admin_passwd = admin
+auto_reload = False
+csv_internal_sep = ,
+data_dir = /opt/dados
+db_host = localhost
+db_maxconn = 64
+db_name = False
+db_password= 123
+db_port = False
+db_template = template0
+db_user = sansa
