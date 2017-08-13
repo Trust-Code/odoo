@@ -87,7 +87,7 @@ msgstr "ສຳເນົາໄວ້ແລ້ວ"
 #: model:ir.ui.menu,name:sales_team.menu_action_res_partner_bank_form
 #: model:ir.ui.menu,name:sales_team.menu_config_bank_accounts
 msgid "Bank Accounts"
-msgstr ""
+msgstr "ບັນຊີທະນາຄານ"
 
 #. module: sales_team
 #: model:ir.ui.menu,name:sales_team.menu_action_res_bank_form
@@ -133,7 +133,7 @@ msgstr "ບໍລິສັດ"
 #. module: sales_team
 #: model:ir.ui.menu,name:sales_team.menu_sale_config
 msgid "Configuration"
-msgstr ""
+msgstr "ການກຳນົດຄ່າ"
 
 #. module: sales_team
 #: model:ir.actions.act_window,name:sales_team.action_sale_config
@@ -329,7 +329,7 @@ msgstr ""
 #. module: sales_team
 #: model:ir.ui.view,arch_db:sales_team.crm_team_view_form
 msgid "More Info"
-msgstr ""
+msgstr "ຂໍ້ມູນເພີ່ມຕື່ມ"
 
 #. module: sales_team
 #. openerp-web
@@ -338,7 +338,7 @@ msgstr ""
 #: code:addons/sales_team/static/src/xml/sales_team_dashboard.xml:216
 #, python-format
 msgid "My Pipeline"
-msgstr ""
+msgstr "ຊ່ອງທາງການຂາຍ"
 
 #. module: sales_team
 #: model:ir.ui.view,arch_db:sales_team.crm_team_salesteams_search
@@ -408,7 +408,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:sales_team.crm_team_view_form
 #: model:ir.ui.view,arch_db:sales_team.crm_team_view_tree
 msgid "Sales Team"
-msgstr ""
+msgstr "ທິມງານຂາຍ"
 
 #. module: sales_team
 #: model:ir.model.fields,help:sales_team.field_res_users_sale_team_id
@@ -575,7 +575,7 @@ msgstr ""
 #. module: sales_team
 #: model:ir.model,name:sales_team.model_res_users
 msgid "Users"
-msgstr ""
+msgstr "ຜູ້ໃຊ້ງານ"
 
 #. module: sales_team
 #: model:crm.team,name:sales_team.salesteam_website_sales
@@ -618,7 +618,7 @@ msgstr ""
 #. module: sales_team
 #: model:ir.model,name:sales_team.model_sale_config_settings
 msgid "sale.config.settings"
-msgstr ""
+msgstr "sale.config.settings"
 
 #. module: sales_team
 #: model:res.groups,comment:sales_team.group_sale_salesman_all_leads
