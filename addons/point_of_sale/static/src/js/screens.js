@@ -1878,11 +1878,18 @@ var PaymentScreenWidget = ScreenWidget.extend({
         this.reset_input();
         this.render_paymentlines();
         this.order_changes();
+        // that one comes from BarcodeEvents
+        $('body').keypress(this.keyboard_handler);
+        // that one comes from the pos, but we prefer to cover all the basis
+        $('body').keydown(this.keyboard_keydown_handler);
+        // legacy vanilla JS listeners
         window.document.body.addEventListener('keypress',this.keyboard_handler);
         window.document.body.addEventListener('keydown',this.keyboard_keydown_handler);
         this._super();
     },
     hide: function(){
+        $('body').off('keypress', this.keyboard_handler);
+        $('body').off('keydown', this.keyboard_keydown_handler);
         window.document.body.removeEventListener('keypress',this.keyboard_handler);
         window.document.body.removeEventListener('keydown',this.keyboard_keydown_handler);
         this._super();
@@ -2080,6 +2087,12 @@ var set_fiscal_position_button = ActionButtonWidget.extend({
             confirm: function (fiscal_position) {
                 var order = self.pos.get_order();
                 order.fiscal_position = fiscal_position;
+                // This will trigger the recomputation of taxes on order lines.
+                // It is necessary to manually do it for the sake of consistency
+                // with what happens when changing a customer. 
+                _.each(order.orderlines.models, function (line) {
+                    line.set_quantity(line.quantity);
+                });
                 order.trigger('change');
             },
             is_selected: function (fiscal_position) {
@@ -2188,4 +2201,3 @@ return {
 };
 
 });
-

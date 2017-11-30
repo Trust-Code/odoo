@@ -546,7 +546,7 @@ msgstr "Afschrijvingskaart gewijzigd"
 #: code:addons/account_asset/models/account_asset.py:598
 #, python-format
 msgid "Depreciation line posted."
-msgstr "Afschrijving lijn geboekt."
+msgstr "Afschrijvingsregel geboekt."
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset_asset_display_name
@@ -1001,6 +1001,8 @@ msgid ""
 "The number of depreciations or the period length of your asset category "
 "cannot be null."
 msgstr ""
+"Het aantal afschrijvingen of de periode lengte van uw activa categorie kan "
+"niet leeg zijn,"
 
 #. module: account_asset
 #: model:ir.ui.view,arch_db:account_asset.view_asset_depreciation_confirmation_wizard

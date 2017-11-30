@@ -8,13 +8,14 @@
 # Bohdan Lisnenko <lem8r.ka11a@gmail.com>, 2017
 # Zoriana Zaiats <sorenabell@quintagroup.com>, 2017
 # Martin Trigaux <mat@odoo.com>, 2017
+# Аліна Семенюк <alinasemeniuk1@gmail.com>, 2017
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.saas~18\n"
+"Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-20 09:53+0000\n"
-"PO-Revision-Date: 2017-09-20 09:53+0000\n"
-"Last-Translator: Martin Trigaux <mat@odoo.com>, 2017\n"
+"POT-Creation-Date: 2017-10-10 11:35+0000\n"
+"PO-Revision-Date: 2017-10-10 11:35+0000\n"
+"Last-Translator: Аліна Семенюк <alinasemeniuk1@gmail.com>, 2017\n"
 "Language-Team: Ukrainian (https://www.transifex.com/odoo/teams/41243/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -141,11 +142,6 @@ msgid "Event disconnection success"
 msgstr ""
 
 #. module: google_calendar
-#: model:ir.actions.act_window,name:google_calendar.action_config_settings_google_calendar
-msgid "General Settings"
-msgstr "Загальні налаштування"
-
-#. module: google_calendar
 #: model:ir.model.fields,field_description:google_calendar.field_calendar_attendee_google_internal_event_id
 msgid "Google Calendar Event Id"
 msgstr ""
@@ -225,6 +221,11 @@ msgid "Refresh Token"
 msgstr ""
 
 #. module: google_calendar
+#: model:ir.actions.act_window,name:google_calendar.action_config_settings_google_calendar
+msgid "Settings"
+msgstr "Налаштування"
+
+#. module: google_calendar
 #. openerp-web
 #: code:addons/google_calendar/static/src/js/google_calendar.js:117
 #, python-format
@@ -290,4 +291,4 @@ msgstr ""
 #. module: google_calendar
 #: model:ir.model,name:google_calendar.model_res_config_settings
 msgid "res.config.settings"
-msgstr ""
+msgstr "res.config.settings"
