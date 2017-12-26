@@ -822,7 +822,7 @@ msgstr "<strong>Klant adres</strong>"
 #: model:ir.ui.view,arch_db:account.portal_invoice_report
 #: model:ir.ui.view,arch_db:account.report_invoice_document
 msgid "<strong>Customer Code:</strong>"
-msgstr "<strong>Klantcode:</strong>"
+msgstr "<strong>Debiteurennummer:</strong>"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.report_payment_receipt
@@ -2309,7 +2309,7 @@ msgstr "Gearchiveerd"
 #. module: account
 #: model:ir.ui.view,arch_db:account.invoice_supplier_form
 msgid "Ask for a Credit Note"
-msgstr "Voeg om een creditfactuur"
+msgstr "Vraag om een creditfactuur"
 
 #. module: account
 #: model:account.financial.report,name:account.account_financial_report_assets0
@@ -7727,7 +7727,7 @@ msgstr "PDF rapportages"
 #. module: account
 #: model:ir.ui.view,arch_db:account.res_config_settings_view_form
 msgid "Package"
-msgstr "Verpakking"
+msgstr "Pakket"
 
 #. module: account
 #: selection:account.invoice,state:0 selection:account.invoice.report,state:0
