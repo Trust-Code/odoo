@@ -106,7 +106,7 @@ class Pricelist(models.Model):
         """
         self.ensure_one()
         if not date:
-            date = self._context.get('date') or fields.Date.today()
+            date = self._context.get('date') or fields.Date.context_today(self)
         if not uom_id and self._context.get('uom'):
             uom_id = self._context['uom']
         if uom_id:
@@ -438,7 +438,7 @@ class PricelistItem(models.Model):
         elif self.compute_price == 'percentage':
             self.price = _("%s %% discount") % (self.percent_price)
         else:
-            self.price = _("%s %% discount and %s surcharge") % (abs(self.price_discount), self.price_surcharge)
+            self.price = _("%s %% discount and %s surcharge") % (self.price_discount, self.price_surcharge)
 
     @api.onchange('applied_on')
     def _onchange_applied_on(self):
