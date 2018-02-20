@@ -5,9 +5,9 @@
 # Translators:
 # Luis M. Ontalba <luis.martinez@tecnativa.com>, 2017
 # Ivan Nieto <ivan.n.s@tuta.io>, 2017
-# Martin Trigaux <mat@odoo.com>, 2017
+# Martin Trigaux, 2017
 # Sergio Flores <vitavitae1@gmail.com>, 2017
-# Gustavo Valverde <g.valverde02@gmail.com>, 2017
+# Gustavo Valverde, 2017
 # Inigo Zuluaga <inigo_zuluaga@yahoo.es>, 2017
 # Rick Hunter <rick_hunter_ec@yahoo.com>, 2017
 # Pedro M. Baeza <pedro.baeza@gmail.com>, 2017
@@ -18,13 +18,14 @@
 # Gafic SLP Albert Cabedo (GAFIC, SLP) <albertgafic@gmail.com>, 2017
 # Alejandro Santana <alejandrosantana@anubia.es>, 2017
 # Mateo Tibaquirá Palacios <nestormateo@gmail.com>, 2017
+# e2f <projects@e2f.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.saas~18\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-09-20 09:52+0000\n"
 "PO-Revision-Date: 2017-09-20 09:52+0000\n"
-"Last-Translator: Mateo Tibaquirá Palacios <nestormateo@gmail.com>, 2017\n"
+"Last-Translator: e2f <projects@e2f.com>, 2018\n"
 "Language-Team: Spanish (https://www.transifex.com/odoo/teams/41243/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -49,7 +50,7 @@ msgstr "128 bit CryptoAPI ha fallado"
 #. module: pos_mercury
 #: model:ir.ui.view,arch_db:pos_mercury.pos_config_view_form_inherit_pos_mercury
 msgid "<i class=\"fa fa-fw fa-arrow-right\"/>Buy a card reader"
-msgstr ""
+msgstr "<i class=\"fa fa-fw fa-arrow-right\"/>Comprar un lector de tarjetas"
 
 #. module: pos_mercury
 #: model:ir.ui.view,arch_db:pos_mercury.view_pos_mercury_configuration_form
@@ -174,7 +175,7 @@ msgstr "No se pudo cifrar la respuesta- proveedor de llamada"
 #: code:addons/pos_mercury/static/src/js/pos_mercury.js:351
 #, python-format
 msgid "Could not read card"
-msgstr ""
+msgstr "No se puede leer la tarjeta"
 
 #. module: pos_mercury
 #: model:ir.model.fields,field_description:pos_mercury.field_pos_mercury_configuration_create_uid
@@ -614,7 +615,7 @@ msgstr "Configuraciones de Mercury"
 #. module: pos_mercury
 #: model:ir.model.fields,field_description:pos_mercury.field_account_journal_pos_mercury_config_id
 msgid "Mercury Credentials"
-msgstr ""
+msgstr "Credenciales de Mercury"
 
 #. module: pos_mercury
 #: model:ir.model.fields,field_description:pos_mercury.field_account_bank_statement_line_mercury_invoice_no
@@ -645,13 +646,14 @@ msgstr "Nombre de esta configuración de Mercury"
 #: code:addons/pos_mercury/models/pos_mercury_transaction.py:33
 #, python-format
 msgid "No Mercury configuration associated with the journal."
-msgstr ""
+msgstr "No hay ninguna configuración de Mercury asociada al diario."
 
 #. module: pos_mercury
 #: code:addons/pos_mercury/models/pos_mercury_transaction.py:21
 #, python-format
 msgid "No opened point of sale session for user %s found"
 msgstr ""
+"No se ha encontrado ninguna sesión de punto de venta abierta para el usuario"
 
 #. module: pos_mercury
 #. openerp-web
@@ -968,7 +970,7 @@ msgstr ""
 #. module: pos_mercury
 #: model:ir.ui.view,arch_db:pos_mercury.pos_config_view_form_inherit_pos_mercury
 msgid "Vantiv Accounts"
-msgstr ""
+msgstr "Cuentas de Vantiv"
 
 #. module: pos_mercury
 #. openerp-web
