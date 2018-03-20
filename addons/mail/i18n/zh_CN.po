@@ -7,12 +7,12 @@
 # Martin Trigaux, 2017
 # Talway <9010446@qq.com>, 2017
 # niulin lnc. <admin@niulin.net>, 2017
-# liAnGjiA <liangjia@qq.com>, 2017
 # xiaobin wu <bd5dml@gmail.com>, 2017
 # 卓忆科技 <zhanghao@jointd.com>, 2017
 # Gary Wei <Gary.wei@elico-corp.com>, 2017
 # also <zhylninc@gmail.com>, 2017
 # Joray <13637815@qq.com>, 2017
+# liAnGjiA <liangjia@qq.com>, 2017
 # Michael Chong <michaelchong2005@gmail.com>, 2017
 # liulixia <liu.lixia@elico-corp.com>, 2017
 # 厦门-许舟 <windedge99@gmail.com>, 2017
@@ -245,10 +245,6 @@ msgid ""
 "object.parent_id.subject) or (object.parent_id and "
 "object.parent_id.record_name and 'Re: %s' % object.parent_id.record_name)}"
 msgstr ""
-"${object.subject 或 (object.record_name 和 'Re: %s' % object.record_name) 或 "
-"(object.parent_id and object.parent_id.subject 和 'Re: %s' % "
-"object.parent_id.subject) 或 (object.parent_id 和 object.parent_id.record_name"
-" 和 'Re: %s' % object.parent_id.record_name)}"
 
 #. module: mail
 #. openerp-web
@@ -5741,7 +5737,7 @@ msgstr "在"
 msgid ""
 "posting a message without model should be with a null res_id (private "
 "message), received %s"
-msgstr "发布无模型消息应使用无效 res_id（私人信息），收到 %"
+msgstr "发布无模型消息应使用无效 res_id（私人信息），收到 %s"
 
 #. module: mail
 #: code:addons/mail/models/mail_thread.py:917
