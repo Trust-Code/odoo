@@ -372,6 +372,7 @@ class PurchaseOrder(models.Model):
                         siblings_states = (order_line.move_dest_ids.mapped('move_orig_ids')).mapped('state')
                         if all(state in ('done', 'cancel') for state in siblings_states):
                             order_line.move_dest_ids.write({'procure_method': 'make_to_stock'})
+                            order_line.move_dest_ids._recompute_state()
 
             for pick in order.picking_ids.filtered(lambda r: r.state != 'cancel'):
                 pick.action_cancel()
@@ -1124,5 +1125,6 @@ class MailComposeMessage(models.TransientModel):
     @api.multi
     def send_mail(self, auto_commit=False):
         if self._context.get('default_model') == 'purchase.order' and self._context.get('default_res_id'):
+            self = self.with_context(mail_post_autofollow=True)
             self.mail_purchase_order_on_send()
-        return super(MailComposeMessage, self.with_context(mail_post_autofollow=True)).send_mail(auto_commit=auto_commit)
+        return super(MailComposeMessage, self).send_mail(auto_commit=auto_commit)

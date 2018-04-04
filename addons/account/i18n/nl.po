@@ -2482,6 +2482,12 @@ msgid "Bank Statement"
 msgstr "Bankafschrift"
 
 #. module: account
+#: code:addons/account/models/account_bank_statement.py:935
+#, python-format
+msgid "Bank Statement %s"
+msgstr ""
+
+#. module: account
 #: model:ir.model,name:account.model_account_bank_statement_line
 msgid "Bank Statement Line"
 msgstr "Bankafschriftregel"
@@ -10286,6 +10292,8 @@ msgstr "Het relatiekenmerk van deze factuur."
 msgid ""
 "The partners of the journal's company and the related bank account mismatch."
 msgstr ""
+"De relaties van het dagboek bedrijf en de gerelateerde bankrekeningen komen "
+"niet overeen."
 
 #. module: account
 #: code:addons/account/models/account_payment.py:60
