@@ -16,34 +16,29 @@
 # Dmytro Kriesovich <dimscoffer@bigmir.net>, 2017
 # Артём Инжиянц <artem.inzhyyants@gmail.com>, 2017
 # iraqez <vladimir.gumenyuk@gmail.com>, 2018
+# Olga Lugova <trolka.olug@gmail.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-12 15:37+0000\n"
-"PO-Revision-Date: 2018-03-12 15:37+0000\n"
-"Last-Translator: iraqez <vladimir.gumenyuk@gmail.com>, 2018\n"
+"POT-Creation-Date: 2018-04-27 14:47+0000\n"
+"PO-Revision-Date: 2018-04-27 14:47+0000\n"
+"Last-Translator: Olga Lugova <trolka.olug@gmail.com>, 2018\n"
 "Language-Team: Ukrainian (https://www.transifex.com/odoo/teams/41243/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Language: uk\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_invoice_state
 msgid ""
 " * The 'Draft' status is used when a user is encoding a new and unconfirmed Invoice.\n"
-" * The 'Pro-forma' status is used when the invoice does not have an invoice number.\n"
 " * The 'Open' status is used when user creates invoice, an invoice number is generated. It stays in the open status till the user pays the invoice.\n"
 " * The 'Paid' status is set automatically when the invoice is paid. Its related journal entries may or may not be reconciled.\n"
 " * The 'Cancelled' status is used when user cancel invoice."
 msgstr ""
-"Статус 'Чернетка' використовується, коли користувач кодує новий та непідтверджений рахунок-фактуру.\n"
-"* Статус \"Проформа\" використовується, коли в рахунку-фактурі немає номера рахунка-фактури.\n"
-"* Стан 'Відкрито' використовується, коли користувач створює рахунок-фактуру, створюється номер рахунка-фактури. Він залишається в відкритому стані, доки користувач не сплачує рахунок-фактуру.\n"
-"* Статус \"Оплачений\" встановлюється автоматично, коли оплачується рахунок-фактура. Його пов'язані записи журналу можуть або не можуть бути узгоджені.\n"
-"* Статус \"Скасовано\" використовується, коли користувач скасовує рахунок-фактуру."
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_chart_template_code_digits
@@ -110,7 +105,7 @@ msgstr "%s (копія)"
 #. module: account
 #: model:ir.ui.view,arch_db:account.report_invoice_document
 msgid "&amp;nbsp;<span>on</span>"
-msgstr ""
+msgstr "&amp;nbsp;<span>від</span>"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
@@ -194,7 +189,7 @@ msgstr ""
 msgid ""
 "<div>\n"
 "% set record = ctx.get('record')\n"
-"% set company = record and record.company_id or user.company_id\n"
+"% set company = record and record.company_id or ctx.get('company')\n"
 "<table border=\"0\" width=\"100%\" cellpadding=\"0\" bgcolor=\"#ededed\" style=\"padding: 20px; background-color: #ededed; border-collapse:separate;\" summary=\"o_mail_notification\">\n"
 "<tbody>\n"
 "    <!-- HEADER -->\n"
@@ -1362,7 +1357,7 @@ msgstr "Шаблон Податкового Рахунку"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_res_config_settings_module_account_taxcloud
 msgid "Account TaxCloud"
-msgstr ""
+msgstr "TaxCloud рахунку"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_account_chart_template_seacrh
@@ -1662,6 +1657,21 @@ msgstr "Адреса"
 #: model:ir.model.fields,field_description:account.field_tax_adjustments_wizard_tax_id
 msgid "Adjustment Tax"
 msgstr "Накопичувальний податок"
+
+#. module: account
+#: model:ir.model.fields,field_description:account.field_tax_adjustments_wizard_adjustment_type
+msgid "Adjustment Type"
+msgstr "Тип коригування"
+
+#. module: account
+#: selection:tax.adjustments.wizard,adjustment_type:0
+msgid "Adjustment in favor of the Estate"
+msgstr ""
+
+#. module: account
+#: selection:tax.adjustments.wizard,adjustment_type:0
+msgid "Adjustment in your favor"
+msgstr ""
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_account_tax_template_form
@@ -2161,12 +2171,12 @@ msgstr "Шаблони пов'язаних рахунків"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_journal_at_least_one_inbound
 msgid "At Least One Inbound"
-msgstr ""
+msgstr "Принаймні один вхідний"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_journal_at_least_one_outbound
 msgid "At Least One Outbound"
-msgstr ""
+msgstr "Принаймні один вихідний"
 
 #. module: account
 #: selection:res.company,fiscalyear_last_month:0
@@ -2470,7 +2480,7 @@ msgstr "На основі оплати"
 #. module: account
 #: model:ir.ui.view,arch_db:account.res_config_settings_view_form
 msgid "Batch Deposits"
-msgstr ""
+msgstr "Пакетні депозити"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
@@ -2759,7 +2769,7 @@ msgstr ""
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_invoice_cash_rounding_id
 msgid "Cash Rounding Method"
-msgstr ""
+msgstr "Метод заокруглення"
 
 #. module: account
 #: model:ir.actions.act_window,name:account.rounding_list_action
@@ -2926,6 +2936,8 @@ msgid ""
 "Check this box if you don't want to share the same sequence for invoices and"
 " credit notes made from this journal"
 msgstr ""
+"Позначте це, якщо ви не хочете поділитися однаковою послідовністю для "
+"рахунків-фактур та кредитних приміток, створених з цього журналу"
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_journal_update_posted
@@ -2957,7 +2969,7 @@ msgstr ""
 #. module: account
 #: model:ir.ui.view,arch_db:account.res_config_settings_view_form
 msgid "Checks"
-msgstr ""
+msgstr "Перевірки"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_tax_children_tax_ids
@@ -3057,7 +3069,7 @@ msgstr "Натисніть, щоб зареєструвати платіж."
 #: code:addons/account/static/src/xml/account_reconciliation.xml:260
 #, python-format
 msgid "Close"
-msgstr "Зупинено"
+msgstr "Закрити"
 
 #. module: account
 #. openerp-web
@@ -3687,7 +3699,7 @@ msgstr ""
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_journal_refund_sequence_id
 msgid "Credit Note Entry Sequence"
-msgstr ""
+msgstr "Послідовність запису кредитної примітки"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_journal_dashboard_kanban_view
@@ -3698,7 +3710,7 @@ msgstr ""
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_journal_refund_sequence_number_next
 msgid "Credit Notes: Next Number"
-msgstr ""
+msgstr "Кредитна примітка: наступний номер"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_tax_adjustments_wizard_credit_account_id
@@ -3808,7 +3820,7 @@ msgstr ""
 #: model:ir.actions.act_window,name:account.action_invoice_out_refund
 #: model:ir.ui.menu,name:account.menu_action_invoice_out_refund
 msgid "Customer Credit Notes"
-msgstr ""
+msgstr "Кредитні примітки клієнта"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
@@ -4014,7 +4026,7 @@ msgstr "Грудень"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_journal_refund_sequence
 msgid "Dedicated Credit Note Sequence"
-msgstr ""
+msgstr "Виділена послідовність кредитних приміток"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_journal_default_credit_account_id
@@ -4766,13 +4778,13 @@ msgstr "Фіскальний рік"
 #: model:ir.model.fields,field_description:account.field_account_financial_year_op_fiscalyear_last_day
 #: model:ir.model.fields,field_description:account.field_res_company_fiscalyear_last_day
 msgid "Fiscalyear Last Day"
-msgstr ""
+msgstr "Останній день фінансового року"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_financial_year_op_fiscalyear_last_month
 #: model:ir.model.fields,field_description:account.field_res_company_fiscalyear_last_month
 msgid "Fiscalyear Last Month"
-msgstr ""
+msgstr "Останній місяць минулого року"
 
 #. module: account
 #: selection:account.reconcile.model,amount_type:0
@@ -4925,7 +4937,7 @@ msgstr "Майбутні"
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_account_invoice_filter
 msgid "Future Activities"
-msgstr ""
+msgstr "Майбутня діяльність"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_account_form
@@ -5677,7 +5689,7 @@ msgstr "Номер рахунка-фактури повинен бути уні�
 #. module: account
 #: model:ir.ui.view,arch_db:account.invoice_form
 msgid "Invoice Number:"
-msgstr ""
+msgstr "Номер рахунку:"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_invoice_line_invoice_id
@@ -5771,7 +5783,6 @@ msgstr "Виставлено рахунок"
 #: model:ir.ui.view,arch_db:account.portal_my_home_menu_invoice
 #: model:ir.ui.view,arch_db:account.portal_my_invoices
 #: model:ir.ui.view,arch_db:account.res_config_settings_view_form
-#: model:ir.ui.view,arch_db:account.view_account_invoice_filter
 #: model:ir.ui.view,arch_db:account.view_account_payment_form
 #: model:ir.ui.view,arch_db:account.view_account_payment_graph
 #: model:ir.ui.view,arch_db:account.view_invoice_graph
@@ -5809,7 +5820,7 @@ msgstr "Рахунки для підтвердження"
 #. module: account
 #: model:ir.actions.report,name:account.account_invoices_without_payment
 msgid "Invoices without Payment"
-msgstr ""
+msgstr "Рахунки без оплати"
 
 #. module: account
 #: model:ir.ui.menu,name:account.menu_finance
@@ -6123,12 +6134,12 @@ msgstr "Обгрунтування"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_journal_kanban_dashboard
 msgid "Kanban Dashboard"
-msgstr ""
+msgstr "Робочий стіл канбану"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_journal_kanban_dashboard_graph
 msgid "Kanban Dashboard Graph"
-msgstr ""
+msgstr "Графік робочого столу канбану"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_account_journal_form
@@ -6431,7 +6442,7 @@ msgstr ""
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_account_invoice_filter
 msgid "Late Activities"
-msgstr ""
+msgstr "Останні дії"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_account_last_time_entries_checked
@@ -6644,6 +6655,9 @@ msgid ""
 "Electronic: Get paid automatically through a payment acquirer by requesting a transaction on a card saved by the customer when buying or subscribing online (payment token).\n"
 "Batch Deposit: Encase several customer checks at once by generating a batch deposit to submit to your bank. When encoding the bank statement in Odoo,you are suggested to reconcile the transaction with the batch deposit. Enable this option from the settings."
 msgstr ""
+"Інструкція: отримуйте оплату готівкою, чеком або будь-яким іншим методом за межами Odoo.\n"
+"Електронний: отримуйте платіж автоматично за допомогою одержання платежу, надіславши запит на транзакцію на картці, збереженої клієнтом під час покупки або підписки в Інтернеті (платіжний токен).\n"
+"Пакетний депозит: одноразово зараховуйте кілька клієнтських чеків, створивши пакетний депозит, щоби подати в банк. Під час кодування виписки з банку в Odoo вам пропонують узгодити транзакцію з депозитом партії. Увімкніть цю опцію в налаштуваннях."
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_abstract_payment_payment_method_id
@@ -6664,6 +6678,9 @@ msgid ""
 "Check:Pay bill by check and print it from Odoo.\n"
 "SEPA Credit Transfer: Pay bill from a SEPA Credit Transfer file you submit to your bank. Enable this option from the settings."
 msgstr ""
+"Інструкція: сплачуйте рахунок готівкою або будь-яким іншим методом за межами Odoo.\n"
+"Перевірте: сплачуйте рахунок чеком та надрукуйте його з Odoo.\n"
+"SEPA Credit Transfer: сплачуйте рахунок з файлу SEPA Credit Transfer, який ви передаєте в свій банк. Увімкніть цю опцію в налаштуваннях."
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
@@ -6884,7 +6901,7 @@ msgstr "Мультивалютніть"
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_account_invoice_filter
 msgid "My Activities"
-msgstr ""
+msgstr "Мої дії"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_account_invoice_filter
@@ -7049,17 +7066,6 @@ msgstr "Нормальний боржник"
 #: selection:account.financial.report,style_overwrite:0
 msgid "Normal Text"
 msgstr "Звичайний текст"
-
-#. module: account
-#: model:ir.ui.view,arch_db:account.view_account_invoice_filter_inherit_credit_notes
-#: model:ir.ui.view,arch_db:account.view_account_invoice_filter_inherit_invoices
-msgid "Not Draft"
-msgstr ""
-
-#. module: account
-#: model:ir.ui.view,arch_db:account.view_account_invoice_filter
-msgid "Not Paid"
-msgstr "Не оплачено"
 
 #. module: account
 #. openerp-web
@@ -7312,13 +7318,14 @@ msgstr ""
 #. openerp-web
 #: selection:account.invoice,state:0 selection:account.invoice.report,state:0
 #: code:addons/account/static/src/xml/account_payment.xml:82
+#: model:ir.ui.view,arch_db:account.view_account_invoice_filter
 #, python-format
 msgid "Open"
 msgstr "Відкрити"
 
 #. module: account
 #. openerp-web
-#: code:addons/account/static/src/js/reconciliation/reconciliation_model.js:636
+#: code:addons/account/static/src/js/reconciliation/reconciliation_model.js:662
 #: code:addons/account/static/src/xml/account_reconciliation.xml:131
 #, python-format
 msgid "Open balance"
@@ -7510,12 +7517,13 @@ msgstr "Упаковка"
 #. module: account
 #: selection:account.invoice,state:0 selection:account.invoice.report,state:0
 #: model:ir.ui.view,arch_db:account.report_overdue_document
+#: model:ir.ui.view,arch_db:account.view_account_invoice_filter
 #: model:mail.message.subtype,name:account.mt_invoice_paid
 msgid "Paid"
 msgstr "Оплачено"
 
 #. module: account
-#: code:addons/account/models/account_payment.py:411
+#: code:addons/account/models/account_payment.py:426
 #, python-format
 msgid "Paid Invoices"
 msgstr "Оплачені рахунки"
@@ -8998,6 +9006,8 @@ msgstr ""
 #: model:ir.model.fields,help:account.field_account_journal_active
 msgid "Set active to false to hide the Journal without removing it."
 msgstr ""
+"Встановити активне значення \"помилково\", щоби приховати журнал, не "
+"видаливши його."
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_tax_active
@@ -9049,7 +9059,7 @@ msgstr "Налаштування"
 #. module: account
 #: model:ir.ui.view,arch_db:account.res_config_settings_view_form
 msgid "Setup"
-msgstr ""
+msgstr "Встановіть"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_res_company_account_setup_bar_closed
@@ -9074,7 +9084,7 @@ msgstr ""
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_account_invoice_filter
 msgid "Show all records which has next action date is before today"
-msgstr ""
+msgstr "Показати всі записи, які мають дату наступної дії до сьогоднішньої"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_account_tax_search
@@ -9615,6 +9625,8 @@ msgstr "Технічне поле використовується в касов
 #: model:ir.model.fields,help:account.field_account_journal_account_setup_bank_data_done
 msgid "Technical field used in the special view for the setup bar step."
 msgstr ""
+"Технічне поле, яке використовується в спеціальному вікні для кроку "
+"налаштування панелі."
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_abstract_payment_payment_method_code
@@ -9970,7 +9982,7 @@ msgstr ""
 #: model:ir.model.fields,help:account.field_account_financial_year_op_fiscalyear_last_month
 msgid ""
 "The last day of the month will be taken if the chosen day doesn't exist."
-msgstr ""
+msgstr "Останній день місяця буде прийнятий, якщо обраного дня не існує."
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_payment_term_form
@@ -10007,11 +10019,13 @@ msgstr "Назва, яка буде використовуватися для п
 #: model:ir.model.fields,help:account.field_account_journal_refund_sequence_number_next
 msgid "The next sequence number will be used for the next credit note."
 msgstr ""
+"Наступний порядковий номер буде використано для наступної кредитної замітки."
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_journal_sequence_number_next
 msgid "The next sequence number will be used for the next invoice."
 msgstr ""
+"Наступний порядковий номер буде використано для наступного рахунку-фактури."
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_bank_statement_line_currency_id
@@ -10318,6 +10332,8 @@ msgid ""
 "This field contains the information related to the numbering of the credit "
 "note entries of this journal."
 msgstr ""
+"Це поле містить інформацію, що стосується нумерації записів кредитної "
+"замітки цього журналу."
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_journal_sequence_id
@@ -10592,7 +10608,6 @@ msgid "Total"
 msgstr "Разом"
 
 #. module: account
-#: model:ir.model.fields,field_description:account.field_account_invoice_line_price_total
 #: model:ir.ui.view,arch_db:account.view_move_tree
 msgid "Total Amount"
 msgstr "Загальна сума"
@@ -11127,7 +11142,7 @@ msgstr "Рахунки постачальників"
 #: model:ir.ui.view,arch_db:account.report_invoice_document
 #, python-format
 msgid "Vendor Credit Note"
-msgstr ""
+msgstr "Кредитна заява продавця"
 
 #. module: account
 #: code:addons/account/models/account_invoice.py:444

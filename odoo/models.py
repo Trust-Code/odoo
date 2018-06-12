@@ -647,12 +647,15 @@ class BaseModel(MetaModel('DummyModel', (object,), {'_register': False})):
             res_id: (module, name)
             for res_id, module, name in cr.fetchall()
         }
+        def to_xid(record_id):
+            (module, name) = xids[record_id]
+            return ('%s.%s' % (module, name)) if module else name
 
         # create missing xml ids
         missing = self.filtered(lambda r: r.id not in xids)
         if not missing:
             return (
-                (record, '%s.%s' % xids[record.id])
+                (record, to_xid(record.id))
                 for record in self
             )
 
@@ -681,7 +684,7 @@ class BaseModel(MetaModel('DummyModel', (object,), {'_register': False})):
         self.env['ir.model.data'].invalidate_cache(fnames=fields)
 
         return (
-            (record, '%s.%s' % xids[record.id])
+            (record, to_xid(record.id))
             for record in self
         )
 
@@ -1388,6 +1391,9 @@ class BaseModel(MetaModel('DummyModel', (object,), {'_register': False})):
             resaction = [action
                          for action in bindings['action']
                          if view_type == 'tree' or not action.get('multi')]
+            resrelate = []
+            if view_type == 'form':
+                resrelate = bindings['action_form_only']
 
             for res in itertools.chain(resreport, resaction):
                 res['string'] = res['name']
@@ -1395,6 +1401,7 @@ class BaseModel(MetaModel('DummyModel', (object,), {'_register': False})):
             result['toolbar'] = {
                 'print': resreport,
                 'action': resaction,
+                'relate': resrelate,
             }
         return result
 
@@ -2014,7 +2021,7 @@ class BaseModel(MetaModel('DummyModel', (object,), {'_register': False})):
         for field in many2onefields:
             ids_set = {d[field] for d in data if d[field]}
             m2o_records = self.env[self._fields[field].comodel_name].browse(ids_set)
-            data_dict = dict(m2o_records.name_get())
+            data_dict = dict(m2o_records.sudo().name_get())
             for d in data:
                 d[field] = (d[field], data_dict[d[field]]) if d[field] else False
 
@@ -2638,7 +2645,7 @@ class BaseModel(MetaModel('DummyModel', (object,), {'_register': False})):
         try:
             result = records.read([f.name for f in fs], load='_classic_write')
         except AccessError:
-            # not all records may be accessible, try with only current record
+            # not all prefetched records may be accessible, try with only the current recordset
             result = self.read([f.name for f in fs], load='_classic_write')
 
         # check the cache, and update it if necessary
@@ -3933,7 +3940,7 @@ class BaseModel(MetaModel('DummyModel', (object,), {'_register': False})):
         vals = self.copy_data(default)[0]
         # To avoid to create a translation in the lang of the user, copy_translation will do it
         new = self.with_context(lang=None).create(vals)
-        self.copy_translations(new)
+        self.with_context(from_copy_translation=True).copy_translations(new)
         return new
 
     @api.multi
@@ -4770,12 +4777,16 @@ class BaseModel(MetaModel('DummyModel', (object,), {'_register': False})):
             (:class:`Field` instance), including ``self``.
             Return at most ``limit`` records.
         """
-        ids0 = self._prefetch[self._name]
-        ids1 = set(self.env.cache.get_records(self, field)._ids)
-        recs = self.browse([it for it in ids0 if it and it not in ids1])
-        if limit and len(recs) > limit:
-            recs = self + (recs - self)[:(limit - len(self))]
-        return recs
+        recs = self.browse(self._prefetch[self._name])
+        ids = [self.id]
+        for record_id in self.env.cache.get_missing_ids(recs - self, field):
+            if not record_id:
+                # Do not prefetch `NewId`
+                continue
+            ids.append(record_id)
+            if limit and limit <= len(ids):
+                break
+        return self.browse(ids)
 
     @api.model
     def refresh(self):

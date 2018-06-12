@@ -1798,6 +1798,8 @@ class Selection(Field):
     def convert_to_cache(self, value, record, validate=True):
         if not validate:
             return value or False
+        if value and self.column_type[0] == 'int4':
+            value = int(value)
         if value in self.get_values(record.env):
             return value
         elif not value:
@@ -2509,6 +2511,7 @@ class Id(Field):
         'string': 'ID',
         'store': True,
         'readonly': True,
+        'prefetch': False,
     }
 
     def update_db(self, model, columns):

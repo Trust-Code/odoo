@@ -190,7 +190,7 @@
                             <label for="duration"/>
                             <div>
                                 <button style="pointer-events: none;" class="oe_inline label label-default">
-                                    <field name="duration" widget="mrp_time_counter"/>
+                                    <field name="duration" widget="mrp_time_counter" help="Time the currently logged user spent on this workorder."/>
                                 </button>
                             </div>
                         </group>
@@ -404,6 +404,8 @@
         <field name="context">{'search_default_ready': True, 'search_default_progress': True}</field>
         <field name="help" type="html">
           <p class="oe_view_nocontent_create">
+            Click to start a new work order.
+          </p><p>
             Work Orders are operations to be processed at a Work Center to realize a
             Manufacturing Order. Work Orders are trigerred by Manufacturing Orders,
             they are based on the Routing defined on these ones.
