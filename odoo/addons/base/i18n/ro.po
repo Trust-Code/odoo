@@ -5,7 +5,7 @@
 # Translators:
 # Dorin Hongu <dhongu@gmail.com>, 2016
 # Cozmin Candea <office@terrabit.ro>, 2016
-# Martin Trigaux <mat@odoo.com>, 2016
+# Martin Trigaux, 2016
 # Fekete Mihai <mihai.fekete@forestandbiomass.ro>, 2016
 # Iulian Cutui <iulian.cutui@gmail.com>, 2017
 msgid ""
@@ -1077,10 +1077,10 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"Permite anularea inregistrarilor contabile.\n"
+"Permite anularea notelor contabile.\n"
 "====================================\n"
 "\n"
-"Acest modul adauga campul 'Permite Anularea Inregistrarilor' in vizualizarea formularului a jurnalului contului.\n"
+"Acest modul adauga campul 'Permite Anularea Notelor contabile' in vizualizarea formularului a jurnalului contului.\n"
 "Daca este setat pe adevarat, ii permite utilizatorului sa anuleze inregistrari si facturi.\n"
 "    "
 
@@ -8506,7 +8506,7 @@ msgstr "Clienți, vânzători, parteneri"
 #: model:ir.ui.view,arch_db:base.view_view_custom_search
 #: model:ir.ui.view,arch_db:base.view_view_custom_tree
 msgid "Customized Views"
-msgstr "Vizualizari Personalizate"
+msgstr "Vizualizări Personalizate"
 
 #. module: base
 #: model:ir.actions.act_window,help:base.action_ui_view_custom
@@ -9108,7 +9108,7 @@ msgstr "Dr."
 #: model:ir.module.module,shortdesc:base.module_stock_dropshipping
 #: model:ir.module.module,summary:base.module_stock_dropshipping
 msgid "Drop Shipping"
-msgstr ""
+msgstr "Drop Shipping"
 
 #. module: base
 #: selection:workflow.activity,kind:0
@@ -9691,7 +9691,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_model_fields_help
 msgid "Field Help"
-msgstr ""
+msgstr "Câmp ajutor"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_model_fields_field_description
@@ -9736,7 +9736,7 @@ msgstr ""
 #: code:addons/base/ir/ir_model.py:307
 #, python-format
 msgid "Field names must be unique per model."
-msgstr ""
+msgstr "Numele câmpului trebuie să fie unic per model"
 
 #. module: base
 #: model:ir.actions.act_window,name:base.action_model_fields
@@ -11769,7 +11769,7 @@ msgstr "LGPL Versiunea 3"
 #. module: base
 #: model:ir.module.module,summary:base.module_stock_landed_costs
 msgid "Landed Costs"
-msgstr "Costuri depozitare"
+msgstr "Costuri adiționale"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_base_language_export_lang
@@ -12662,6 +12662,18 @@ msgid "Memos pad"
 msgstr "Bloc notes"
 
 #. module: base
+#: code:addons/base/ir/ir_model.py:382
+#, python-format
+msgid "Model %s does not exist"
+msgstr ""
+
+#. module: base
+#: code:addons/base/ir/ir_model.py:383
+#, python-format
+msgid "Please specify a valid model for the object relation"
+msgstr ""
+
+#. module: base
 #: model:ir.model.fields,field_description:base.field_ir_ui_menu_name
 #: model:ir.ui.view,arch_db:base.edit_menu
 #: model:ir.ui.view,arch_db:base.edit_menu_access
@@ -12853,7 +12865,7 @@ msgstr "Model (doar modificare)"
 #: model:ir.ui.view,arch_db:base.view_model_constraint_form
 #: model:ir.ui.view,arch_db:base.view_model_constraint_list
 msgid "Model Constraints"
-msgstr "Restrictii Model"
+msgstr "Restricții Model"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_ui_view_model_data_id
@@ -13568,6 +13580,8 @@ msgid ""
 "One of the documents you are trying to access has been deleted, please try "
 "again after refreshing."
 msgstr ""
+"Unul dintre documentele pe care încercați să le accesați a fost șters, "
+"încercați din nou după reîmprospătare."
 
 #. module: base
 #: code:addons/models.py:3626
@@ -15600,7 +15614,7 @@ msgstr "Secvență"
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_sequence_code
 msgid "Sequence Code"
-msgstr ""
+msgstr "Cod secvență"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_sequence_padding
@@ -16601,6 +16615,12 @@ msgid ""
 " 1,06,500; [1,2,-1] will represent it to be 106,50,0;[3] will represent it "
 "as 106,500. Provided ',' as the thousand separator in each case."
 msgstr ""
+"Formatul Separator ar trebui să fie de genul [,n] unde 0<n : pornind de la cifra de unitate. -1 va termina separarea. \n"
+"De exemplu: \n"
+"[3,2, -1] va prezenta valoarea 106500 în forma  1,06,500; \n"
+"[1,2, -1] va afișa 106,50,0; \n"
+"[3] o va afișa 106,500. \n"
+"Furnizată ca separator de mii în fiecare caz."
 
 #. module: base
 #: code:addons/base/res/res_lang.py:66
@@ -16611,6 +16631,11 @@ msgid ""
 " 1,06,500;[1,2,-1] will represent it to be 106,50,0;[3] will represent it as"
 " 106,500. Provided as the thousand separator in each case."
 msgstr ""
+"Formatul Separator ar trebui să fie de genul [,n] unde 0<n : pornind de la cifra de unitate. -1 va termina separarea. de exemplu. \n"
+"[3,2, -1] va prezenta valoarea 106500 în forma  1,06,500; \n"
+"[1,2, -1] va afișa 106,50,0; \n"
+"[3] o va afișa 106,500. \n"
+"Furnizată ca separator de mii în fiecare caz."
 
 #. module: base
 #: code:addons/base/module/module.py:666
@@ -16715,6 +16740,9 @@ msgid ""
 "                                    the field must be assigned to each record with a dictionary-like\n"
 "                                    assignment."
 msgstr ""
+"Câmpul <strong>Compute</strong> conține codul Python pentru calculul valorii"
+" câmpului dintr-un set de înregistrări. Valoarea câmpului trebuie să fie "
+"atribuită fiecărei înregistrări cu o atribuire asemănătoare unui dicționar."
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_model_form
@@ -18098,7 +18126,7 @@ msgstr "Structura vizualizării"
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_translation_search
 msgid "View ID"
-msgstr ""
+msgstr "Id vizualizare"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_ui_view_name
@@ -18131,7 +18159,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_ui_view_mode
 msgid "View inheritance mode"
-msgstr ""
+msgstr "Mod moștenire vizualizare"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_act_window_view_mode
@@ -18206,7 +18234,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_stock_landed_costs
 msgid "WMS Landed Costs"
-msgstr ""
+msgstr "Costuri adiționale"
 
 #. module: base
 #: model:res.country,name:base.wf

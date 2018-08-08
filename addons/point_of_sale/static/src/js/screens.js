@@ -1228,9 +1228,14 @@ var ClientListScreenWidget = ScreenWidget.extend({
             self.saved_client_details(partner_id);
         },function(err,event){
             event.preventDefault();
+            var error_body = _t('Your Internet connection is probably down.');
+            if (err.data) {
+                var except = err.data;
+                error_body = except.arguments && except.arguments[0] || except.message || error_body;
+            }
             self.gui.show_popup('error',{
                 'title': _t('Error: Could not Save Changes'),
-                'body': _t('Your Internet connection is probably down.'),
+                'body': error_body,
             });
         });
     },
@@ -1312,6 +1317,9 @@ var ClientListScreenWidget = ScreenWidget.extend({
     reload_partners: function(){
         var self = this;
         return this.pos.load_new_partners().then(function(){
+            // partners may have changed in the backend
+            self.partner_cache = new DomCache();
+
             self.render_list(self.pos.db.get_partners_sorted(1000));
             
             // update the currently assigned client if it has been changed in db.
@@ -1985,6 +1993,7 @@ var PaymentScreenWidget = ScreenWidget.extend({
 
             invoiced.fail(function(error){
                 self.invoicing = false;
+                order.finalized = false;
                 if (error.message === 'Missing Customer') {
                     self.gui.show_popup('confirm',{
                         'title': _t('Please select the Customer'),

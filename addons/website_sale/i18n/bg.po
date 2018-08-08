@@ -4,19 +4,23 @@
 # 
 # Translators:
 # Kaloyan Naumov <kaloyan@lumnus.net>, 2016
-# kalatchev <kalatchev@gmail.com>, 2016
-# Martin Trigaux <mat@odoo.com>, 2016
-# Anton Vassilev <anton.vasilev@gmail.com>, 2016
+# kalatchev, 2016
+# Maria Boyadjieva <marabo2000@gmail.com>, 2016
+# Martin Trigaux, 2016
+# Anton Vassilev, 2016
 # Bernard <bernard@abv.bg>, 2016
 # preslav <hackerz99999@gmail.com>, 2016
 # Vladimir Petrov <vladimir.petrov@gmail.com>, 2017
+# B Dochev, 2017
+# Ivan Ivanov, 2017
+# Albena Mincheva <albena_vicheva@abv.bg>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-18 14:21+0000\n"
-"PO-Revision-Date: 2017-07-18 14:21+0000\n"
-"Last-Translator: Vladimir Petrov <vladimir.petrov@gmail.com>, 2017\n"
+"POT-Creation-Date: 2017-11-30 14:34+0000\n"
+"PO-Revision-Date: 2017-11-30 14:34+0000\n"
+"Last-Translator: Albena Mincheva <albena_vicheva@abv.bg>, 2018\n"
 "Language-Team: Bulgarian (https://www.transifex.com/odoo/teams/41243/bg/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -500,7 +504,7 @@ msgstr ""
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.confirmation
 msgid "<strong>Order Details:</strong>"
-msgstr "<strong>Детайли за Поръчката:</strong>"
+msgstr "<strong>Подробности за поръчката:</strong>"
 
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.confirmation
@@ -702,6 +706,8 @@ msgstr ""
 msgid ""
 "Add a step to request some extra customer data (picking preferences, etc.)"
 msgstr ""
+"Добавете стъпка, за да изискате допълнителни данни за клиента (предпочитания"
+" за пикинги и т.н.)"
 
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.product
@@ -811,12 +817,12 @@ msgstr ""
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.bill_to
 msgid "Bill To:"
-msgstr "Платец:"
+msgstr "Фактура за покупка към:"
 
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.checkout
 msgid "Billing Address"
-msgstr ""
+msgstr "Адрес на плащане"
 
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.wizard_checkout
@@ -841,7 +847,7 @@ msgstr ""
 #. module: website_sale
 #: model:ir.ui.menu,name:website_sale.menu_catalog
 msgid "Catalog"
-msgstr ""
+msgstr "Каталог"
 
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.sort
@@ -997,12 +1003,12 @@ msgstr "Потвърди <span class=\"fa fa-long-arrow-right\"/>"
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.payment
 msgid "Confirm Order"
-msgstr ""
+msgstr "Потвърдете поръчка"
 
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.payment
 msgid "Confirm Order <span class=\"fa fa-long-arrow-right\"/>"
-msgstr "Потвърди Поръчка <span class=\"fa fa-long-arrow-right\"/>"
+msgstr "Потвърдете поръчка <span class=\"fa fa-long-arrow-right\"/>"
 
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.wizard_checkout
@@ -1038,7 +1044,7 @@ msgstr ""
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.website_planner
 msgid "Create your product items"
-msgstr ""
+msgstr "Създайте свои продуктови редове"
 
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_product_image_create_uid
@@ -1138,7 +1144,7 @@ msgstr "Описание за уебсайт"
 #: model:ir.model.fields,help:website_sale.field_product_product_website_sequence
 #: model:ir.model.fields,help:website_sale.field_product_template_website_sequence
 msgid "Determine the display order in the Website E-commerce"
-msgstr "Определи ред за показване в електронния магазин"
+msgstr "Определете реда на показване в електронния магазин"
 
 #. module: website_sale
 #: model:product.public.category,name:website_sale.devices
@@ -1282,7 +1288,8 @@ msgstr "Дайте на клиентите си достъп до техните
 #: model:ir.model.fields,help:website_sale.field_product_public_category_sequence
 msgid "Gives the sequence order when displaying a list of product categories."
 msgstr ""
-"Показва в последователен ред при показване на списък с продуктови категории."
+"Дава реда на последователност при показване на списък с продуктови "
+"категории."
 
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.website_planner
@@ -1447,7 +1454,8 @@ msgstr "Фактури"
 #: code:addons/website_sale/models/sale_order.py:115
 #, python-format
 msgid "It is forbidden to modify a sale order which is not in draft status"
-msgstr "Забранено е да променята поръчка, която не е в драфт статус"
+msgstr ""
+"Забранено е да променяте поръчка за продажба, която не е в етап 'Чернова'"
 
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.website_planner
@@ -1479,7 +1487,7 @@ msgstr "Последно променено на"
 #: model:ir.model.fields,field_description:website_sale.field_res_partner_last_website_so_id
 #: model:ir.model.fields,field_description:website_sale.field_res_users_last_website_so_id
 msgid "Last Online Sale Order"
-msgstr "Последна Поръчка"
+msgstr "Последна поръчка"
 
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_product_image_write_uid
@@ -1498,7 +1506,7 @@ msgstr "Последно обновено на"
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.website_planner
 msgid "Legal Name"
-msgstr ""
+msgstr "Правно/юридическо име"
 
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.website_planner
@@ -1511,6 +1519,11 @@ msgid "List displaying"
 msgstr ""
 
 #. module: website_sale
+#: model:ir.ui.view,arch_db:website_sale.address
+msgid "Log In"
+msgstr ""
+
+#. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.website_planner
 msgid "Logo"
 msgstr "Емблема"
@@ -1518,7 +1531,7 @@ msgstr "Емблема"
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.website_planner
 msgid "Main Currency"
-msgstr ""
+msgstr "Основна валута"
 
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.website_planner
@@ -1562,7 +1575,7 @@ msgstr ""
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.website_config_settings_view_form
 msgid "More Info"
-msgstr ""
+msgstr "Повече информация"
 
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_website_config_settings_group_website_multiimage
@@ -1677,17 +1690,17 @@ msgstr ""
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.confirmation
 msgid "Order"
-msgstr "Ред"
+msgstr "Поръчка"
 
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_website_config_settings_order_mail_template
 msgid "Order Confirmation Email"
-msgstr ""
+msgstr "Имейл за потвърждаване на поръчка"
 
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_sale_order_website_order_line
 msgid "Order Lines displayed on Website"
-msgstr "Order Lines displayed on Website"
+msgstr "Редове с поръчки, отразени в сайта"
 
 #. module: website_sale
 #: model:ir.model.fields,help:website_sale.field_sale_order_website_order_line
@@ -1695,14 +1708,14 @@ msgid ""
 "Order Lines to be displayed on the website. They should not be used for "
 "computation purpose."
 msgstr ""
-"Order Lines to be displayed on the website. They should not be used for "
-"computation purpose."
+"Редове с поръчки, отразени в сайта. Не трябва да се използват с изчислителна"
+" цел."
 
 #. module: website_sale
 #: model:ir.ui.menu,name:website_sale.menu_orders
 #: model:ir.ui.menu,name:website_sale.menu_orders_orders
 msgid "Orders"
-msgstr ""
+msgstr "Поръчки"
 
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_product_public_category_parent_id
@@ -1759,7 +1772,7 @@ msgstr "Начини на плащане"
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.website_planner
 msgid "Payment must be reconciled manually"
-msgstr ""
+msgstr "Плащането трябва да се обедини ръчно"
 
 #. module: website_sale
 #: code:addons/website_sale/controllers/main.py:758
@@ -1846,7 +1859,7 @@ msgstr "Ценови листи"
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.website_planner
 msgid "Pricing &amp; Discounts"
-msgstr ""
+msgstr "Ценообразуване и отстъпки"
 
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_website_config_settings_sale_pricelist_setting_split_1
@@ -1856,7 +1869,7 @@ msgstr ""
 #. module: website_sale
 #: model:product.public.category,name:website_sale.printer
 msgid "Printer"
-msgstr ""
+msgstr "Принтер"
 
 #. module: website_sale
 #. openerp-web
@@ -2037,7 +2050,7 @@ msgstr "Обратно към списъка с продукти."
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.wizard_checkout
 msgid "Review Order<span class=\"chevron\"/>"
-msgstr "Преглед на Поръчката<span class=\"chevron\"/>"
+msgstr "Прегледайте поръчката<span class=\"chevron\"/>"
 
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.website_planner
@@ -2113,7 +2126,7 @@ msgstr ""
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.website_planner
 msgid "See how to configure pricing &amp; discounts"
-msgstr ""
+msgstr "Вижте как да конфигурирате Ценообразуването и отстъпките"
 
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.website_planner
@@ -2295,11 +2308,16 @@ msgstr ""
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_website_config_settings_group_product_pricelist
 msgid "Show pricelists On Products"
-msgstr ""
+msgstr "Показване на ценовите листи на продуктите"
 
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_website_config_settings_group_pricelist_item
 msgid "Show pricelists to customers"
+msgstr "Покажи ценовата листа на клиентите"
+
+#. module: website_sale
+#: model:ir.ui.view,arch_db:website_sale.address
+msgid "Sign Up"
 msgstr ""
 
 #. module: website_sale
@@ -2499,7 +2517,7 @@ msgstr ""
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.confirmation
 msgid "Thank you for your order."
-msgstr "Благодарим за вашата поръчка"
+msgstr "Благодарим за Вашата поръчка"
 
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.terms
@@ -2619,7 +2637,7 @@ msgstr "Единична цена"
 #. module: website_sale
 #: model:ir.ui.menu,name:website_sale.menu_orders_unpaid_orders
 msgid "Unpaid Orders"
-msgstr ""
+msgstr "Неплатени поръчки"
 
 #. module: website_sale
 #: model:ir.actions.act_window,name:website_sale.action_unpaid_orders_ecommerce
@@ -2639,7 +2657,7 @@ msgstr ""
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_website_config_settings_group_sale_pricelist
 msgid "Use pricelists to adapt your price per customers"
-msgstr ""
+msgstr "Използвайте ценовите листи, за да адаптирате цената си за клиентите"
 
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.cart_popover
@@ -2826,7 +2844,7 @@ msgstr "Вашата поръчка е потвърдена, благодари�
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.order_state_message
 msgid "Your payment has been authorized."
-msgstr ""
+msgstr "Плащането Ви е оторизирано."
 
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.order_state_message
@@ -2892,7 +2910,7 @@ msgstr ""
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.cart_popover
 msgid "items)"
-msgstr "продукта)"
+msgstr "редове/статии)"
 
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.website_planner

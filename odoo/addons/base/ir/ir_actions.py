@@ -2,7 +2,6 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import datetime
-import dateutil
 import logging
 import os
 import time
@@ -13,8 +12,19 @@ from odoo import api, fields, models, tools, workflow, _
 from odoo.exceptions import MissingError, UserError, ValidationError
 from odoo.report.report_sxw import report_sxw, report_rml
 from odoo.tools.safe_eval import safe_eval, test_python_expr
+from odoo.tools.misc import wrap_module
 
 _logger = logging.getLogger(__name__)
+
+# build dateutil helper, starting with the relevant *lazy* imports
+import dateutil
+import dateutil.parser
+import dateutil.relativedelta
+import dateutil.rrule
+import dateutil.tz
+mods = {'parser', 'relativedelta', 'rrule', 'tz'}
+attribs = {atr for m in mods for atr in getattr(dateutil, m).__all__}
+dateutil = wrap_module(dateutil, mods | attribs)
 
 
 class IrActions(models.Model):
@@ -126,7 +136,7 @@ class IrActionsReportXml(models.Model):
     def _compute_report_sxw(self):
         for report in self:
             if report.report_rml:
-                self.report_sxw = report.report_rml.replace('.rml', '.sxw')
+                report.report_sxw = report.report_rml.replace('.rml', '.sxw')
 
     def _report_content(self, name):
         data = self[name + '_content_data']
@@ -375,7 +385,7 @@ class IrActionsActWindowView(models.Model):
     _name = 'ir.actions.act_window.view'
     _table = 'ir_act_window_view'
     _rec_name = 'view_id'
-    _order = 'sequence'
+    _order = 'sequence,id'
 
     sequence = fields.Integer()
     view_id = fields.Many2one('ir.ui.view', string='View')
