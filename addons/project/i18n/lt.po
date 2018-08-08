@@ -13,17 +13,18 @@
 # Rolandas <info@paninfo.lt>, 2017
 # Silvija Butko <silvija.butko@gmail.com>, 2017
 # UAB "Draugiški sprendimai" <transifex@draugiskisprendimai.lt>, 2017
+# Linas Versada <paulius.sladkevicius@gmail.com>, 2017
 # Šarūnas Ažna <sarunas.azna@gmail.com>, 2017
+# Paulius Sladkevičius <paulius@versada.eu>, 2017
 # Elvinas Černys <elvinas@digitouch.lt>, 2017
 # Eimantas <eimantas@focusate.eu>, 2018
-# Linas Versada <paulius.sladkevicius@gmail.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-30 13:11+0000\n"
 "PO-Revision-Date: 2017-11-30 13:11+0000\n"
-"Last-Translator: Linas Versada <paulius.sladkevicius@gmail.com>, 2018\n"
+"Last-Translator: Eimantas <eimantas@focusate.eu>, 2018\n"
 "Language-Team: Lithuanian (https://www.transifex.com/odoo/teams/41243/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -268,6 +269,11 @@ msgid ""
 "                        documents to your project.\n"
 "                    </p>"
 msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                       Dokumentai yra prisegti prie jūsų projekto užduočių ar problemų.</p><p>\n"
+"                        Siųskite žinutes arba veskite vidinius užrašus su prisegtukais, kad\n"
+"                        susietumėte dokumentus su savo projektu.\n"
+"                    </p>"
 
 #. module: project
 #: code:addons/project/models/project.py:144
@@ -411,6 +417,11 @@ msgid ""
 "                                            <span class=\"small\">Delay to close an Task</span>\n"
 "                                        </span>"
 msgstr ""
+"<span class=\"panel-title\">\n"
+"                                            <span class=\"fa fa-thumb-tack\"/>\n"
+"                                            <strong> Pratimas 2</strong><br/>\n"
+"                                            <span class=\"small\">Pavėluokite uždaryti užduotį</span>\n"
+"                                        </span>"
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
@@ -514,6 +525,8 @@ msgid ""
 "<strong> Q&amp;A and discussion time (10 min)</strong>\n"
 "                                Always give your team time to ask questions on tasks that were not discussed. This gives you another opportunity to reinforce key points that you've picked up during the week or discovered during the meeting."
 msgstr ""
+"<strong> Klausimų, atsakymų ir diskusijų laikas (10 min)</strong>\n"
+"                                Visada duokite savo komandai laiko paklausti klausimų apie užduotis, kurios nebuvo aptartos. Tai suteikia jums dar vieną galimybę pabrėžti esminius dalykus, kuriuos supratote per savaitę ar šį susitikimą."
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
@@ -537,6 +550,8 @@ msgid ""
 "<strong>A great feature in Odoo is the integration of a Collaborative Notepad called Etherpad.</strong><br/>\n"
 "                            It replaces the standard Description area in Tasks and is extremely useful for several cases."
 msgstr ""
+"<strong>Puiki Odoo funkcija yra kolektyvinės užrašinės, vadinamos Etherpad, integracija.</strong><br/>\n"
+"                            Ji pakeičia standartinę aprašymo vietą užduotyse ir yra ypatingai naudinga keliais atvejais."
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
@@ -890,6 +905,8 @@ msgid ""
 "<strong>Use Tags</strong><br/>\n"
 "                                    Tags  are complementary to your project stages: they can work as a second  level categorization which is very useful if you have a lot of Tasks to manage. Also, it becomes very easy to find Tasks by typing  the Tag into the main Search bar."
 msgstr ""
+"<strong>Naudokite etiketes</strong><br/>\n"
+"                                    Etiketės papildo jūsų projekto stadijas: jie gali veikti kaip antrojo lygmens kategorizacija, kuri labai naudinga, jei turite daug valdomų užduočių. Taip pat, įvedus etiketę į pagrindinį paieškos laukelį labai lengva rasti užduotis."
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
@@ -934,6 +951,8 @@ msgid ""
 "A Python dictionary that will be evaluated to provide default values when "
 "creating new records for this alias."
 msgstr ""
+"Python žodynas, kuris bus įvertinamas numatytųjų reikšmių nustatymui, kai "
+"šiam slapyvardžiui sukuriami nauji įrašai."
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
@@ -952,6 +971,10 @@ msgid ""
 " * Red indicates something is preventing the progress of this task\n"
 " * Green indicates the task is ready to be pulled to the next stage"
 msgstr ""
+"Užduoties kanban būsena parodo specialias būsenas, veikiančias ją:\n"
+" * Pilka yra numatytoji situacija\n"
+" * Raudona rodo, kad kažkas neleidžia šiai užduočiai progresuoti\n"
+" * Žalia rodo, kad užduotis yra paruošta perkėlimui į kitą stadiją"
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.edit_project
@@ -1489,7 +1512,7 @@ msgstr "Sukūrimo data"
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
 msgid "Create a Gantt chart with your projects tasks and deadlines"
-msgstr ""
+msgstr "Sukurti Gantt grafiką su savo projektais, užduotimis ir terminais"
 
 #. module: project
 #: model:ir.actions.act_window,name:project.open_create_project
@@ -1512,11 +1535,13 @@ msgid ""
 "Create a task by sending an email to a project alias with one of your "
 "colleagues in copy"
 msgstr ""
+"Sukurti užduotį siunčiant el. laišką projekto pseudonimui su kopija vienam "
+"iš jūsų kolegų"
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
 msgid "Create at least 3 tasks"
-msgstr "Sukurti mažiausiai 3 užduotis"
+msgstr "Sukurkite bent 3 užduotis"
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
@@ -1551,6 +1576,8 @@ msgid ""
 "Creating Tasks is the next step in managing your Projects.<br/>\n"
 "                        In Odoo, it is pretty straightforward, but here are some explanations you may find useful."
 msgstr ""
+"Užduočių kūrimas yra kitas žingsnis jūsų projektų valdyme.<br/>\n"
+"                        Odoo jis gana paprastas, bet pateikiame kelis paaiškinimus, kurie gali būti naudingi."
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.view_task_project_user_search
@@ -1648,7 +1675,7 @@ msgstr "Klientų aptarnavimo kortelės"
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
 msgid "Customization"
-msgstr ""
+msgstr "Pritaikymas"
 
 #. module: project
 #: model:ir.ui.menu,name:project.menu_projects
@@ -1684,6 +1711,10 @@ msgid ""
 "                You will use these stages in order to track the progress in\n"
 "                solving a task or an issue."
 msgstr ""
+"Nustatykite žingsnius, kurie bus naudojami projekte nuo\n"
+"                užduoties sukūrimo iki jos ar problemos uždarymo.\n"
+"                Šias stadijas naudosite progreso sekimui sprendžiant\n"
+"                užduotį ar problemą."
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.view_task_kanban
@@ -2064,6 +2095,8 @@ msgid ""
 "the <b>implementation guide</b> to help you setup Project Management in your"
 " company."
 msgstr ""
+"Puiku! Baigėte projekto valdymo turą. Galite tęsti su <b>pritaikymo "
+"gidu</b>, kuris jums padės sukonfigūruoti projektų valdymą jūsų kompanijai."
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
@@ -2145,7 +2178,7 @@ msgstr "Valandos"
 #: code:addons/project/models/project.py:730
 #, python-format
 msgid "I take it"
-msgstr ""
+msgstr "Renkuosi tai"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_project_id
@@ -2345,6 +2378,8 @@ msgid ""
 "Internal notes are messages that will appear in the Chatter but will not be "
 "notified in Odoo's Inbox."
 msgstr ""
+"Vidiniai pranešimai yra žinutės, kurios pasirodys susirašinėjime, bet ne "
+"Odoo laiškų dėžutėje."
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_tags_search_view
@@ -2395,6 +2430,8 @@ msgid ""
 "It's essential to be clear about why you want to use Odoo Project and what your goals are.\n"
 "                        Indeed, there are many ways to manage a project, to find the best one for you, you need to know exactly what you want to achieve. And later on, we will hopefully transform your objectives into real improvements for your company."
 msgstr ""
+"Svarbiausia - aiškiai išsiaiškinti, kodėl jūs norite naudoti Odoo Projektą ir kokie yra jūsų tikslai.\n"
+"                        Aišku, yra daugybė būdų valdyti projektą, tačiau norėdami rasti geriausią sau, turite žinoti, ką tiksliai norite pasiekti. Vėliau mes jūsų tikslus paversime tikrais jūsų kompanijos patobulinimais."
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
@@ -2423,7 +2460,7 @@ msgstr "Kanban užblokuotas paaiškinimas"
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_task_legend_normal
 msgid "Kanban Ongoing Explanation"
-msgstr ""
+msgstr "Kanban vykstantis paaiškinimas"
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
@@ -2445,7 +2482,7 @@ msgstr "Kanban statusas"
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_task_legend_done
 msgid "Kanban Valid Explanation"
-msgstr ""
+msgstr "Kanban tinkantis paaiškinimas"
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
@@ -2567,6 +2604,8 @@ msgid ""
 "Managing a group of people, a team or a department (example: R&amp;D team, "
 "HR Department, etc.)"
 msgstr ""
+"Valdoma žmonių grupė, komanda arba skyrius (pavyzdžiui, tyrimų komanda, "
+"žmogiškųjų išteklių skyrius ir pan.)"
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
@@ -2583,6 +2622,11 @@ msgid ""
 "stages and tasks you want to be informed about. Fortunately, Odoo Project "
 "has many levels of notifications and messages you can choose from."
 msgstr ""
+"Pranešimų valdymas yra esminis: jei pamatysite per mažai, galite praleisti "
+"ypatingai svarbią informaciją, jei pamatysite per daug, galite paskęsti "
+"nereikalingoje informacijoje. Svarbu rasti teisingą balansą tarp projektų, "
+"stadijų ir užduočių, apie kurias norite būti informuotas. Odoo Projektai "
+"turi daug žinučių ir pranešimų lygių, iš kurių galite rinktis."
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
@@ -2747,12 +2791,12 @@ msgstr "Dabar, kai projektas yra paruoštas, <b>sukurkite kelias užduotis</b>."
 #. module: project
 #: model:ir.model.fields,help:project.field_report_project_task_user_working_days_open
 msgid "Number of Working Days to Open the task"
-msgstr ""
+msgstr "Darbo dienų skaičius užduoties atidarymui"
 
 #. module: project
 #: model:ir.model.fields,help:project.field_report_project_task_user_working_days_close
 msgid "Number of Working Days to close the task"
-msgstr ""
+msgstr "Darbo dienų skaičius užduoties uždarymui"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_project_doc_count
@@ -2771,6 +2815,9 @@ msgid ""
 "                        everyone in your company. Follow how things progress, see when things are stuck, know\n"
 "                        who's in charge, all in one place."
 msgstr ""
+"Odoo projektai yra super greitas ir lengvas būdas padaryti jūsų veiklą matomą\n"
+"                        visiems jūsų kompanijoje. Sekite progresą, pastebėkite, kas užstringa, žinokite\n"
+"                        kas atsakingas – viskas vienoje vietoje."
 
 #. module: project
 #: model:ir.actions.act_window,help:project.action_view_task
@@ -2845,6 +2892,8 @@ msgid ""
 "Override the default value displayed for the done state for kanban "
 "selection, when the task or issue is in that stage."
 msgstr ""
+"Viršyti numatytąją reikšmę, rodomą Kanban pasirinkimo atliktai stadijai, kai"
+" užduotis ar problema yra šioje stadijoje."
 
 #. module: project
 #: model:ir.model.fields,help:project.field_project_task_legend_normal
@@ -2853,6 +2902,8 @@ msgid ""
 "Override the default value displayed for the normal state for kanban "
 "selection, when the task or issue is in that stage."
 msgstr ""
+"Viršyti numatytąją reikšmę, rodomą Kanban pasirinkimo normaliai stadijai, "
+"kai užduotis ar problema yra šioje stadijoje."
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_project_alias_user_id
@@ -3082,7 +3133,7 @@ msgstr "Paruošta kitai stadijai"
 #: code:addons/project/static/src/js/web_planner_project.js:41
 #, python-format
 msgid "Ready for layout / copywriting"
-msgstr ""
+msgstr "Paruošta išdėstymui / teksto kūrimui"
 
 #. module: project
 #: selection:report.project.task.user,state:0
@@ -3352,6 +3403,8 @@ msgid ""
 "So if you're looking for the history of a Task, or the latest message on a "
 "Task, simply go to the corresponding Document and you'll find it!"
 msgstr ""
+"Jei ieškote užduoties istorijos ar paskutinės žinutės užduotyje, tiesiog "
+"eikite į susijusį dokumentą ir ją rasite!"
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
@@ -3382,7 +3435,7 @@ msgstr "Užduoties specifikacija yra parašyta"
 #. module: project
 #: model:ir.ui.view,arch_db:project.res_config_settings_view_form
 msgid "Split your tasks to organize your work into sub-milestones"
-msgstr ""
+msgstr "Padalinkite savo užduotis ir organizuokite savo darbą mažais etapais"
 
 #. module: project
 #. openerp-web
@@ -3716,6 +3769,9 @@ msgid ""
 " email that does not reply to an existing record will cause the creation of "
 "a new record of this model (e.g. a Project Task)"
 msgstr ""
+"Modelis (Odoo dokumento rūšis), su kuriuo susijęs šis pseudonimas. Visi "
+"gaunami laiškai, kurie neatsako į egzistuojantį įrašą, sukurs naują šio "
+"modelio įrašą (pvz. projekto užduotį)"
 
 #. module: project
 #: model:ir.model.fields,help:project.field_project_project_alias_name
@@ -3723,6 +3779,8 @@ msgid ""
 "The name of the email alias, e.g. 'jobs' if you want to catch emails for "
 "<jobs@example.odoo.com>"
 msgstr ""
+"El. pašto slapyvardžio pavadinimas, pvz. \"darbai\", jei norite gauti "
+"<darbai@pavyzdys.odoo.com>"
 
 #. module: project
 #: model:ir.model.fields,help:project.field_project_project_alias_user_id
@@ -3762,6 +3820,8 @@ msgid ""
 "There is no available image to be set as cover. Send a message on the task "
 "with an attached image."
 msgstr ""
+"Nėra paveikslėlio, kuris galėtų būti nustatytas kaip viršelis. Nusiųskite "
+"žinutę užduočiai su prisegtu paveikslėliu."
 
 #. module: project
 #: model:ir.model.fields,help:project.field_project_task_email_cc
@@ -3864,7 +3924,7 @@ msgstr "Laiko planavimas"
 #. module: project
 #: model:ir.model.fields,field_description:project.field_res_config_settings_module_hr_timesheet
 msgid "Timesheets"
-msgstr "Darbuotojo darbo laiko apskaitos žiniaraštis"
+msgstr "Darbo laiko žiniaraštis"
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
@@ -3972,6 +4032,8 @@ msgid ""
 "Use separate meetings to solve big tasks or tasks that aren’t important for "
 "the entire team."
 msgstr ""
+"Naudokite atskirus susitikimus didelių problemų ar tokių problemų, kurios "
+"nėra svarbios visai komandai, sprendimui."
 
 #. module: project
 #. openerp-web
@@ -3981,6 +4043,8 @@ msgid ""
 "Use the <b>implementation guide</b> to setup Project Management in your "
 "company."
 msgstr ""
+"Naudokite <b>pritaikymo gidą </b> projektų valdymo konfigūravimui jūsų "
+"kompanijoje."
 
 #. module: project
 #. openerp-web
@@ -4255,6 +4319,8 @@ msgid ""
 "You can reply directly to a message from you email software; the message and"
 " its attachments will be added to the Chatter."
 msgstr ""
+"Galite į žinutę atsakyti tiesiogiai iš savo el. pašto programos; žinutė ir "
+"jos prisegtukai bus pridėti prie susirašinėjimo."
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
@@ -4279,6 +4345,8 @@ msgid ""
 "project's tasks and then delete the project or simply deactivate the "
 "project."
 msgstr ""
+"Negalite ištrinti projekto, kuris turi užduočių. Galite arba ištrinti visas "
+"užduotis ir tada ištrinti projektą, arba tiesiog deaktyvuoti projektą."
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner

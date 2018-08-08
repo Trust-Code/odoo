@@ -4,7 +4,7 @@ import base64
 
 import babel.dates
 import collections
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, MAXYEAR
 from dateutil import parser
 from dateutil import rrule
 from dateutil.relativedelta import relativedelta
@@ -632,7 +632,7 @@ class Meeting(models.Model):
                     recurring_date = todate(meeting.recurrent_id_date)
                 rset1.exdate(recurring_date)
             invalidate = True
-        return [d.astimezone(pytz.UTC) if d.tzinfo else d for d in rset1]
+        return [d.astimezone(pytz.UTC) if d.tzinfo else d for d in rset1 if d.year < MAXYEAR]
 
     @api.multi
     def _get_recurrency_end_date(self):
@@ -902,8 +902,8 @@ class Meeting(models.Model):
                 startdate = startdate.astimezone(pytz.utc)  # Convert to UTC
                 meeting.start = fields.Datetime.to_string(startdate)
             else:
-                meeting.start = meeting.start_datetime
-                meeting.stop = meeting.stop_datetime
+                meeting.write({'start': meeting.start_datetime,
+                               'stop': meeting.stop_datetime})
 
     @api.depends('byday', 'recurrency', 'final_date', 'rrule_type', 'month_by', 'interval', 'count', 'end_type', 'mo', 'tu', 'we', 'th', 'fr', 'sa', 'su', 'day', 'week_list')
     def _compute_rrule(self):
@@ -943,6 +943,14 @@ class Meeting(models.Model):
             start = fields.Datetime.from_string(self.start_datetime)
             self.start = self.start_datetime
             self.stop = fields.Datetime.to_string(start + timedelta(hours=self.duration))
+
+    @api.onchange('start_date')
+    def _onchange_start_date(self):
+        self.start = self.start_date
+
+    @api.onchange('stop_date')
+    def _onchange_stop_date(self):
+        self.stop = self.stop_date
 
     ####################################################
     # Calendar Business, Reccurency, ...
@@ -1462,6 +1470,10 @@ class Meeting(models.Model):
 
     @api.multi
     def write(self, values):
+        # FIXME: neverending recurring events
+        if 'rrule' in values:
+            values['rrule'] = self._fix_rrule(values)
+
         # compute duration, only if start and stop are modified
         if not 'duration' in values and 'start' in values and 'stop' in values:
             values['duration'] = self._get_duration(values['start'], values['stop'])
@@ -1530,6 +1542,10 @@ class Meeting(models.Model):
 
     @api.model
     def create(self, values):
+        # FIXME: neverending recurring events
+        if 'rrule' in values:
+            values['rrule'] = self._fix_rrule(values)
+
         if not 'user_id' in values:  # Else bug with quick_create when we are filter on an other user
             values['user_id'] = self.env.user.id
 
@@ -1734,3 +1750,13 @@ class Meeting(models.Model):
                 activity_values['user_id'] = values['user_id']
             if activity_values.keys():
                 self.mapped('activity_ids').write(activity_values)
+
+    @api.model
+    def _fix_rrule(self, values):
+        rule_str = values.get('rrule')
+        if rule_str:
+            rule = rrule.rrulestr(rule_str)
+            if not rule._until and not rule._count:
+                rule._count = 100
+                rule_str = str(rule).split('RRULE:')[-1]
+        return rule_str
