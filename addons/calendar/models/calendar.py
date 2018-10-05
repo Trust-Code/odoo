@@ -630,6 +630,8 @@ class Meeting(models.Model):
                     recurring_date = recurring_date.replace(tzinfo=None)
                 else:
                     recurring_date = todate(meeting.recurrent_id_date)
+                if date_field == "stop":
+                    recurring_date += timedelta(hours=self.duration)
                 rset1.exdate(recurring_date)
             invalidate = True
         return [d.astimezone(pytz.UTC) if d.tzinfo else d for d in rset1 if d.year < MAXYEAR]
@@ -946,11 +948,13 @@ class Meeting(models.Model):
 
     @api.onchange('start_date')
     def _onchange_start_date(self):
-        self.start = self.start_date
+        if self.start_date:
+            self.start = self.start_date
 
     @api.onchange('stop_date')
     def _onchange_stop_date(self):
-        self.stop = self.stop_date
+        if self.stop_date:
+            self.stop = self.stop_date
 
     ####################################################
     # Calendar Business, Reccurency, ...
@@ -1077,9 +1081,8 @@ class Meeting(models.Model):
             else:
                 sort_fields[field] = self[field]
                 if isinstance(self[field], models.BaseModel):
-                    name_get = self[field].name_get()
-                    if len(name_get) and len(name_get[0]) >= 2:
-                        sort_fields[field] = name_get[0][1]
+                    name_get = self[field].mapped('display_name')
+                    sort_fields[field] = name_get and name_get[0] or ''
         if r_date:
             sort_fields['sort_start'] = r_date.strftime(VIRTUALID_DATETIME_FORMAT)
         else:
@@ -1755,8 +1758,6 @@ class Meeting(models.Model):
     def _fix_rrule(self, values):
         rule_str = values.get('rrule')
         if rule_str:
-            rule = rrule.rrulestr(rule_str)
-            if not rule._until and not rule._count:
-                rule._count = 100
-                rule_str = str(rule).split('RRULE:')[-1]
+            if 'UNTIL' not in rule_str and 'COUNT' not in rule_str:
+                rule_str += ';COUNT=100'
         return rule_str
