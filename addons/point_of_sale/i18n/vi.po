@@ -2601,7 +2601,7 @@ msgstr "Người phụ trách"
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_module_pos_restaurant
 msgid "Restaurant"
-msgstr ""
+msgstr "Nhà hàng"
 
 #. module: point_of_sale
 #: selection:pos.config.settings,module_pos_restaurant:0
@@ -3798,7 +3798,7 @@ msgstr "at"
 #. module: point_of_sale
 #: model:ir.model,name:point_of_sale.model_barcode_rule
 msgid "barcode.rule"
-msgstr ""
+msgstr "barcode.rule"
 
 #. module: point_of_sale
 #. openerp-web
