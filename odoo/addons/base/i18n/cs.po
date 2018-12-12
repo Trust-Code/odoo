@@ -3,20 +3,21 @@
 # * base
 # 
 # Translators:
-# Martin Trigaux, 2017
-# Michal Veselý <michal@veselyberanek.net>, 2018
 # Jan Horzinka <jan.horzinka@centrum.cz>, 2018
-# J. Podhorecky <j.podhorecky@volny.cz>, 2018
+# Michal Veselý <michal@veselyberanek.net>, 2018
 # Jaroslav Helemik Nemec <nemec@helemik.cz>, 2018
 # xlu <xlu@seznam.cz>, 2018
 # Ladislav Tomm <tomm@helemik.cz>, 2018
+# Martin Trigaux, 2018
+# trendspotter <j.podhorecky@volny.cz>, 2018
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-08-02 09:47+0000\n"
-"PO-Revision-Date: 2018-08-02 09:47+0000\n"
-"Last-Translator: Ladislav Tomm <tomm@helemik.cz>, 2018\n"
+"PO-Revision-Date: 2017-09-20 10:13+0000\n"
+"Last-Translator: trendspotter <j.podhorecky@volny.cz>, 2018\n"
 "Language-Team: Czech (https://www.transifex.com/odoo/teams/41243/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2899,6 +2900,10 @@ msgid ""
 "==========================\n"
 "\n"
 msgstr ""
+"\n"
+"Odoo widget Webového Editoru .\n"
+"==========================\n"
+"\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_web
@@ -2919,6 +2924,10 @@ msgid ""
 "========================\n"
 "\n"
 msgstr ""
+"\n"
+"Odoo Web tours.\n"
+"========================\n"
+"\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_website_google_map
@@ -3574,6 +3583,8 @@ msgid ""
 "The kernel of Odoo, needed for all installation.\n"
 "===================================================\n"
 msgstr ""
+"\n"
+"Jádro Odoo, potřebné pro všechny instalace. ===================================================\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_google_account
@@ -4520,6 +4531,14 @@ msgid ""
 "project.\n"
 "        "
 msgstr ""
+"\n"
+"Transifex integrace \n"
+"===================== \n"
+"Tento modul přidá odkaz na projekt Transifex v přehledu. Celkem tohoto modulu je rychlost překládání hlavních modulů. \n"
+"\n"
+"\"Odoo používá konfigurační soubory Transifex` .tx/config` k detekci zdroje projektu. Vlastní moduly nebudou přeloženy (nejsou zveřejněny na hlavním projektu Transifex). \n"
+"\n"
+"Jazyk, který se uživatel pokouší přeložit, musí být aktivován na projektu Transifex®."
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_tr
@@ -4543,6 +4562,11 @@ msgid ""
 "\n"
 "    "
 msgstr ""
+"\n"
+"Spojené arabské emiráty účetní graf a lokalizace.\n"
+"=======================================================\n"
+"\n"
+"    "
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_us
@@ -4769,7 +4793,7 @@ msgstr ""
 #. module: base
 #: model:ir.ui.view,arch_db:base.res_lang_form
 msgid "%H - Hour (24-hour clock) [00,23].\""
-msgstr ""
+msgstr "%H - Hodina (24-hodinový den) [00,23].\""
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.res_lang_form
@@ -4779,17 +4803,17 @@ msgstr ""
 #. module: base
 #: model:ir.ui.view,arch_db:base.res_lang_form
 msgid "%M - Minute [00,59].\""
-msgstr ""
+msgstr "%M - Minut [00,59].\""
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.res_lang_form
 msgid "%S - Seconds [00,61].\""
-msgstr ""
+msgstr "%S - Vteřin [00,61].\""
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.res_lang_form
 msgid "%Y - Year with century.\""
-msgstr ""
+msgstr "%Y - Rok se stoletím.\""
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.res_lang_form
@@ -4809,7 +4833,7 @@ msgstr ""
 #. module: base
 #: model:ir.ui.view,arch_db:base.res_lang_form
 msgid "%j - Day of the year [001,366].\""
-msgstr ""
+msgstr "%j - den v roce [001,366].\""
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.res_lang_form
@@ -4838,7 +4862,7 @@ msgstr ""
 #. module: base
 #: model:ir.ui.view,arch_db:base.res_lang_form
 msgid "%y - Year without century [00,99].\""
-msgstr ""
+msgstr "%y - rok bez století [00,99].\""
 
 #. module: base
 #: code:addons/base/ir/ir_model.py:1416
@@ -4938,12 +4962,12 @@ msgstr "-Tento modul nevytváří nabídku."
 #. module: base
 #: model:ir.ui.view,arch_db:base.module_form
 msgid "-This module does not create report."
-msgstr ""
+msgstr "-Tento modul nevytváří hlášení."
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.module_form
 msgid "-This module does not create views."
-msgstr ""
+msgstr "-Tento modul nevytváří pohledy."
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.module_form
@@ -4972,7 +4996,7 @@ msgstr ""
 #. module: base
 #: model:ir.ui.view,arch_db:base.res_lang_form
 msgid "2. %a ,%A         ==&gt; Fri, Friday"
-msgstr ""
+msgstr "2. %a ,%A         ==&gt; Pá, pátek"
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_rule_form
@@ -5053,7 +5077,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:base.view_model_fields_form
 #: model:ir.ui.view,arch_db:base.view_model_form
 msgid "<code>datetime</code> (Python module)"
-msgstr ""
+msgstr "<code>datetime</code> (Python modul)"
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_model_fields_form
@@ -5103,7 +5127,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:base.view_model_fields_form
 #: model:ir.ui.view,arch_db:base.view_model_form
 msgid "<code>time</code> (Python module)"
-msgstr ""
+msgstr "<code>time</code> (Python modul)"
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_server_action_form
@@ -5115,7 +5139,7 @@ msgstr ""
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_currency_kanban
 msgid "<strong><span>Current Rate: </span></strong>"
-msgstr ""
+msgstr "<strong><span>Aktuální kurz: </span></strong>"
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.report_irmodeloverview
@@ -5130,12 +5154,12 @@ msgstr ""
 #. module: base
 #: model:ir.ui.view,arch_db:base.report_irmodulereference
 msgid "<strong>Dependencies :</strong>"
-msgstr ""
+msgstr "<strong>Závislosti:</strong>"
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_res_company_kanban
 msgid "<strong>Email:</strong>"
-msgstr ""
+msgstr "<strong>Email:</strong>"
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.report_irmodeloverview
@@ -5175,17 +5199,17 @@ msgstr ""
 #. module: base
 #: model:ir.ui.view,arch_db:base.report_irmodulereference
 msgid "<strong>Reports :</strong>"
-msgstr ""
+msgstr "<strong>Reporty :</strong>"
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.report_irmodeloverview
 msgid "<strong>Ro</strong>"
-msgstr ""
+msgstr "<strong>Ro</strong>"
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.report_irmodeloverview
 msgid "<strong>Rq</strong>"
-msgstr ""
+msgstr "<strong>Rq</strong>"
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.report_irmodeloverview
@@ -7767,6 +7791,12 @@ msgstr "Komentáře"
 #: model:ir.model.fields,field_description:base.field_res_users_commercial_partner_id
 msgid "Commercial Entity"
 msgstr "Podnikatelský subjekt"
+
+#. module: base
+#: model:ir.model.fields,field_description:base.field_res_partner_commercial_partner_country_id
+#: model:ir.model.fields,field_description:base.field_res_users_commercial_partner_country_id
+msgid "Commercial Entity's Country"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_pos_data_drinks
@@ -11068,7 +11098,7 @@ msgstr "Ovladače hardwaru"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hw_proxy
 msgid "Hardware Proxy"
-msgstr ""
+msgstr "Hardwarová Proxy"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_report_paperformat_header_spacing
@@ -12163,7 +12193,7 @@ msgstr "Neplatný typ"
 #: code:addons/base/ir/ir_default.py:70
 #, python-format
 msgid "Invalid value for %s.%s: %s"
-msgstr ""
+msgstr "Neplatná hodnota pro %s.%s: %s"
 
 #. module: base
 #: code:addons/base/ir/ir_ui_view.py:343
@@ -13460,7 +13490,7 @@ msgstr "Zpráva"
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_users_form
 msgid "Messaging and Social"
-msgstr ""
+msgstr "Zprávy a sociální sítě"
 
 #. module: base
 #: code:addons/base/res/res_config.py:498
@@ -16833,7 +16863,7 @@ msgstr ""
 #: model:ir.module.module,summary:base.module_sale_expense
 #: model:ir.module.module,summary:base.module_sale_stock
 msgid "Quotation, Sales Orders, Delivery & Invoicing Control"
-msgstr ""
+msgstr "Nabídky, objednávky, kontrola doručení a fakturace"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_sale_management
@@ -17213,7 +17243,7 @@ msgstr "Rozšíření restaurace pro prodejní místo"
 #. module: base
 #: selection:ir.model.fields,on_delete:0
 msgid "Restrict"
-msgstr ""
+msgstr "Omezit"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_act_window_multi
@@ -17321,7 +17351,7 @@ msgstr "S OSTATNÍ SERVISNÍ ČINNOSTI"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_sepa
 msgid "SEPA Credit Transfer"
-msgstr ""
+msgstr "SEPA Credit Transfer"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr_expense_sepa
@@ -17460,7 +17490,7 @@ msgstr "Prodejní kanály"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_expense
 msgid "Sales Expense"
-msgstr ""
+msgstr "Prodejní náklady"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_management
@@ -17702,7 +17732,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_sale_timesheet
 msgid "Sell based on timesheets"
-msgstr ""
+msgstr "Prodeje na základě časových rozvrhů"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_account
@@ -18029,7 +18059,7 @@ msgstr "Přeskočit"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_slides
 msgid "Slides"
-msgstr ""
+msgstr "prezentace"
 
 #. module: base
 #: model:res.country,name:base.sk
@@ -18691,7 +18721,7 @@ msgstr "Testování výkonu"
 #. module: base
 #: model:ir.module.module,description:base.module_test_access_rights
 msgid "Testing of access restrictions"
-msgstr ""
+msgstr "Testování omezení přístupu"
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_tests
@@ -18707,7 +18737,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,description:base.module_test_converter
 msgid "Tests of field conversions"
-msgstr ""
+msgstr "Testy konverzí polí"
 
 #. module: base
 #: selection:ir.property,type:0
@@ -18860,7 +18890,7 @@ msgstr "Kód měny musí být jedinečný!"
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_attachment_res_model
 msgid "The database object this attachment will be attached to."
-msgstr ""
+msgstr "Databáze, jíž bude tato příloha připojena."
 
 #. module: base
 #: code:addons/base/ir/ir_model.py:561
@@ -19903,6 +19933,8 @@ msgstr ""
 msgid ""
 "Unrecognized extension: must be one of .csv, .po, or .tgz (received .%s)."
 msgstr ""
+"Nerozpoznaná koncovka souboru: musí být jedna z koncovek .csv, .po nebo .tgz"
+" (přijato %s)."
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_translation_search
@@ -20443,7 +20475,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_ui_view_inherit_children_ids
 msgid "Views which inherit from this one"
-msgstr ""
+msgstr "Pohledy, které z tohoto důvodu dědí"
 
 #. module: base
 #: model:res.country,name:base.vg
@@ -20488,7 +20520,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_stock_picking_batch
 msgid "Warehouse Management: Batch Picking"
-msgstr ""
+msgstr "Správa skladu: dávkové vybírání"
 
 #. module: base
 #: code:addons/base/ir/ir_mail_server.py:479
@@ -20513,7 +20545,7 @@ msgstr "Varování"
 #. module: base
 #: model:res.partner.industry,name:base.res_partner_industry_E
 msgid "Water supply"
-msgstr ""
+msgstr "Zdroj vody"
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_base_module_upgrade_install
@@ -20537,7 +20569,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_web_editor
 msgid "Web Editor"
-msgstr ""
+msgstr "Webový Editor"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_web_enterprise
@@ -20563,7 +20595,7 @@ msgstr "Obrázek webové ikony"
 #: model:ir.module.module,shortdesc:base.module_http_routing
 #: model:ir.module.module,summary:base.module_http_routing
 msgid "Web Routing"
-msgstr ""
+msgstr "Webové přesměrování"
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_translation_search
@@ -20637,7 +20669,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_mail
 msgid "Website Mail"
-msgstr ""
+msgstr "Website e-mail"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_mass_mailing
@@ -20647,17 +20679,17 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_website_mail
 msgid "Website Module for Mail"
-msgstr ""
+msgstr "Modul webových stránek pro poštu"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_partner
 msgid "Website Partner"
-msgstr ""
+msgstr "Partner webové stránky"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_rating
 msgid "Website Rating"
-msgstr ""
+msgstr "Hodnocení webových stránek"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_rating_project
