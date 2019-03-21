@@ -1412,7 +1412,7 @@
                                     </div>
                                     <div class="col-xs-6">
                                         <span class="pull-right">
-                                            <field name="state" widget="kanban_label_selection" options="{'classes': {'draft': 'default', 'posted': 'success'}}"/>
+                                            <field name="state" widget="label_selection" options="{'classes': {'draft': 'default', 'posted': 'success'}}"/>
                                         </span>
                                     </div>
                                 </div>
@@ -1427,10 +1427,11 @@
             <field name="name">account.move.form</field>
             <field name="model">account.move</field>
             <field name="arch" type="xml">
-                <form string="Account Entry">
+                <form string="Account Entry" duplicate="false">
                     <header>
                         <button name="post" states="draft" string="Post" type="object" class="oe_highlight" groups="account.group_account_invoice"/>
                         <button name="%(action_view_account_move_reversal)d" states="posted" string="Reverse Entry" type="action" groups="account.group_account_invoice"/>
+                        <button name="action_duplicate" string="Duplicate" type="object" groups="account.group_account_invoice"/>
                         <field name="state" widget="statusbar"/>
                     </header>
                     <sheet>

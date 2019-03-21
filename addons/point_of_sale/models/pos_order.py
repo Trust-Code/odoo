@@ -486,13 +486,11 @@ class PosOrder(models.Model):
             aml = order.statement_ids.mapped('journal_entry_ids') | order.account_move.line_ids | order.invoice_id.move_id.line_ids
             aml = aml.filtered(lambda r: not r.reconciled and r.account_id.internal_type == 'receivable' and r.partner_id == order.partner_id.commercial_partner_id)
 
-            # Reconcile returns first
-            # to avoid mixing up the credit of a payment and the credit of a return
-            # in the receivable account
-            aml_returns = aml.filtered(lambda l: (l.journal_id.type == 'sale' and l.credit) or (l.journal_id.type != 'sale' and l.debit))
             try:
-                aml_returns.reconcile()
-                (aml - aml_returns).reconcile()
+                # Cash returns will be well reconciled
+                # Whereas freight returns won't be
+                # "c'est la vie..."
+                aml.reconcile()
             except Exception:
                 # There might be unexpected situations where the automatic reconciliation won't
                 # work. We don't want the user to be blocked because of this, since the automatic
@@ -834,21 +832,18 @@ class PosOrder(models.Model):
                 lots_necessary = True
                 if picking_type:
                     lots_necessary = picking_type and picking_type.use_existing_lots
-                qty = 0
                 qty_done = 0
                 pack_lots = []
                 pos_pack_lots = PosPackOperationLot.search([('order_id', '=', order.id), ('product_id', '=', move.product_id.id)])
-                pack_lot_names = [pos_pack.lot_name for pos_pack in pos_pack_lots]
 
-                if pack_lot_names and lots_necessary:
-                    for lot_name in list(set(pack_lot_names)):
-                        stock_production_lot = StockProductionLot.search([('name', '=', lot_name), ('product_id', '=', move.product_id.id)])
+                if pos_pack_lots and lots_necessary:
+                    for pos_pack_lot in pos_pack_lots:
+                        stock_production_lot = StockProductionLot.search([('name', '=', pos_pack_lot.lot_name), ('product_id', '=', move.product_id.id)])
                         if stock_production_lot:
+                            # a serialnumber always has a quantity of 1 product, a lot number takes the full quantity of the order line
+                            qty = 1.0
                             if stock_production_lot.product_id.tracking == 'lot':
-                                # if a lot nr is set through the frontend it will refer to the full quantity
-                                qty = move.product_uom_qty
-                            else: # serial numbers
-                                qty = 1.0
+                                qty = pos_pack_lot.pos_order_line_id.qty
                             qty_done += qty
                             pack_lots.append({'lot_id': stock_production_lot.id, 'qty': qty})
                         else:
@@ -860,6 +855,7 @@ class PosOrder(models.Model):
                 for pack_lot in pack_lots:
                     lot_id, qty = pack_lot['lot_id'], pack_lot['qty']
                     self.env['stock.move.line'].create({
+                        'picking_id': move.picking_id.id,
                         'move_id': move.id,
                         'product_id': move.product_id.id,
                         'product_uom_id': move.product_uom.id,

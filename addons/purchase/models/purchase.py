@@ -307,6 +307,7 @@ class PurchaseOrder(models.Model):
             'default_template_id': template_id,
             'default_composition_mode': 'comment',
             'custom_layout': "purchase.mail_template_data_notification_email_purchase_order",
+            'purchase_mark_rfq_sent': True,
             'force_email': True
         })
         return {
@@ -459,6 +460,16 @@ class PurchaseOrder(models.Model):
                     'currency_id': currency.id,
                     'delay': 0,
                 }
+                # In case the order partner is a contact address, a new supplierinfo is created on
+                # the parent company. In this case, we keep the product name and code.
+                seller = line.product_id._select_seller(
+                    partner_id=line.partner_id,
+                    quantity=line.product_qty,
+                    date=line.order_id.date_order and line.order_id.date_order[:10],
+                    uom_id=line.product_uom)
+                if seller:
+                    supplierinfo['product_name'] = seller.product_name
+                    supplierinfo['product_code'] = seller.product_code
                 vals = {
                     'seller_ids': [(0, 0, supplierinfo)],
                 }
@@ -521,6 +532,8 @@ class PurchaseOrder(models.Model):
             res = self.env.ref('account.invoice_supplier_form', False)
             result['views'] = [(res and res.id or False, 'form')]
             result['res_id'] = self.invoice_ids.id
+        result['context']['default_origin'] = self.name
+        result['context']['default_reference'] = self.partner_ref
         return result
 
     @api.multi
@@ -746,9 +759,11 @@ class PurchaseOrderLine(models.Model):
     def _create_stock_moves(self, picking):
         moves = self.env['stock.move']
         done = self.env['stock.move'].browse()
-        for line in self:
-            for val in line._prepare_stock_moves(picking):
-                done += moves.create(val)
+        with self.env.norecompute():
+            for line in self:
+                for val in line._prepare_stock_moves(picking):
+                    done += moves.create(val)
+        self.recompute()
         return done
 
     @api.multi
@@ -1122,7 +1137,7 @@ class MailComposeMessage(models.TransientModel):
 
     @api.multi
     def mail_purchase_order_on_send(self):
-        if not self.filtered('subtype_id.internal'):
+        if self._context.get('purchase_mark_rfq_sent'):
             order = self.env['purchase.order'].browse(self._context['default_res_id'])
             if order.state == 'draft':
                 order.state = 'sent'
@@ -1130,6 +1145,7 @@ class MailComposeMessage(models.TransientModel):
     @api.multi
     def send_mail(self, auto_commit=False):
         if self._context.get('default_model') == 'purchase.order' and self._context.get('default_res_id'):
-            self = self.with_context(mail_post_autofollow=True)
+            order = self.env['purchase.order'].browse(self._context['default_res_id'])
+            self = self.with_context(mail_post_autofollow=True, lang=order.partner_id.lang)
             self.mail_purchase_order_on_send()
         return super(MailComposeMessage, self).send_mail(auto_commit=auto_commit)

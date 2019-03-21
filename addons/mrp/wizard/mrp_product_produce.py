@@ -85,7 +85,7 @@ class MrpProductProduce(models.TransientModel):
     product_uom_id = fields.Many2one('product.uom', 'Unit of Measure')
     lot_id = fields.Many2one('stock.production.lot', string='Lot')
     produce_line_ids = fields.One2many('mrp.product.produce.line', 'product_produce_id', string='Product to Track')
-    product_tracking = fields.Selection(related="product_id.tracking")
+    product_tracking = fields.Selection(related="product_id.tracking", readonly=True)
 
     @api.multi
     def do_produce(self):
@@ -133,6 +133,7 @@ class MrpProductProduce(models.TransientModel):
                 existing_move_line.product_uom_qty += self.product_qty
                 existing_move_line.qty_done += self.product_qty
             else:
+                location_dest_id = produce_move.location_dest_id.get_putaway_strategy(self.product_id).id or produce_move.location_dest_id.id
                 vals = {
                   'move_id': produce_move.id,
                   'product_id': produce_move.product_id.id,
@@ -142,7 +143,7 @@ class MrpProductProduce(models.TransientModel):
                   'qty_done': self.product_qty,
                   'lot_id': self.lot_id.id,
                   'location_id': produce_move.location_id.id,
-                  'location_dest_id': produce_move.location_dest_id.id,
+                  'location_dest_id': location_dest_id,
                 }
                 self.env['stock.move.line'].create(vals)
 

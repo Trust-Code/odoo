@@ -180,6 +180,9 @@ class IrModel(models.Model):
                 # prevent screwing up fields that depend on these models' fields
                 model.field_id._prepare_update()
 
+        # delete fields whose comodel is being removed
+        self.env['ir.model.fields'].search([('relation', 'in', self.mapped('model'))]).unlink()
+
         self._drop_table()
         res = super(IrModel, self).unlink()
 
@@ -365,6 +368,11 @@ class IrModelFields(models.Model):
             _logger.info('Invalid selection list definition for fields.selection', exc_info=True)
             raise UserError(_("The Selection Options expression is not a valid Pythonic expression. "
                               "Please provide an expression in the [('key','Label'), ...] format."))
+
+    @api.constrains('domain')
+    def _check_domain(self):
+        for field in self:
+            safe_eval(field.domain or '[]')
 
     @api.constrains('name', 'state')
     def _check_name(self):

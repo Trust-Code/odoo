@@ -7,17 +7,17 @@
 # ТАрас <tratatuta@i.ua>, 2017
 # rontif <oleksandr.basenko@gmail.com>, 2018
 # Olga Lugova <trolka.olug@gmail.com>, 2018
-# Alina Lisnenko <alinasemeniuk1@gmail.com>, 2018
 # Martin Trigaux, 2018
 # Bohdan Lisnenko, 2018
+# Alina Lisnenko <alinasemeniuk1@gmail.com>, 2019
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-27 11:55+0000\n"
+"POT-Creation-Date: 2019-01-03 15:06+0000\n"
 "PO-Revision-Date: 2017-09-20 10:19+0000\n"
-"Last-Translator: Bohdan Lisnenko, 2018\n"
+"Last-Translator: Alina Lisnenko <alinasemeniuk1@gmail.com>, 2019\n"
 "Language-Team: Ukrainian (https://www.transifex.com/odoo/teams/41243/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -229,6 +229,19 @@ msgstr ""
 "object.parent_id.record_name and 'Re: %s' % object.parent_id.record_name)}"
 
 #. module: mail
+#: code:addons/mail/wizard/invite.py:29
+#, python-format
+msgid "%(user_name)s invited you to follow %(document)s document: %(title)s"
+msgstr ""
+"%(user_name)s запросив вас слідкувати %(document)s за документом: %(title)s"
+
+#. module: mail
+#: code:addons/mail/wizard/invite.py:31
+#, python-format
+msgid "%(user_name)s invited you to follow a new document."
+msgstr "%(user_name)s запросив вас слідкувати за новим документом."
+
+#. module: mail
 #. openerp-web
 #: code:addons/mail/static/src/js/chat_manager.js:63
 #, python-format
@@ -377,22 +390,6 @@ msgid ""
 msgstr ""
 "<div class=\"o_mail_notification\">покинуто <a href=\"#\" "
 "class=\"o_channel_redirect\" data-oe-id=\"%s\">#%s</a></div>"
-
-#. module: mail
-#: code:addons/mail/wizard/invite.py:23
-#, python-format
-msgid ""
-"<div><p>Hello,</p><p>%s invited you to follow %s document: %s.</p></div>"
-msgstr "<div><p>Привіт,</p><p>%s запросив Вас вподобати %s : %s.</p></div>"
-
-#. module: mail
-#: code:addons/mail/wizard/invite.py:26
-#, python-format
-msgid ""
-"<div><p>Hello,</p><p>%s invited you to follow a new document.</p></div>"
-msgstr ""
-"<div><p>Вітаємо,</p><p>%s запросив вас відслідковувати новий "
-"документ.</p></div>"
 
 #. module: mail
 #. openerp-web
@@ -1453,7 +1450,7 @@ msgstr "Шановний"
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_message_subtype_default
 msgid "Default"
-msgstr "Типовий"
+msgstr "За замовчуванням"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_email_template_preview_null_value
@@ -1640,7 +1637,7 @@ msgstr "Готово"
 #: code:addons/mail/static/src/xml/activity.xml:77
 #, python-format
 msgid "Done & Schedule Next"
-msgstr "Готово & Наступний розклад"
+msgstr "Готово & Запланувати наступне"
 
 #. module: mail
 #. openerp-web
@@ -2264,6 +2261,12 @@ msgid "Headers"
 msgstr "Заголовки"
 
 #. module: mail
+#: code:addons/mail/wizard/invite.py:35
+#, python-format
+msgid "Hello,"
+msgstr "Вітаємо,"
+
+#. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_message_subtype_hidden
 msgid "Hidden"
 msgstr "Приховано"
@@ -2615,7 +2618,7 @@ msgstr "Запросити підписника"
 #: code:addons/mail/static/src/xml/client_action.xml:133
 #, python-format
 msgid "Invite people"
-msgstr "Запросити людей"
+msgstr "Тільки запрошені люди"
 
 #. module: mail
 #. openerp-web
@@ -2632,7 +2635,7 @@ msgstr "Майстер запрошень"
 #. module: mail
 #: selection:mail.channel,public:0
 msgid "Invited people only"
-msgstr "Запросити тільки людей"
+msgstr "Тільки запрошені люди"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_account_analytic_account_message_is_follower
@@ -4519,7 +4522,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:mail.field_mail_template_reply_to
 #: model:ir.model.fields,field_description:mail.field_survey_mail_compose_message_reply_to
 msgid "Reply-To"
-msgstr "Відповісти до"
+msgstr "Відповісти"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_email_template_preview_report_name
@@ -4597,7 +4600,7 @@ msgstr "Скажіть щось"
 #. module: mail
 #: model:ir.ui.view,arch_db:mail.mail_activity_view_form_popup
 msgid "Schedule"
-msgstr "План"
+msgstr "Запланувати"
 
 #. module: mail
 #. openerp-web

@@ -8,6 +8,7 @@
 # Manuela Feliciani <mfeliciani@alice.it>, 2018
 # Luigi Di Naro <gigidn@gmail.com>, 2018
 # David Minneci <david@numeko.it>, 2018
+# Davide Corio <enlightx@gmail.com>, 2018
 # Cécile Collart <cco@odoo.com>, 2018
 # Lorenzo Battistini <lorenzo.battistini@agilebg.com>, 2018
 # Massimo Bianchi <bianchi.massimo@gmail.com>, 2018
@@ -21,19 +22,19 @@
 # Martin Trigaux, 2018
 # Giovanni Perteghella <giovanni@perteghella.org>, 2018
 # Simone Bernini <simone@aperturelabs.it>, 2018
-# Sergio Zanchetta <primes2h@gmail.com>, 2018
 # Marco Calcagni <mcalcagni@dinamicheaziendali.it>, 2018
 # Paolo Valier, 2018
 # efraimbiffi <eab@odoo.com>, 2018
-# Léonie Bouchat <lbo@odoo.com>, 2018
+# Sergio Zanchetta <primes2h@gmail.com>, 2019
+# Léonie Bouchat <lbo@odoo.com>, 2019
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-27 11:55+0000\n"
+"POT-Creation-Date: 2019-01-03 15:06+0000\n"
 "PO-Revision-Date: 2017-09-20 10:19+0000\n"
-"Last-Translator: Léonie Bouchat <lbo@odoo.com>, 2018\n"
+"Last-Translator: Léonie Bouchat <lbo@odoo.com>, 2019\n"
 "Language-Team: Italian (https://www.transifex.com/odoo/teams/41243/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -152,6 +153,19 @@ msgid ""
 "object.parent_id.subject) or (object.parent_id and "
 "object.parent_id.record_name and 'Re: %s' % object.parent_id.record_name)}"
 msgstr ""
+
+#. module: mail
+#: code:addons/mail/wizard/invite.py:29
+#, python-format
+msgid "%(user_name)s invited you to follow %(document)s document: %(title)s"
+msgstr ""
+"%(user_name)s ti ha invitato a seguire il documento %(document)s: %(title)s"
+
+#. module: mail
+#: code:addons/mail/wizard/invite.py:31
+#, python-format
+msgid "%(user_name)s invited you to follow a new document."
+msgstr "%(user_name)s ti ha invitato a seguire un nuovo documento."
 
 #. module: mail
 #. openerp-web
@@ -301,24 +315,6 @@ msgid ""
 msgstr ""
 "<div class=\"o_mail_notification\">sinistra <a href=\"#\" "
 "class=\"o_channel_redirect\" data-oe-id=\"%s\">#%s</a></div>"
-
-#. module: mail
-#: code:addons/mail/wizard/invite.py:23
-#, python-format
-msgid ""
-"<div><p>Hello,</p><p>%s invited you to follow %s document: %s.</p></div>"
-msgstr ""
-"<div><p>Ciao,</p><p>%s sei stato invitato a seguire %s il documento: "
-"%s.</p></div>"
-
-#. module: mail
-#: code:addons/mail/wizard/invite.py:26
-#, python-format
-msgid ""
-"<div><p>Hello,</p><p>%s invited you to follow a new document.</p></div>"
-msgstr ""
-"<div><p>Ciao,</p><p>%s sei stato invitato a seguire un nuovo "
-"documento.</p></div>"
 
 #. module: mail
 #. openerp-web
@@ -2191,6 +2187,12 @@ msgid "Headers"
 msgstr "Intestazioni"
 
 #. module: mail
+#: code:addons/mail/wizard/invite.py:35
+#, python-format
+msgid "Hello,"
+msgstr "Buongiorno,"
+
+#. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_message_subtype_hidden
 msgid "Hidden"
 msgstr "Nascosto"
@@ -2926,7 +2928,7 @@ msgstr "Invia il tipo di attività per email"
 #. module: mail
 #: model:ir.ui.view,arch_db:mail.mail_channel_view_form
 msgid "Mail Channel Form"
-msgstr ""
+msgstr "Modulo canale email"
 
 #. module: mail
 #: code:addons/mail/models/mail_mail.py:372
@@ -3994,7 +3996,7 @@ msgstr "Altro"
 #. module: mail
 #: model:ir.ui.view,arch_db:mail.view_mail_search selection:mail.mail,state:0
 msgid "Outgoing"
-msgstr "Estroverso"
+msgstr "In uscita"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_email_template_preview_mail_server_id
@@ -5382,7 +5384,7 @@ msgstr "Disdire l'abbonamento al canale"
 #: code:addons/mail/static/src/js/chat_manager.js:486
 #, python-format
 msgid "Unsubscribed"
-msgstr ""
+msgstr "Disiscriversi"
 
 #. module: mail
 #: code:addons/mail/models/mail_template.py:510
@@ -5587,8 +5589,8 @@ msgstr "Sei nel canale <b>#%s</b>."
 msgid ""
 "You can mark any message as 'starred', and it shows up in this channel."
 msgstr ""
-"Puoi impostare qualunque messaggio come 'speciale', e verrà visualizzato in "
-"questo canale."
+"È possibile aggiungere un messaggio ai \"Preferiti\", comparirà in questo "
+"canale."
 
 #. module: mail
 #: code:addons/mail/models/res_users.py:54
@@ -5617,7 +5619,7 @@ msgid ""
 "You could also add a new %(document)s by sending an email to: "
 "%(email_link)s."
 msgstr ""
-"Puoi anche aggiungere un nuovo %(document)s mandando un'email a: "
+"È possibile anche aggiungere un nuovo %(document)s mandando una email a: "
 "%(email_link)s."
 
 #. module: mail
@@ -5853,7 +5855,7 @@ msgstr "publisher_warranty.contract"
 #. module: mail
 #: model:mail.channel,name:mail.channel_3
 msgid "rd"
-msgstr ""
+msgstr "R&S"
 
 #. module: mail
 #. openerp-web

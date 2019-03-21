@@ -3,18 +3,19 @@
 # * auth_signup
 # 
 # Translators:
-# Martin Trigaux, 2017
-# Paolo Valier, 2017
-# Pietro Della Notte <pdellanotte@gmail.com>, 2017
 # Francesco Garganese <francesco.garganese@aeromnia.aero>, 2018
-# Léonie Bouchat <lbo@odoo.com>, 2018
+# Martin Trigaux, 2018
+# Pietro Della Notte <pdellanotte@gmail.com>, 2018
+# Paolo Valier, 2018
+# Léonie Bouchat <lbo@odoo.com>, 2019
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-27 11:56+0000\n"
-"PO-Revision-Date: 2018-07-27 11:56+0000\n"
-"Last-Translator: Léonie Bouchat <lbo@odoo.com>, 2018\n"
+"PO-Revision-Date: 2017-09-20 10:15+0000\n"
+"Last-Translator: Léonie Bouchat <lbo@odoo.com>, 2019\n"
 "Language-Team: Italian (https://www.transifex.com/odoo/teams/41243/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -144,11 +145,13 @@ msgid ""
 "<strong>An invitation email containing the following subscription link has "
 "been sent:</strong>"
 msgstr ""
+"<strong>È stata inviata una email di invito con il seguente link di "
+"iscrizione:</strong>"
 
 #. module: auth_signup
 #: model:ir.ui.view,arch_db:auth_signup.signup
 msgid "Already have an account?"
-msgstr ""
+msgstr "Hai già un account?"
 
 #. module: auth_signup
 #: code:addons/auth_signup/controllers/main.py:79
@@ -172,7 +175,7 @@ msgstr "Autenticazione fallita."
 #. module: auth_signup
 #: model:ir.ui.view,arch_db:auth_signup.reset_password
 msgid "Back to Login"
-msgstr "Ritorno al Login"
+msgstr "Ritorna al Login"
 
 #. module: auth_signup
 #: code:addons/auth_signup/models/res_users.py:137
@@ -225,7 +228,7 @@ msgstr "Autorizzazioni di Accesso predefinite"
 #. module: auth_signup
 #: model:ir.ui.view,arch_db:auth_signup.login
 msgid "Don't have an account?"
-msgstr ""
+msgstr "Non hai un account?"
 
 #. module: auth_signup
 #: model:ir.model.fields,field_description:auth_signup.field_res_config_settings_auth_signup_reset_password
@@ -275,7 +278,7 @@ msgstr "Mai connesso"
 #: code:addons/auth_signup/controllers/main.py:74
 #, python-format
 msgid "No login provided."
-msgstr ""
+msgstr "Nessun login fornito"
 
 #. module: auth_signup
 #: selection:res.config.settings,auth_signup_uninvited:0
@@ -290,7 +293,7 @@ msgstr "Password"
 #. module: auth_signup
 #: model:ir.ui.view,arch_db:auth_signup.res_config_settings_view_form
 msgid "Password Reset"
-msgstr ""
+msgstr "Reimpostazione password"
 
 #. module: auth_signup
 #: model:mail.template,subject:auth_signup.reset_password_email
@@ -301,7 +304,7 @@ msgstr "Ripristino password"
 #: code:addons/auth_signup/controllers/main.py:124
 #, python-format
 msgid "Passwords do not match; please retype them."
-msgstr ""
+msgstr "Le password non corrispondono, per favore scrivile di nuovo."
 
 #. module: auth_signup
 #: model:ir.ui.view,arch_db:auth_signup.login
@@ -327,7 +330,7 @@ msgstr "Inviare una e-mail di invito"
 #. module: auth_signup
 #: model:ir.ui.view,arch_db:auth_signup.signup
 msgid "Sign up"
-msgstr "Registrazione"
+msgstr "Registrati"
 
 #. module: auth_signup
 #: model:ir.model.fields,field_description:auth_signup.field_res_partner_signup_expiration
@@ -393,7 +396,7 @@ msgstr ""
 #: code:addons/auth_signup/controllers/main.py:122
 #, python-format
 msgid "The form was not properly filled in."
-msgstr ""
+msgstr "Il modulo non è stato compilato correttamente."
 
 #. module: auth_signup
 #: model:ir.model,name:auth_signup.model_res_users
@@ -403,7 +406,7 @@ msgstr "Utenti"
 #. module: auth_signup
 #: model:mail.template,subject:auth_signup.mail_template_user_signup_account_created
 msgid "Welcome to ${object.company_id.name}!"
-msgstr ""
+msgstr "Benvenuto su ${object.company_id.name}!"
 
 #. module: auth_signup
 #: model:ir.ui.view,arch_db:auth_signup.fields

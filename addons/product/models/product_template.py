@@ -62,6 +62,8 @@ class ProductTemplate(models.Model):
 
     currency_id = fields.Many2one(
         'res.currency', 'Currency', compute='_compute_currency_id')
+    cost_currency_id = fields.Many2one(
+        'res.currency', 'Cost Currency', compute='_compute_cost_currency_id')
 
     # price fields
     price = fields.Float(
@@ -162,6 +164,10 @@ class ProductTemplate(models.Model):
             main_company = self.env['res.company'].sudo().search([], limit=1, order="id")
         for template in self:
             template.currency_id = template.company_id.sudo().currency_id.id or main_company.currency_id.id
+
+    def _compute_cost_currency_id(self):
+        for template in self:
+            template.cost_currency_id = self.env.user.company_id.currency_id.id
 
     @api.multi
     def _compute_template_price(self):
@@ -332,6 +338,8 @@ class ProductTemplate(models.Model):
 
     @api.multi
     def name_get(self):
+        # Prefetch the fields used by the `name_get`, so `browse` doesn't fetch other fields
+        self.read(['name', 'default_code'])
         return [(template.id, '%s%s' % (template.default_code and '[%s] ' % template.default_code or '', template.name))
                 for template in self]
 

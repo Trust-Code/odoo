@@ -3,22 +3,24 @@
 # * web
 # 
 # Translators:
-# Yihya Hugirat <hugirat@gmail.com>, 2017
 # שהאב חוסיין <shhab89@gmail.com>, 2018
-# Martin Trigaux, 2018
 # ilan kl <ilan@qaroads.co.il>, 2018
-# Fishfur A Banter <fishfurbanter@gmail.com>, 2018
-# ExcaliberX <excaliberx@gmail.com>, 2018
 # Leandro Noijovich <eliel.sorcerer@gmail.com>, 2018
 # Itzik Ephraim <oranja@gmail.com>, 2018
 # Moshe Flam <pashute@gmail.com>, 2018
+# Fishfur A Banter <fishfurbanter@gmail.com>, 2018
+# ExcaliberX <excaliberx@gmail.com>, 2018
+# Yihya Hugirat <hugirat@gmail.com>, 2018
+# Martin Trigaux, 2018
+# דודי מלכה <Dudimalka6@gmail.com>, 2019
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-27 11:56+0000\n"
-"PO-Revision-Date: 2018-07-27 11:56+0000\n"
-"Last-Translator: Moshe Flam <pashute@gmail.com>, 2018\n"
+"POT-Creation-Date: 2019-01-03 15:07+0000\n"
+"PO-Revision-Date: 2017-09-20 10:24+0000\n"
+"Last-Translator: דודי מלכה <Dudimalka6@gmail.com>, 2019\n"
 "Language-Team: Hebrew (https://www.transifex.com/odoo/teams/41243/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -441,11 +443,12 @@ msgstr ""
 
 #. module: web
 #. openerp-web
-#: code:addons/web/static/src/js/chrome/abstract_web_client.js:188
+#: code:addons/web/static/src/js/chrome/abstract_web_client.js:190
 #, python-format
 msgid ""
 "An unknown CORS error occured. The error probably originates from a "
-"JavaScript file served from a different origin."
+"JavaScript file served from a different origin. (Opening your browser "
+"console might give you a hint on the error.)"
 msgstr ""
 
 #. module: web
@@ -1282,7 +1285,7 @@ msgstr ""
 #: code:addons/web/static/src/xml/kanban.xml:20
 #, python-format
 msgid "Fold"
-msgstr ""
+msgstr "קפל"
 
 #. module: web
 #. openerp-web
@@ -2383,7 +2386,7 @@ msgstr "עדיין טוען...<br />נא להמתין."
 #: code:addons/web/static/src/xml/web_calendar.xml:80
 #, python-format
 msgid "Summary:"
-msgstr ""
+msgstr "סיכום:"
 
 #. module: web
 #. openerp-web
@@ -2723,7 +2726,7 @@ msgstr "העלה את הקובץ שלך"
 #: code:addons/web/static/src/js/fields/relational_fields.js:1581
 #, python-format
 msgid "Uploading Error"
-msgstr ""
+msgstr "שגיאת העלאה"
 
 #. module: web
 #. openerp-web
@@ -3034,7 +3037,7 @@ msgstr ""
 #: code:addons/web/static/src/js/widgets/domain_selector.js:25
 #, python-format
 msgid "in"
-msgstr ""
+msgstr "ב"
 
 #. module: web
 #: model:ir.model,name:web.model_ir_qweb_field_image
@@ -3060,9 +3063,23 @@ msgstr ""
 
 #. module: web
 #. openerp-web
+#: code:addons/web/static/src/js/chrome/search_filters.js:185
+#, python-format
+msgid "is after or equal"
+msgstr ""
+
+#. module: web
+#. openerp-web
 #: code:addons/web/static/src/js/chrome/search_filters.js:184
 #, python-format
 msgid "is before"
+msgstr ""
+
+#. module: web
+#. openerp-web
+#: code:addons/web/static/src/js/chrome/search_filters.js:186
+#, python-format
+msgid "is before or equal"
 msgstr ""
 
 #. module: web

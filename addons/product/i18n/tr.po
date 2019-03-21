@@ -3,30 +3,31 @@
 # * product
 # 
 # Translators:
-# Martin Trigaux, 2017
-# Murat Kaplan <muratk@projetgrup.com>, 2017
-# Ramiz Deniz Öner <deniz@denizoner.com>, 2017
-# tanerhasret <tanerhasret@gmail.com>, 2017
-# Ediz Duman <neps1192@gmail.com>, 2017
-# Fırat Kaya <firat.kaya@mechsoft.com.tr>, 2017
-# Ayhan KIZILTAN <akiziltan76@hotmail.com>, 2017
-# Levent Karakaş <levent@mektup.at>, 2017
-# Güven YILMAZ <guvenyilmaz@outlook.com.tr>, 2017
 # Alper Çiftçi <inactive+alprciftci@transifex.com>, 2017
-# cagri erarslan <cagri.erarslan@mechsoft.com.tr>, 2017
 # Gökhan Erdoğdu <gokhan.erdogdu@mechsoft.com.tr>, 2017
+# Fırat Kaya <firat.kaya@mechsoft.com.tr>, 2017
 # Saban Yildiz <sabany@projetgrup.com>, 2017
 # gezgin biri <gezginbiri@hotmail.com>, 2017
-# Umur Akın <umura@projetgrup.com>, 2018
+# tanerhasret <tanerhasret@gmail.com>, 2017
+# Ayhan KIZILTAN <akiziltan76@hotmail.com>, 2017
+# cagri erarslan <cagri.erarslan@mechsoft.com.tr>, 2017
+# Ediz Duman <neps1192@gmail.com>, 2017
+# Güven YILMAZ <guvenyilmaz@outlook.com.tr>, 2017
+# Levent Karakaş <levent@mektup.at>, 2018
+# Murat Kaplan <muratk@projetgrup.com>, 2018
+# Martin Trigaux, 2018
 # Ertuğrul Güreş <ertugrulg@projetgrup.com>, 2018
 # Buket Şeker <buket_skr@hotmail.com>, 2018
+# Ramiz Deniz Öner <deniz@denizoner.com>, 2018
+# Umur Akın <umura@projetgrup.com>, 2019
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-27 11:56+0000\n"
-"PO-Revision-Date: 2018-07-27 11:56+0000\n"
-"Last-Translator: Buket Şeker <buket_skr@hotmail.com>, 2018\n"
+"POT-Creation-Date: 2019-01-03 15:07+0000\n"
+"PO-Revision-Date: 2017-09-20 10:22+0000\n"
+"Last-Translator: Umur Akın <umura@projetgrup.com>, 2019\n"
 "Language-Team: Turkish (https://www.transifex.com/odoo/teams/41243/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -151,6 +152,9 @@ msgid ""
 "                            <span attrs=\"{'invisible':[('base', '!=', 'standard_price')]}\">Cost  -  </span>\n"
 "                            <span attrs=\"{'invisible':[('base', '!=', 'pricelist')]}\">Other Pricelist  -  </span>"
 msgstr ""
+"<span attrs=\"{'invisible':[('base', '!=', 'list_price')]}\">Satış Fiyatı  -  </span>\n"
+"                            <span attrs=\"{'invisible':[('base', '!=', 'standard_price')]}\">Maliyet  -  </span>\n"
+"                            <span attrs=\"{'invisible':[('base', '!=', 'pricelist')]}\">Diğer Fiyat Listeleri  -  </span>"
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_category_form_view
@@ -753,9 +757,7 @@ msgid "Computer SC234"
 msgstr "Bilgisayar SC234"
 
 #. module: product
-#: code:addons/product/models/product_template.py:50
 #: selection:product.template,type:0
-#, python-format
 msgid "Consumable"
 msgstr "Sarf Malzeme"
 
@@ -939,7 +941,7 @@ msgstr "Gün(ler)"
 #: code:addons/product/models/res_company.py:59
 #, python-format
 msgid "Default %(currency)s pricelist for %(company)s"
-msgstr ""
+msgstr "Varsayılan %(currency)s fiyat listesi%(company)s"
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_product_uom_id
@@ -976,7 +978,7 @@ msgstr "Müşteri İçin Tanımlama"
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_template_form_view
 msgid "Description for Internal"
-msgstr ""
+msgstr "Dahili Açıklama"
 
 #. module: product
 #: model:product.product,website_description:product.product_product_11
@@ -1527,6 +1529,10 @@ msgstr "Stok"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_product_is_product_variant
+msgid "Is Product Variant"
+msgstr "Ürün Varyantı"
+
+#. module: product
 #: model:ir.model.fields,field_description:product.field_product_template_is_product_variant
 msgid "Is a product variant"
 msgstr "Ürün varyantı mı?"
@@ -2394,9 +2400,7 @@ msgid "Server"
 msgstr "Sunucu"
 
 #. module: product
-#: code:addons/product/models/product_template.py:51
 #: selection:product.template,type:0
-#, python-format
 msgid "Service"
 msgstr "Hizmet"
 
@@ -2903,7 +2907,7 @@ msgstr "Bu, tüm özelliklerin ekstra fiyat toplamıdır"
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_template_form_view
 msgid "This note is only for internal purposes."
-msgstr ""
+msgstr "Bu not sadece dahili amaçlar içindir."
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_template_form_view
@@ -3027,6 +3031,9 @@ msgid ""
 "            <i>'Time'</i>, you will have the following units of measure:\n"
 "            Hours, Days."
 msgstr ""
+"Aynı kategoriye ait ölçü birimleri birbirleri arasında dönüştürülebilir. Örneğin,  bu kategoride\n"
+"            <i>'Zaman'</i>, bu ölçü birimlerini elde edeceksiniz:\n"
+"            Saat. Gün."
 
 #. module: product
 #: model:product.product,website_description:product.product_product_5b

@@ -3,20 +3,21 @@
 # * stock
 # 
 # Translators:
-# Martin Trigaux, 2017
-# Pornvibool Tippayawat <pornvibool.t@gmail.com>, 2017
 # Somchart Jabsung <jabsung.s@gmail.com>, 2018
+# Prawit Boonthue <prawit.boonthue@gmail.com>, 2018
+# monchai7 <montchye@gmail.com>, 2018
 # Seksan Poltree <seksan.poltree@gmail.com>, 2018
 # Khwunchai Jaengsawang <khwunchai.j@ku.th>, 2018
-# monchai7 <montchye@gmail.com>, 2018
-# Prawit Boonthue <prawit.boonthue@gmail.com>, 2018
+# Martin Trigaux, 2019
+# Pornvibool Tippayawat <pornvibool.t@gmail.com>, 2019
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-27 11:55+0000\n"
-"PO-Revision-Date: 2018-07-27 11:55+0000\n"
-"Last-Translator: Prawit Boonthue <prawit.boonthue@gmail.com>, 2018\n"
+"POT-Creation-Date: 2019-01-03 15:06+0000\n"
+"PO-Revision-Date: 2017-09-20 10:24+0000\n"
+"Last-Translator: Pornvibool Tippayawat <pornvibool.t@gmail.com>, 2019\n"
 "Language-Team: Thai (https://www.transifex.com/odoo/teams/41243/th/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -648,6 +649,12 @@ msgid "Active"
 msgstr "เปิดใช้งาน"
 
 #. module: stock
+#: model:ir.ui.view,arch_db:stock.view_picking_form
+msgid ""
+"Add an internal note that will be printed on the Picking Operations sheet"
+msgstr ""
+
+#. module: stock
 #: model:ir.model.fields,help:stock.field_res_config_settings_group_stock_adv_location
 msgid ""
 "Add and customize route operations to process product moves in your warehouse(s): e.g. unload > quality control > stock for incoming products, pick > pack > ship for outgoing products. \n"
@@ -801,12 +808,24 @@ msgstr ""
 #. module: stock
 #: selection:stock.picking,move_type:0
 msgid "As soon as possible"
-msgstr ""
+msgstr "เร็วที่สุดเท่าที่จะทำได้"
 
 #. module: stock
 #: model:ir.ui.view,arch_db:stock.view_picking_form
 msgid "Assign Owner"
 msgstr "กำหนดเจ้าของ"
+
+#. module: stock
+#: model:ir.ui.view,arch_db:stock.view_picking_form
+msgid "Assign Partner"
+msgstr ""
+
+#. module: stock
+#: model:ir.ui.view,arch_db:stock.view_picking_form
+msgid ""
+"Assign the partner to the Operations. Use only if the partner is manually "
+"changed!"
+msgstr ""
 
 #. module: stock
 #: model:ir.ui.view,arch_db:stock.view_picking_internal_search
@@ -1097,7 +1116,7 @@ msgstr ""
 #. module: stock
 #: model:ir.ui.view,arch_db:stock.view_picking_form
 msgid "Check Availability"
-msgstr ""
+msgstr "สำรองสินค้า"
 
 #. module: stock
 #: model:ir.model.fields,help:stock.field_stock_picking_has_packages
@@ -1887,17 +1906,17 @@ msgstr "รายละเอียด"
 #. module: stock
 #: model:ir.ui.view,arch_db:stock.view_template_property_form
 msgid "Description for Delivery Orders"
-msgstr ""
+msgstr "รายละเอียดสำหรับใบส่งสินค้า"
 
 #. module: stock
 #: model:ir.ui.view,arch_db:stock.view_template_property_form
 msgid "Description for Internal Transfers"
-msgstr ""
+msgstr "รายละเอียดสำหรับการเคลื่อนย้ายภายใน"
 
 #. module: stock
 #: model:ir.ui.view,arch_db:stock.view_template_property_form
 msgid "Description for Receptions"
-msgstr ""
+msgstr "รายละเอียดสำหรับการรับสินค้า"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_product_product_description_pickingout
@@ -2255,7 +2274,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:stock.field_stock_move_availability
 #, python-format
 msgid "Forecasted Quantity"
-msgstr ""
+msgstr "ปริมาณพยากรณ์"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_move_line_location_id
@@ -2792,7 +2811,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:stock.field_stock_move_product_uom_qty
 #: model:ir.ui.view,arch_db:stock.view_picking_form
 msgid "Initial Demand"
-msgstr ""
+msgstr "ความต้องการเริ่มต้น"
 
 #. module: stock
 #: model:ir.ui.view,arch_db:stock.inventory_planner
@@ -3339,7 +3358,6 @@ msgid "Locate"
 msgstr ""
 
 #. module: stock
-#: code:addons/stock/models/barcode.py:12
 #: model:ir.model.fields,field_description:stock.field_product_product_location_id
 #: model:ir.model.fields,field_description:stock.field_product_template_location_id
 #: model:ir.model.fields,field_description:stock.field_stock_change_product_qty_location_id
@@ -3358,7 +3376,6 @@ msgstr ""
 #: model:ir.ui.view,arch_db:stock.stock_scrap_search_view
 #: model:ir.ui.view,arch_db:stock.view_move_search
 #: model:ir.ui.view,arch_db:stock.warehouse_orderpoint_search
-#, python-format
 msgid "Location"
 msgstr "ตำแหน่ง"
 
@@ -3418,10 +3435,8 @@ msgid "Logistics"
 msgstr "โลจิสติกส์"
 
 #. module: stock
-#: code:addons/stock/models/barcode.py:13
 #: model:ir.model.fields,field_description:stock.field_stock_move_line_lot_id
 #: model:ir.model.fields,field_description:stock.field_stock_scrap_lot_id
-#, python-format
 msgid "Lot"
 msgstr "ล็อต"
 
@@ -3860,6 +3875,11 @@ msgid "Not urgent"
 msgstr "ไม่เร่งด่วน"
 
 #. module: stock
+#: model:ir.ui.view,arch_db:stock.view_picking_form
+msgid "Note"
+msgstr "โน้ต"
+
+#. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_move_note
 #: model:ir.model.fields,field_description:stock.field_stock_picking_note
 #: model:ir.ui.view,arch_db:stock.view_inventory_form
@@ -4224,7 +4244,6 @@ msgid "Pack Type"
 msgstr "ประเภทหีบห่อ"
 
 #. module: stock
-#: code:addons/stock/models/barcode.py:14
 #: model:ir.model.fields,field_description:stock.field_stock_quant_package_id
 #: model:ir.model.fields,field_description:stock.field_stock_scrap_package_id
 #: model:ir.ui.view,arch_db:stock.quant_package_search_view
@@ -4233,7 +4252,6 @@ msgstr "ประเภทหีบห่อ"
 #: model:ir.ui.view,arch_db:stock.view_quant_package_form
 #: model:ir.ui.view,arch_db:stock.view_quant_package_picking_tree
 #: model:ir.ui.view,arch_db:stock.view_quant_package_tree
-#, python-format
 msgid "Package"
 msgstr "หีบห่อ"
 
@@ -4872,7 +4890,7 @@ msgstr ""
 #. module: stock
 #: sql_constraint:stock.warehouse.orderpoint:0
 msgid "Qty Multiple must be greater than or equal to zero."
-msgstr ""
+msgstr "จำนวน multiple ต้องมากกว่าหรือเท่ากับ 0"
 
 #. module: stock
 #: code:addons/stock/models/stock_warehouse.py:98
@@ -4922,7 +4940,7 @@ msgstr ""
 #. module: stock
 #: model:ir.ui.view,arch_db:stock.view_warehouse_orderpoint_form
 msgid "Quantity Multiple"
-msgstr "ปริมาณหลายแบบ"
+msgstr "จำนวน multiple"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_product_product_qty_available
@@ -5219,12 +5237,12 @@ msgstr ""
 #: model:ir.ui.view,arch_db:stock.view_picking_form
 #: model:ir.ui.view,arch_db:stock.view_stock_quant_tree
 msgid "Reserved"
-msgstr ""
+msgstr "สำรองแล้ว"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_quant_reserved_quantity
 msgid "Reserved Quantity"
-msgstr ""
+msgstr "ปริมาณที่สำรองไว้"
 
 #. module: stock
 #: model:ir.model.fields,help:stock.field_res_config_settings_module_procurement_jit
@@ -5641,7 +5659,7 @@ msgstr ""
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_picking_move_type
 msgid "Shipping Policy"
-msgstr ""
+msgstr "นโยบายการจัดส่ง"
 
 #. module: stock
 #: model:ir.ui.view,arch_db:stock.res_config_settings_view_form
@@ -5690,7 +5708,7 @@ msgstr ""
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_picking_type_show_reserved
 msgid "Show Reserved"
-msgstr ""
+msgstr "แสดงสำรอง"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_picking_show_validate
@@ -6120,13 +6138,6 @@ msgid ""
 msgstr ""
 
 #. module: stock
-#: model:ir.ui.view,arch_db:stock.product_category_form_view_inherit
-msgid ""
-"The following routes will apply to the products in this category taking into"
-" account parent categories:"
-msgstr ""
-
-#. module: stock
 #: sql_constraint:stock.warehouse:0
 msgid "The name of the warehouse must be unique per company!"
 msgstr ""
@@ -6168,6 +6179,8 @@ msgid ""
 "The procurement quantity will be rounded up to this multiple.  If it is 0, "
 "the exact quantity will be used."
 msgstr ""
+"จำนวนจัดซื้อจะถูกปัดขึ้นเพื่อให้หารด้วยจำนวน multiple ลงตัว หากเป็น 0 "
+"จะไม่มีการปัดขึ้น"
 
 #. module: stock
 #: model:ir.model.fields,help:stock.field_stock_move_rule_id
@@ -6692,7 +6705,7 @@ msgstr "จำนวนที่ไม่ได้วางแผน"
 #. module: stock
 #: model:ir.ui.view,arch_db:stock.view_picking_form
 msgid "Unreserve"
-msgstr "ยกเลิกการจอง"
+msgstr "ยกเลิกการสำรอง"
 
 #. module: stock
 #: model:ir.ui.menu,name:stock.menu_stock_uom_form_action
@@ -6960,12 +6973,6 @@ msgid "We hope this guide helped you implement Odoo Inventory."
 msgstr ""
 
 #. module: stock
-#: code:addons/stock/models/barcode.py:11
-#, python-format
-msgid "Weighted Product"
-msgstr ""
-
-#. module: stock
 #: model:ir.ui.view,arch_db:stock.inventory_planner
 msgid "Welcome"
 msgstr "ยินดีต้อนรับ"
@@ -6992,7 +6999,7 @@ msgstr ""
 #. module: stock
 #: selection:stock.picking,move_type:0
 msgid "When all products are ready"
-msgstr ""
+msgstr "เมื่อสินค้าทุกอย่างพร้อม"
 
 #. module: stock
 #: model:ir.model.fields,help:stock.field_stock_location_route_product_selectable
@@ -7284,20 +7291,14 @@ msgid ""
 msgstr ""
 
 #. module: stock
-#: code:addons/stock/models/stock_picking.py:723
-#, python-format
-msgid ""
-"You cannot validate a transfer if you have not processed any quantity for "
-"%s."
-msgstr ""
-
-#. module: stock
-#: code:addons/stock/models/stock_picking.py:707
+#: code:addons/stock/models/stock_picking.py:709
 #, python-format
 msgid ""
 "You cannot validate a transfer if you have not processed any quantity. You "
 "should rather cancel the transfer."
 msgstr ""
+"คุณไม่สามารถตรวจสอบการเคลื่อนย้ายสินค้าได้ หากจำนวนดำเนินการทั้งหมดเป็นศูนย์"
+" คุณควรที่จะยกเลิกการเคลื่อนย้ายสินค้าทิ้งแทน"
 
 #. module: stock
 #: model:ir.ui.view,arch_db:stock.report_picking
@@ -7353,6 +7354,8 @@ msgid ""
 "You haven't entered <i>done</i> quantities, by clicking on <i>apply</i>\n"
 "                        Odoo will process all the <i>reserved</i> quantities."
 msgstr ""
+"คุณยังไม่ได้ใส่จำนวน <i>เสร็จสิ้น</i> , หากคุณคลิ๊กที่ <i>นำไปใช้</i>\n"
+"                        Odoo จะดำเนินการด้วยจำนวนที่ <i>สำรองแล้ว</i>."
 
 #. module: stock
 #: code:addons/stock/wizard/stock_picking_return.py:46

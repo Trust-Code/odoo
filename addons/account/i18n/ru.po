@@ -38,14 +38,17 @@
 # sergeiruzkiicode <sergei.ruzki@icode.by>, 2018
 # Илья Пономарев <horochiy92@gmail.com>, 2018
 # Yaroslav Panychev <walkmanyd@yandex.ru>, 2018
+# Дмитрий Ефременко <shiza867@gmail.com>, 2019
+# Sergo S, 2019
+# Vasiliy Korobatov <korobatov@gmail.com>, 2019
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-27 11:55+0000\n"
+"POT-Creation-Date: 2019-01-03 15:06+0000\n"
 "PO-Revision-Date: 2017-09-20 10:13+0000\n"
-"Last-Translator: Yaroslav Panychev <walkmanyd@yandex.ru>, 2018\n"
+"Last-Translator: Vasiliy Korobatov <korobatov@gmail.com>, 2019\n"
 "Language-Team: Russian (https://www.transifex.com/odoo/teams/41243/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -61,6 +64,10 @@ msgid ""
 " * The 'Paid' status is set automatically when the invoice is paid. Its related journal entries may or may not be reconciled.\n"
 " * The 'Cancelled' status is used when user cancel invoice."
 msgstr ""
+"Статус \"Черновик\" используется в случае, когда пользователь шифрует новый или неподтвержденный Счет.\n"
+"Статус \"Открыт\" используется в случае, когда пользователь создает счет и затем генерируется номер счета. Данный статус остается действительным до того момента, когда пользователь оплачивает счет.\n"
+"Статус \"Оплачен\" устанавливается автоматически в случае, когда счет был оплачен. Синхронизация счета и записей в журнале гарантируется.\n"
+"Статус \"Отменен\" используется в случае, когда пользователь отменяет счет."
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_chart_template_code_digits
@@ -332,6 +339,15 @@ msgid "<span class=\"fa fa-arrow-circle-o-down\"/> Install Now"
 msgstr "<span class=\"fa fa-arrow-circle-o-down\"/> Установить сейчас"
 
 #. module: account
+#: model:ir.ui.view,arch_db:account.res_config_settings_view_form
+msgid ""
+"<span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-"
+"specific.\" groups=\"base.group_multi_company\"/>"
+msgstr ""
+"<span class=\"fa fa-lg fa-building-o\" title=\"Значения относятся к "
+"конкретной компании.\" groups=\"base.group_multi_company\"/>"
+
+#. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
 msgid "<span class=\"fa\"/> Invite Your Users"
 msgstr "<span class=\"fa\"/> Пригласить пользователей"
@@ -600,7 +616,7 @@ msgstr "<strong>2. Регистрация несогласованных пла�
 #. module: account
 #: model:ir.ui.view,arch_db:account.report_invoice_document_with_payments
 msgid "<strong>Amount Due</strong>"
-msgstr ""
+msgstr "<strong>Сумма задолженности</strong>"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
@@ -1393,7 +1409,7 @@ msgstr "Шаблон налогового счета"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_res_config_settings_module_account_taxcloud
 msgid "Account TaxCloud"
-msgstr ""
+msgstr "Учет TaxCloud"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_account_chart_template_seacrh
@@ -1698,7 +1714,7 @@ msgstr "Корректировка налога"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_tax_adjustments_wizard_adjustment_type
 msgid "Adjustment Type"
-msgstr ""
+msgstr "Тип регулировки"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_account_tax_template_form
@@ -2419,7 +2435,7 @@ msgstr "Банковская выписка"
 #: code:addons/account/models/account_bank_statement.py:937
 #, python-format
 msgid "Bank Statement %s"
-msgstr ""
+msgstr "Банковская выписка %s"
 
 #. module: account
 #: model:ir.model,name:account.model_account_bank_statement_line
@@ -3794,11 +3810,22 @@ msgid "Currency as per company's country."
 msgstr "Валюта, в стране компании."
 
 #. module: account
-#: code:addons/account/models/account_move.py:1609
-#: code:addons/account/models/account_move.py:1621
+#: code:addons/account/models/account_move.py:1663
+#: code:addons/account/models/account_move.py:1675
 #, python-format
 msgid "Currency exchange rate difference"
 msgstr "Курсовая разница валют"
+
+#. module: account
+#: code:addons/account/models/account.py:451
+#, python-format
+msgid ""
+"Currency field should only be set if the journal's currency is different "
+"from the company's. Leave the field blank to use company currency."
+msgstr ""
+"Поле валюты должно быть установлено только в том случае, если валюта журнала"
+" отличается от валюты компании. Оставьте поле пустым, чтобы использовать "
+"валюту компании."
 
 #. module: account
 #: model:account.account.type,name:account.data_account_type_current_assets
@@ -10822,6 +10849,7 @@ msgstr "Оборотно-сальдовая ведомость"
 #: model:ir.model.fields,field_description:account.field_account_account_user_type_id
 #: model:ir.model.fields,field_description:account.field_account_bank_statement_journal_type
 #: model:ir.model.fields,field_description:account.field_account_financial_report_type
+#: model:ir.model.fields,field_description:account.field_account_invoice_line_invoice_type
 #: model:ir.model.fields,field_description:account.field_account_invoice_report_type
 #: model:ir.model.fields,field_description:account.field_account_invoice_type
 #: model:ir.model.fields,field_description:account.field_account_journal_type
@@ -11485,6 +11513,8 @@ msgid ""
 "You cannot change the currency of the company since some journal items "
 "already exist"
 msgstr ""
+"Вы не можете изменить валюту компании, так как некоторые записи журнала уже "
+"существуют"
 
 #. module: account
 #: code:addons/account/models/account.py:235
@@ -11635,7 +11665,7 @@ msgstr ""
 "Вы не можете помещать/брать деньги в/из баланса банка, который закрыт."
 
 #. module: account
-#: code:addons/account/models/account.py:253
+#: code:addons/account/models/account.py:261
 #, python-format
 msgid ""
 "You cannot remove/deactivate an account which is set on a customer or "
@@ -11645,13 +11675,21 @@ msgstr ""
 " поставщике."
 
 #. module: account
-#: code:addons/account/models/account_move.py:1330
+#: code:addons/account/models/account.py:249
+#, python-format
+msgid ""
+"You cannot set a currency on this account as it already has some journal "
+"entries having a different foreign currency."
+msgstr ""
+
+#. module: account
+#: code:addons/account/models/account_move.py:1368
 #, python-format
 msgid "You cannot use deprecated account."
 msgstr "Вы не можете использовать устаревший аккаунт."
 
 #. module: account
-#: code:addons/account/models/account_move.py:1250
+#: code:addons/account/models/account_move.py:1283
 #, python-format
 msgid ""
 "You cannot use this general account in this journal, check the tab 'Entry "
@@ -11662,7 +11700,7 @@ msgstr ""
 
 #. module: account
 #: code:addons/account/models/account_invoice.py:74
-#: code:addons/account/models/account_invoice.py:777
+#: code:addons/account/models/account_invoice.py:780
 #, python-format
 msgid ""
 "You cannot validate an invoice with a negative total amount. You should "
@@ -11686,7 +11724,7 @@ msgstr "Вы имеете"
 #: code:addons/account/models/account_payment.py:505
 #, python-format
 msgid "You have to define a sequence for %s in your company."
-msgstr ""
+msgstr "Вы должны определить последовательность для %s в вашей компании."
 
 #. module: account
 #: code:addons/account/wizard/account_report_general_ledger.py:21
@@ -12060,7 +12098,7 @@ msgstr "чтобы установить баланс всех ваших сче�
 #: code:addons/account/static/src/xml/account_reconciliation.xml:53
 #, python-format
 msgid "transactions in"
-msgstr ""
+msgstr "Транзакции в"
 
 #. module: account
 #: model:ir.model,name:account.model_wizard_multi_charts_accounts
@@ -12071,11 +12109,3 @@ msgstr "wizard.multi.charts.accounts"
 #: model:ir.ui.view,arch_db:account.view_bank_statement_form
 msgid "→ Count"
 msgstr "→ Считать"
-
-#. module: account
-#: code:addons/account/models/account.py:309
-#, python-format
-msgid ""
-"Currency field should only be set if the journal's currency is different "
-"from the company's. Leave the field blank to use company currency."
-msgstr ""

@@ -3,16 +3,17 @@
 # * sale
 # 
 # Translators:
-# 敬雲 林 <chingyun@yuanchih-consult.com>, 2017
-# Martin Trigaux, 2017
-# Michael Yeung, 2017
+# Michael Yeung, 2018
+# Martin Trigaux, 2019
+# 敬雲 林 <chingyun@yuanchih-consult.com>, 2019
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-27 11:56+0000\n"
-"PO-Revision-Date: 2018-07-27 11:56+0000\n"
-"Last-Translator: Michael Yeung, 2017\n"
+"POT-Creation-Date: 2019-01-03 15:07+0000\n"
+"PO-Revision-Date: 2017-09-20 10:23+0000\n"
+"Last-Translator: 敬雲 林 <chingyun@yuanchih-consult.com>, 2019\n"
 "Language-Team: Chinese (Taiwan) (https://www.transifex.com/odoo/teams/41243/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -348,6 +349,13 @@ msgid ""
 "                to buy an extra pack of hours, because he used all his support\n"
 "                hours.</i>"
 msgstr "<i>示例：預付費服務提供給那些不得不購買額外時間包的客戶，由於他之前的所有支援。</i>"
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.res_config_settings_view_form
+msgid ""
+"<span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-"
+"specific.\" groups=\"base.group_multi_company\"/>"
+msgstr ""
 
 #. module: sale
 #: model:ir.ui.view,arch_db:sale.portal_my_orders
@@ -1062,7 +1070,7 @@ msgstr "預付定金產品"
 #. module: sale
 #: model:ir.ui.view,arch_db:sale.res_config_settings_view_form
 msgid "Down Payments"
-msgstr "首付款"
+msgstr "預付訂金"
 
 #. module: sale
 #: selection:sale.advance.payment.inv,advance_payment_method:0
@@ -1085,7 +1093,7 @@ msgstr "%s%%預付定金"
 msgid ""
 "Down payments are made when creating invoices from a sales order. They are "
 "not copied when duplicating a sales order."
-msgstr "從銷售訂單創建應收憑單時，將進行預付款。 複製銷售訂單時不會複製它們。"
+msgstr "從銷售訂單創建應收憑單時，將進行預付訂金。 複製銷售訂單時不會複製它們。"
 
 #. module: sale
 #: model:ir.ui.view,arch_db:sale.portal_order_page
@@ -1285,7 +1293,7 @@ msgstr "已發貨發票"
 #. module: sale
 #: selection:res.config.settings,default_invoice_policy:0
 msgid "Invoice what is ordered"
-msgstr "應收憑單管理"
+msgstr "依銷售訂單開立應收憑單"
 
 #. module: sale
 #: selection:sale.advance.payment.inv,advance_payment_method:0
@@ -1295,7 +1303,7 @@ msgstr "可開立應收憑單的項目"
 #. module: sale
 #: selection:sale.advance.payment.inv,advance_payment_method:0
 msgid "Invoiceable lines (deduct down payments)"
-msgstr "可開立應收憑單項目 (扣除預付定金)"
+msgstr "可開立應收憑單項目 (扣除預付訂金)"
 
 #. module: sale
 #: model:ir.model.fields,field_description:sale.field_sale_order_line_qty_invoiced
@@ -1379,7 +1387,7 @@ msgstr "開立發票和送貨地址："
 #. module: sale
 #: model:ir.model.fields,field_description:sale.field_sale_order_line_is_downpayment
 msgid "Is a down payment"
-msgstr "是首付款嗎？"
+msgstr "是預付訂金嗎？"
 
 #. module: sale
 #: model:ir.model.fields,field_description:sale.field_sale_order_is_expired
@@ -1918,6 +1926,11 @@ msgid "Product Catalog"
 msgstr "產品目錄"
 
 #. module: sale
+#: model:ir.ui.menu,name:sale.menu_product_category_config_sale
+msgid "Product Categories"
+msgstr "產品類別"
+
+#. module: sale
 #: model:ir.model.fields,field_description:sale.field_report_all_channels_sales_categ_id
 #: model:ir.model.fields,field_description:sale.field_sale_report_categ_id
 #: model:ir.ui.view,arch_db:sale.view_order_product_search
@@ -1950,7 +1963,7 @@ msgstr "產品變體"
 #. module: sale
 #: model:ir.ui.view,arch_db:sale.res_config_settings_view_form
 msgid "Product used for down payments"
-msgstr "用於預付定金的產品"
+msgstr "用於預付訂金的產品"
 
 #. module: sale
 #: model:ir.ui.menu,name:sale.menu_product_template_action
@@ -2475,7 +2488,7 @@ msgstr "分類匯總和分頁分段排序的產品"
 #. module: sale
 #: model:ir.model.fields,field_description:sale.field_sale_order_origin
 msgid "Source Document"
-msgstr "來來源單據"
+msgstr "來源單據"
 
 #. module: sale
 #: model:ir.model.fields,field_description:sale.field_res_config_settings_module_product_email_template
@@ -2564,13 +2577,29 @@ msgid "Terms and conditions"
 msgstr "條款和條件"
 
 #. module: sale
-#: code:addons/sale/models/analytic.py:129
-#: code:addons/sale/models/analytic.py:143
+#: code:addons/sale/models/analytic.py:134
 #, python-format
 msgid ""
-"The Sales Order %s linked to the Analytic Account must be validated before "
-"registering expenses."
-msgstr "銷售訂單%s關聯的分析帳戶之前必須驗證註冊費用。"
+"The Sales Order %s linked to the Analytic Account %s is cancelled. You "
+"cannot register an expense on a cancelled Sales Order."
+msgstr "銷售訂單%s關聯的分析帳戶%s被取消。您不能在取消的銷售訂單上登記費用。"
+
+#. module: sale
+#: code:addons/sale/models/analytic.py:133
+#, python-format
+msgid ""
+"The Sales Order %s linked to the Analytic Account %s is currently locked. "
+"You cannot register an expense on a locked Sales Order. Please create a new "
+"SO linked to this Analytic Account."
+msgstr "銷售訂單%s關聯的分析帳戶%s目前被鎖定。您不能在鎖定的銷售訂單上登記費用。請創建新的銷售訂單關聯這個分析帳戶。"
+
+#. module: sale
+#: code:addons/sale/models/analytic.py:129
+#, python-format
+msgid ""
+"The Sales Order %s linked to the Analytic Account %s must be validated "
+"before registering expenses."
+msgstr "銷售訂單%s關聯的分析帳戶%s在登記費用前必須被驗證。"
 
 #. module: sale
 #: model:ir.model.fields,help:sale.field_sale_advance_payment_inv_amount
@@ -2595,7 +2624,7 @@ msgstr "利潤率計算為產品銷售價格減去其詳細表格中的成本集
 msgid ""
 "The product used to invoice a down payment should be of type 'Service'. "
 "Please use another product or update this product."
-msgstr "此產品用於開具預付定金應收憑單，應該為「服務」類型。請使用其它產品或更新本產品。"
+msgstr "此產品用於開具預付訂金應收憑單，應該為「服務」類型。請使用其它產品或更新本產品。"
 
 #. module: sale
 #: code:addons/sale/wizard/sale_make_invoice_advance.py:149

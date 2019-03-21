@@ -423,20 +423,19 @@ class Users(models.Model):
     @tools.ormcache('self._uid')
     def context_get(self):
         user = self.env.user
-        result = {}
-        for k in self._fields:
-            if k.startswith('context_'):
-                context_key = k[8:]
-            elif k in ['lang', 'tz']:
-                context_key = k
-            else:
-                context_key = False
-            if context_key:
-                res = getattr(user, k) or False
-                if isinstance(res, models.BaseModel):
-                    res = res.id
-                result[context_key] = res or False
-        return result
+        # determine field names to read
+        name_to_key = {
+            name: name[8:] if name.startswith('context_') else name
+            for name in self._fields
+            if name.startswith('context_') or name in ('lang', 'tz')
+        }
+        # use read() to not read other fields: this must work while modifying
+        # the schema of models res.users or res.partner
+        values = user.read(list(name_to_key), load=False)[0]
+        return {
+            key: values[name]
+            for name, key in name_to_key.items()
+        }
 
     @api.model
     @api.returns('ir.actions.act_window', lambda record: record.id)
@@ -676,8 +675,26 @@ class GroupsImplied(models.Model):
         if values.get('users') or values.get('implied_ids'):
             # add all implied groups (to all users of each group)
             for group in self:
-                vals = {'users': list(pycompat.izip(repeat(4), group.with_context(active_test=False).users.ids))}
-                super(GroupsImplied, group.trans_implied_ids).write(vals)
+                self._cr.execute("""
+                    WITH RECURSIVE group_imply(gid, hid) AS (
+                        SELECT gid, hid
+                          FROM res_groups_implied_rel
+                         UNION
+                        SELECT i.gid, r.hid
+                          FROM res_groups_implied_rel r
+                          JOIN group_imply i ON (i.hid = r.gid)
+                    )
+                    INSERT INTO res_groups_users_rel (gid, uid)
+                         SELECT i.hid, r.uid
+                           FROM group_imply i, res_groups_users_rel r
+                          WHERE r.gid = i.gid
+                            AND i.gid = %(gid)s
+                         EXCEPT
+                         SELECT r.gid, r.uid
+                           FROM res_groups_users_rel r
+                           JOIN group_imply i ON (r.gid = i.hid)
+                          WHERE i.gid = %(gid)s
+                """, dict(gid=group.id))
         return res
 
 

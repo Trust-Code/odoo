@@ -18,8 +18,8 @@
 # Alejandro Die Sanchis <marketing@domatix.com>, 2017
 # Luis M. Triana <luis.triana@jarsa.com.mx>, 2017
 # Sergio Flores <vitavitae1@gmail.com>, 2017
-# Jesús Alan Ramos Rodríguez <alan.ramos@jarsa.com.mx>, 2017
 # Kiko <kiko@comunitea.com>, 2017
+# Harald Panten <harald.panten@qubiq.es>, 2017
 # RGB Consulting <odoo@rgbconsulting.com>, 2017
 # Luis Pomar <luis.pomar@gmail.com>, 2017
 # Sergio Hevia <sah@talleresbernesga.com>, 2017
@@ -31,7 +31,6 @@
 # José Vicente <txusev@gmail.com>, 2017
 # Glen Sojo <inactive+glen.sojo@transifex.com>, 2017
 # Rick Hunter <rick_hunter_ec@yahoo.com>, 2017
-# Miguel Orueta <mo@landoo.es>, 2017
 # Fernando San Martín Woerner <fsnmartin@gmail.com>, 2017
 # Raquel Iciarte <ric@odoo.com>, 2017
 # Pedro M. Baeza <pedro.baeza@gmail.com>, 2017
@@ -40,17 +39,19 @@
 # Luis M. Ontalba <luis.martinez@tecnativa.com>, 2017
 # e2f_EPV Translator <e2f_EPV@outlook.com>, 2018
 # e2f <projects@e2f.com>, 2018
-# Martin Trigaux, 2018
 # Nicolás Broggi <rnbroggi@gmail.com>, 2018
 # Miquel Torner <miq@odoo.com>, 2018
+# Martin Trigaux, 2019
+# Miguel Orueta <mo@landoo.es>, 2019
+# Jesús Alan Ramos Rodríguez <alan.ramos@jarsa.com.mx>, 2019
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-27 11:55+0000\n"
+"POT-Creation-Date: 2019-01-03 15:06+0000\n"
 "PO-Revision-Date: 2017-09-20 10:24+0000\n"
-"Last-Translator: Miquel Torner <miq@odoo.com>, 2018\n"
+"Last-Translator: Jesús Alan Ramos Rodríguez <alan.ramos@jarsa.com.mx>, 2019\n"
 "Language-Team: Spanish (https://www.transifex.com/odoo/teams/41243/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -820,6 +821,13 @@ msgid "Active"
 msgstr "Activo"
 
 #. module: stock
+#: model:ir.ui.view,arch_db:stock.view_picking_form
+msgid ""
+"Add an internal note that will be printed on the Picking Operations sheet"
+msgstr ""
+"Añadir una nota interna que se imprimirá en la hoja operaciones de picking"
+
+#. module: stock
 #: model:ir.model.fields,help:stock.field_res_config_settings_group_stock_adv_location
 msgid ""
 "Add and customize route operations to process product moves in your warehouse(s): e.g. unload > quality control > stock for incoming products, pick > pack > ship for outgoing products. \n"
@@ -994,6 +1002,18 @@ msgid "Assign Owner"
 msgstr "Asignar propietario"
 
 #. module: stock
+#: model:ir.ui.view,arch_db:stock.view_picking_form
+msgid "Assign Partner"
+msgstr ""
+
+#. module: stock
+#: model:ir.ui.view,arch_db:stock.view_picking_form
+msgid ""
+"Assign the partner to the Operations. Use only if the partner is manually "
+"changed!"
+msgstr ""
+
+#. module: stock
 #: model:ir.ui.view,arch_db:stock.view_picking_internal_search
 msgid "Assigned Moves"
 msgstr "Movimientos asignados"
@@ -1048,7 +1068,7 @@ msgstr "Pedido en espera de"
 #. module: stock
 #: model:ir.ui.view,arch_db:stock.stock_picking_type_kanban
 msgid "Back Orders"
-msgstr "Pedidos en espera"
+msgstr "Entregas parciales"
 
 #. module: stock
 #: code:addons/stock/wizard/stock_backorder_confirmation.py:20
@@ -2676,7 +2696,7 @@ msgstr "Tiene movimientos de desecho"
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_picking_has_tracking
 msgid "Has Tracking"
-msgstr ""
+msgstr "Tiene Rastreo"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_location_posz
@@ -3685,7 +3705,6 @@ msgid "Locate"
 msgstr "Ubicar"
 
 #. module: stock
-#: code:addons/stock/models/barcode.py:12
 #: model:ir.model.fields,field_description:stock.field_product_product_location_id
 #: model:ir.model.fields,field_description:stock.field_product_template_location_id
 #: model:ir.model.fields,field_description:stock.field_stock_change_product_qty_location_id
@@ -3704,7 +3723,6 @@ msgstr "Ubicar"
 #: model:ir.ui.view,arch_db:stock.stock_scrap_search_view
 #: model:ir.ui.view,arch_db:stock.view_move_search
 #: model:ir.ui.view,arch_db:stock.warehouse_orderpoint_search
-#, python-format
 msgid "Location"
 msgstr "Ubicación"
 
@@ -3764,10 +3782,8 @@ msgid "Logistics"
 msgstr "Logística"
 
 #. module: stock
-#: code:addons/stock/models/barcode.py:13
 #: model:ir.model.fields,field_description:stock.field_stock_move_line_lot_id
 #: model:ir.model.fields,field_description:stock.field_stock_scrap_lot_id
-#, python-format
 msgid "Lot"
 msgstr "Lote"
 
@@ -4155,7 +4171,7 @@ msgstr "Nueva transferencia"
 #. module: stock
 #: model:ir.ui.view,arch_db:stock.view_backorder_confirmation
 msgid "No Backorder"
-msgstr "Sin pedido pendiente"
+msgstr "No crear entrega parcial"
 
 #. module: stock
 #: selection:res.partner,picking_warn:0
@@ -4225,6 +4241,11 @@ msgstr "Normal"
 #: selection:stock.move,priority:0 selection:stock.picking,priority:0
 msgid "Not urgent"
 msgstr "No urgente"
+
+#. module: stock
+#: model:ir.ui.view,arch_db:stock.view_picking_form
+msgid "Note"
+msgstr "Nota"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_move_note
@@ -4612,7 +4633,6 @@ msgid "Pack Type"
 msgstr "Tipo de empaquetado"
 
 #. module: stock
-#: code:addons/stock/models/barcode.py:14
 #: model:ir.model.fields,field_description:stock.field_stock_quant_package_id
 #: model:ir.model.fields,field_description:stock.field_stock_scrap_package_id
 #: model:ir.ui.view,arch_db:stock.quant_package_search_view
@@ -4621,7 +4641,6 @@ msgstr "Tipo de empaquetado"
 #: model:ir.ui.view,arch_db:stock.view_quant_package_form
 #: model:ir.ui.view,arch_db:stock.view_quant_package_picking_tree
 #: model:ir.ui.view,arch_db:stock.view_quant_package_tree
-#, python-format
 msgid "Package"
 msgstr "Paquete"
 
@@ -4843,7 +4862,7 @@ msgstr "Movimientos de albarán"
 #. module: stock
 #: model:ir.actions.report,name:stock.action_report_picking
 msgid "Picking Operations"
-msgstr "Operaciones de de albarán"
+msgstr "Operaciones de albarán"
 
 #. module: stock
 #: model:ir.ui.view,arch_db:stock.vpicktree
@@ -6619,15 +6638,6 @@ msgstr ""
 "que se prefieren sobre las reglas push."
 
 #. module: stock
-#: model:ir.ui.view,arch_db:stock.product_category_form_view_inherit
-msgid ""
-"The following routes will apply to the products in this category taking into"
-" account parent categories:"
-msgstr ""
-"Las siguientes rutas se aplicarán a los productos en esta categoría teniendo"
-" en cuenta las categorías padre:"
-
-#. module: stock
 #: sql_constraint:stock.warehouse:0
 msgid "The name of the warehouse must be unique per company!"
 msgstr "¡El nombre del almacén debe ser único por compañía!"
@@ -7562,12 +7572,6 @@ msgid "We hope this guide helped you implement Odoo Inventory."
 msgstr "Esperamos que esta guía le ayude a implementar Odoo Inventory"
 
 #. module: stock
-#: code:addons/stock/models/barcode.py:11
-#, python-format
-msgid "Weighted Product"
-msgstr "Producto pesado"
-
-#. module: stock
 #: model:ir.ui.view,arch_db:stock.inventory_planner
 msgid "Welcome"
 msgstr "Bienvenido"
@@ -7951,17 +7955,7 @@ msgstr ""
 "números de serie codificados."
 
 #. module: stock
-#: code:addons/stock/models/stock_picking.py:723
-#, python-format
-msgid ""
-"You cannot validate a transfer if you have not processed any quantity for "
-"%s."
-msgstr ""
-"No puede validar una transferencia si no ha procesado ninguna cantidad para "
-"%s."
-
-#. module: stock
-#: code:addons/stock/models/stock_picking.py:707
+#: code:addons/stock/models/stock_picking.py:709
 #, python-format
 msgid ""
 "You cannot validate a transfer if you have not processed any quantity. You "
