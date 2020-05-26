@@ -2638,6 +2638,12 @@ exports.Order = Backbone.Model.extend({
         var line = new exports.Orderline({}, {pos: this.pos, order: this, product: product});
         this.fix_tax_included_price(line);
 
+        if(options.extras !== undefined){
+            for (var prop in options.extras) {
+                line[prop] = options.extras[prop];
+            }
+        }
+
         if(options.quantity !== undefined){
             line.set_quantity(options.quantity);
         }
@@ -2653,12 +2659,6 @@ exports.Order = Backbone.Model.extend({
 
         if(options.discount !== undefined){
             line.set_discount(options.discount);
-        }
-
-        if(options.extras !== undefined){
-            for (var prop in options.extras) {
-                line[prop] = options.extras[prop];
-            }
         }
 
         var to_merge_orderline;
@@ -3030,6 +3030,9 @@ exports.Order = Backbone.Model.extend({
     },
     wait_for_push_order: function () {
         return this.is_to_email();
+    },
+    get_total_balance: function() {
+        return this.get_total_with_tax() - this.get_total_paid();
     },
 });
 

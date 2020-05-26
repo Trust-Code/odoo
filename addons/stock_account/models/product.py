@@ -239,7 +239,8 @@ class ProductProduct(models.Model):
             }
             am_vals_list.append(move_vals)
         account_moves = self.env['account.move'].create(am_vals_list)
-        account_moves.post()
+        if account_moves:
+            account_moves.post()
 
         # Actually update the standard price.
         self.with_context(force_company=company_id.id).sudo().write({'standard_price': new_price})
@@ -588,6 +589,8 @@ class ProductProduct(models.Model):
         :rtype: float
         """
         self.ensure_one()
+        if not qty_to_invoice:
+            return 0.0
 
         candidates = stock_moves\
             .sudo()\

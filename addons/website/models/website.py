@@ -173,7 +173,7 @@ class Website(models.Model):
             public_user_to_change_websites = self.filtered(lambda w: w.sudo().user_id.company_id.id != values['company_id'])
             if public_user_to_change_websites:
                 company = self.env['res.company'].browse(values['company_id'])
-                super(Website, public_user_to_change_websites).write(dict(values, user_id=company._get_public_user().id))
+                super(Website, public_user_to_change_websites).write(dict(values, user_id=company and company._get_public_user().id))
 
         result = super(Website, self - public_user_to_change_websites).write(values)
         if 'cdn_activated' in values or 'cdn_url' in values or 'cdn_filters' in values:
@@ -218,7 +218,7 @@ class Website(models.Model):
         homepage_page = Page.search([
             ('website_id', '=', self.id),
             ('key', '=', standard_homepage.key),
-        ])
+        ], limit=1)
         if not homepage_page:
             homepage_page = Page.create({
                 'website_published': True,
@@ -737,7 +737,7 @@ class Website(models.Model):
                 continue
 
             converters = rule._converters or {}
-            if query_string and not converters and (query_string not in rule.build([{}], append_unknown=False)[1]):
+            if query_string and not converters and (query_string not in rule.build({}, append_unknown=False)[1]):
                 continue
 
             values = [{}]
@@ -798,6 +798,7 @@ class Website(models.Model):
         return pages
 
     def search_pages(self, needle=None, limit=None):
+
         name = slugify(needle, max_length=50, path=True)
         res = []
         for page in self.enumerate_pages(query_string=name, force=True):

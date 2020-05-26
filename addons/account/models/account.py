@@ -359,10 +359,8 @@ class AccountAccount(models.Model):
         either 'debit' or 'credit', depending on which one of these two fields
         got assigned.
         """
+        self.company_id.create_op_move_if_non_existant()
         opening_move = self.company_id.account_opening_move_id
-
-        if not opening_move:
-            raise UserError(_("You must first define an opening move."))
 
         if opening_move.state == 'draft':
             # check whether we should create a new move line or modify an existing one
@@ -536,7 +534,7 @@ class AccountAccount(models.Model):
         query = """
             UPDATE account_move_line
                 SET amount_residual = 0, amount_residual_currency = 0
-            WHERE full_reconcile_id = NULL AND account_id IN %s
+            WHERE full_reconcile_id IS NULL AND account_id IN %s
         """
         self.env.cr.execute(query, [tuple(self.ids)])
 
@@ -980,7 +978,7 @@ class AccountJournal(models.Model):
             draft_moves = self.env['account.move'].search([('journal_id', 'in', self.ids), ('state', '=', 'draft')])
             pending_payments = draft_moves.mapped('line_ids.payment_id')
             pending_payments.mapped('move_line_ids.move_id').post()
-            pending_payments.mapped('reconciled_invoice_ids').filtered(lambda x: x.state == 'in_payment').write({'state': 'paid'})
+            pending_payments.mapped('reconciled_invoice_ids').filtered(lambda x: x.invoice_payment_state == 'in_payment').write({'invoice_payment_state': 'paid'})
         for record in self:
             if record.restrict_mode_hash_table and not record.secure_sequence_id:
                 record._create_secure_sequence(['secure_sequence_id'])
@@ -1357,9 +1355,9 @@ class AccountTax(models.Model):
             JOIN account_tax tax ON tax.id = line.tax_line_id
             WHERE line.tax_line_id IN %s
             AND line.company_id != tax.company_id
-            
+
             UNION ALL
-            
+
             SELECT line.id
             FROM account_move_line_account_tax_rel tax_rel
             JOIN account_tax tax ON tax.id = tax_rel.account_tax_id
@@ -1624,7 +1622,7 @@ class AccountTax(models.Model):
                         incl_fixed_amount += quantity * tax.amount * sum_repartition_factor
                     else:
                         # tax.amount_type == other (python)
-                        tax_amount = tax._compute_amount(base, price_unit, quantity, product, partner) * sum_repartition_factor
+                        tax_amount = tax._compute_amount(base, sign * price_unit, quantity, product, partner) * sum_repartition_factor
                         incl_fixed_amount += tax_amount
                         # Avoid unecessary re-computation
                         cached_tax_amounts[i] = tax_amount
