@@ -418,9 +418,17 @@ class AccountAssetAsset(models.Model):
         depreciation_ids = self.env['account.asset.depreciation.line'].search([
             ('asset_id', 'in', self.ids), ('depreciation_date', '<=', date),
             ('move_check', '=', False)])
+        batch_size = self.env.context.get('batch_size')
         if group_entries:
             return depreciation_ids.create_grouped_move()
-        return depreciation_ids.create_move()
+        move_ids = []
+        if batch_size:
+            for idx in range(0, len(depreciation_ids), batch_size):
+                move_ids += depreciation_ids[idx:idx+batch_size].create_move()
+                self.env.cr.commit()
+        else:
+            move_ids += depreciation_ids.create_move()
+        return move_ids
 
     @api.model
     def create(self, vals):
@@ -486,26 +494,23 @@ class AccountAssetDepreciationLine(models.Model):
     def create_move(self, post_move=True):
         created_moves = self.env['account.move']
         prec = self.env['decimal.precision'].precision_get('Account')
-        # `line.move_id` was invalidated from the cache at each iteration
-        # To prevent to refetch `move_id` of all lines at each iteration just to check a UserError,
-        # we use an intermediar dict which stores the information the UserError check requires.
-        line_moves = {line: line.move_id for line in self}
+        if self.mapped('move_id'):
+            raise UserError(_('This depreciation is already linked to a journal entry! Please post or delete it.'))
         for line in self:
-            if line_moves[line]:
-                raise UserError(_('This depreciation is already linked to a journal entry! Please post or delete it.'))
             category_id = line.asset_id.category_id
             depreciation_date = self.env.context.get('depreciation_date') or line.depreciation_date or fields.Date.context_today(self)
             company_currency = line.asset_id.company_id.currency_id
             current_currency = line.asset_id.currency_id
             amount = current_currency.with_context(date=depreciation_date).compute(line.amount, company_currency)
             asset_name = line.asset_id.name + ' (%s/%s)' % (line.sequence, len(line.asset_id.depreciation_line_ids))
+            partner = self.env['res.partner']._find_accounting_partner(line.asset_id.partner_id)
             move_line_1 = {
                 'name': asset_name,
                 'account_id': category_id.account_depreciation_id.id,
                 'debit': 0.0 if float_compare(amount, 0.0, precision_digits=prec) > 0 else -amount,
                 'credit': amount if float_compare(amount, 0.0, precision_digits=prec) > 0 else 0.0,
                 'journal_id': category_id.journal_id.id,
-                'partner_id': line.asset_id.partner_id.id,
+                'partner_id': partner.id,
                 'analytic_account_id': category_id.account_analytic_id.id if category_id.type == 'sale' else False,
                 'currency_id': company_currency != current_currency and current_currency.id or False,
                 'amount_currency': company_currency != current_currency and - 1.0 * line.amount or 0.0,
@@ -516,7 +521,7 @@ class AccountAssetDepreciationLine(models.Model):
                 'credit': 0.0 if float_compare(amount, 0.0, precision_digits=prec) > 0 else -amount,
                 'debit': amount if float_compare(amount, 0.0, precision_digits=prec) > 0 else 0.0,
                 'journal_id': category_id.journal_id.id,
-                'partner_id': line.asset_id.partner_id.id,
+                'partner_id': partner.id,
                 'analytic_account_id': category_id.account_analytic_id.id if category_id.type == 'purchase' else False,
                 'currency_id': company_currency != current_currency and current_currency.id or False,
                 'amount_currency': company_currency != current_currency and line.amount or 0.0,
@@ -529,7 +534,6 @@ class AccountAssetDepreciationLine(models.Model):
             }
             move = self.env['account.move'].create(move_vals)
             line.write({'move_id': move.id, 'move_check': True})
-            line_moves[line] = move
             created_moves |= move
 
         if post_move and created_moves:
@@ -590,11 +594,13 @@ class AccountAssetDepreciationLine(models.Model):
         # preprocess the assets and lines in which a message should be posted,
         # and then post in batch will prevent the re-fetch of the same data over and over.
         assets_to_close = self.env['account.asset.asset']
+        no_log = self.env.context.get('no_log')
         for line in self:
             asset = line.asset_id
             if asset.currency_id.is_zero(asset.value_residual):
                 assets_to_close |= asset
-        self.log_message_when_posted()
+        if not no_log:
+            self.log_message_when_posted()
         assets_to_close.write({'state': 'close'})
         for asset in assets_to_close:
             asset.message_post(body=_("Document closed."))

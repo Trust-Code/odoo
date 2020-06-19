@@ -5,20 +5,22 @@
 # Translators:
 # Radoslav Sloboda <rado.sloboda@gmail.com>, 2018
 # palica <pavol.cupka@gmail.com>, 2018
-# Matus Krnac <matus.krnac@gmail.com>, 2018
 # gebri <gebri@inmail.sk>, 2018
 # Martin Trigaux, 2018
 # Pavol Krnáč <pavol.krnac@ekoenergo.sk>, 2018
 # Jaroslav Bosansky <jaro.bosansky@ekoenergo.sk>, 2018
-# Jan Prokop, 2019
+# Matus Krnac <matus.krnac@gmail.com>, 2019
+# Jan Prokop, 2020
+# Michal Matus <misko.matus@gmail.com>, 2020
+# Adam Levrinc <adam.levrinc@26house.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-03 15:06+0000\n"
+"POT-Creation-Date: 2019-03-29 09:07+0000\n"
 "PO-Revision-Date: 2017-09-20 10:13+0000\n"
-"Last-Translator: Jan Prokop, 2019\n"
+"Last-Translator: Adam Levrinc <adam.levrinc@26house.com>, 2020\n"
 "Language-Team: Slovak (https://www.transifex.com/odoo/teams/41243/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2265,7 +2267,7 @@ msgstr "Bilancia"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_move_line_balance_cash_basis
 msgid "Balance Cash Basis"
-msgstr ""
+msgstr "Zostatok hotovostného základu"
 
 #. module: account
 #: model:account.financial.report,name:account.account_financial_report_balancesheet0
@@ -2469,6 +2471,8 @@ msgid ""
 "Based on Invoice: the tax is due as soon as the invoice is validated.\n"
 "Based on Payment: the tax is due as soon as the payment of the invoice is received."
 msgstr ""
+"Podľa faktúry: daň je splatná pri validácii faktúry.\n"
+"Podľa platby: daň je splatná prijatím úhrady."
 
 #. module: account
 #: selection:account.tax,tax_exigibility:0
@@ -3093,7 +3097,7 @@ msgstr "Kód"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_group_code_prefix
 msgid "Code Prefix"
-msgstr ""
+msgstr "Predpona kódu"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_cashbox_line_coin_value
@@ -3464,7 +3468,7 @@ msgstr "Vytvoriť návrh dobropisu"
 #. module: account
 #: model:ir.ui.view,arch_db:account.tax_adjustments_wizard
 msgid "Create and post move"
-msgstr ""
+msgstr "Vytvoriť a zaúčtovať pohyb"
 
 #. module: account
 #: code:addons/account/models/account_journal_dashboard.py:288
@@ -3818,7 +3822,7 @@ msgstr "Zákaznícky dobropis"
 #: model:ir.actions.act_window,name:account.action_invoice_out_refund
 #: model:ir.ui.menu,name:account.menu_action_invoice_out_refund
 msgid "Customer Credit Notes"
-msgstr ""
+msgstr "Zákaznícky dobropis"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
@@ -3854,7 +3858,7 @@ msgstr "Zákaznícke platobné podmienky"
 #. module: account
 #: model:ir.ui.view,arch_db:account.res_config_settings_view_form
 msgid "Customer Payments"
-msgstr ""
+msgstr "Zákaznícke platby"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_product_product_taxes_id
@@ -3917,6 +3921,7 @@ msgid ""
 "Date at which the opening entry of this company's accounting has been "
 "posted."
 msgstr ""
+"Dátum, kedy bol zaúčtovaný vstupný zápis účtovníctva tejto spoločnosti."
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_financial_year_op_opening_date
@@ -3924,6 +3929,7 @@ msgid ""
 "Date from which the accounting is managed in Odoo. It is the date of the "
 "opening entry."
 msgstr ""
+"Dátum odkedy je účtovníctvo riadené v Odoo. Je to dátum otváracej položky."
 
 #. module: account
 #. openerp-web
@@ -4000,12 +4006,12 @@ msgstr "Metódy debetu"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_partial_reconcile_debit_move_id
 msgid "Debit Move"
-msgstr ""
+msgstr "Debetný pohyb"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_tax_adjustments_wizard_debit_account_id
 msgid "Debit account"
-msgstr ""
+msgstr "Debetný účet"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_move_line_reconcile_debit
@@ -4072,7 +4078,7 @@ msgstr "Dane prednastavené pre lokálne transakcie "
 #. module: account
 #: model:ir.ui.view,arch_db:account.res_config_settings_view_form
 msgid "Deferred Revenues Management"
-msgstr ""
+msgstr "Riadenie odložených príjmov"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.res_config_settings_view_form
@@ -4173,6 +4179,12 @@ msgid ""
 msgstr ""
 "Rozdiel medzi vypočítaným konečným zostatkom a špecifikovaným konečným "
 "zostatkom."
+
+#. module: account
+#: code:addons/account/models/account_move.py:235
+#, python-format
+msgid "Difference debit - credit: "
+msgstr "Rozdiel Má dať - Dal:"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
@@ -4432,7 +4444,12 @@ msgid "Due date"
 msgstr "Dátum splatnosti"
 
 #. module: account
-#: code:addons/account/models/account_invoice.py:1176
+#: model:ir.ui.view,arch_db:account.view_move_form
+msgid "Duplicate"
+msgstr "Duplikát"
+
+#. module: account
+#: code:addons/account/models/account_invoice.py:1194
 #, python-format
 msgid ""
 "Duplicated vendor reference detected. You probably encoded twice the same "
@@ -4444,7 +4461,7 @@ msgstr ""
 #. module: account
 #: model:ir.model.fields,field_description:account.field_res_config_settings_module_account_reports
 msgid "Dynamic Reports"
-msgstr ""
+msgstr "Dynamické reporty"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_res_config_settings_module_l10n_eu_service
@@ -5095,7 +5112,7 @@ msgstr "Má faktúry"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_invoice_has_outstanding
 msgid "Has Outstanding"
-msgstr ""
+msgstr "Má nevybavené"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_res_partner_has_unreconciled_entries
@@ -5408,7 +5425,7 @@ msgstr "Imporotovať pomocou \"Import\" tlaçidla v ľavom hornom rohu"
 #. module: account
 #: model:ir.ui.view,arch_db:account.res_config_settings_view_form
 msgid "Import your bank statements automatically"
-msgstr ""
+msgstr "Automatický import bankových výpisov"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.res_config_settings_view_form
@@ -6082,6 +6099,8 @@ msgid ""
 "Journal where the opening entry of this company's accounting has been "
 "posted."
 msgstr ""
+"Účtovná kniha, do ktorej bol zaúčtovaný vstupný zápis účtovníctva tejto "
+"spoločnosti."
 
 #. module: account
 #: model:ir.actions.act_window,name:account.action_account_journal_form
@@ -6263,7 +6282,7 @@ msgstr "Posledný mesiac"
 #: code:addons/account/static/src/xml/account_reconciliation.xml:119
 #, python-format
 msgid "Last Reconciliation:"
-msgstr ""
+msgstr "Posledné zosúladenie :"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_account_tag_write_uid
@@ -6478,7 +6497,7 @@ msgstr "Nechaj odoo skúsiť zosúladiť vstupy pre používateľa"
 #. module: account
 #: model:ir.ui.view,arch_db:account.res_config_settings_view_form
 msgid "Let your customers pay their invoices online"
-msgstr ""
+msgstr "Umožnite vašim zákazníkom uhrádzať faktúry online"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_financial_report_level
@@ -7235,6 +7254,8 @@ msgid ""
 "Once installed, set 'Bank Feeds' to 'File Import' in bank account "
 "settings.This adds a button to import from the Accounting dashboard."
 msgstr ""
+"Po inštalácii nastavte \"Bankové kanály\" na \"Import súboru\" v nastavení "
+"bankového účtu. Bude pridané tlačítko na import v nástenke účtovníctva."
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
@@ -7281,7 +7302,7 @@ msgstr "Iba jedna šablóna grafu k dispozícii"
 #: code:addons/account/models/account_payment.py:484
 #, python-format
 msgid "Only a draft payment can be posted."
-msgstr ""
+msgstr "Je možné zaúčtovať iba návrh platby."
 
 #. module: account
 #: code:addons/account/models/chart_template.py:866
@@ -7952,6 +7973,7 @@ msgid ""
 "Please install a chart of accounts or create a miscellaneous journal before "
 "proceeding."
 msgstr ""
+"Nainštalujte prosím účtovnú osnovu alebo vytvorte zápis pre pokračovaním."
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_account_form
@@ -8893,6 +8915,8 @@ msgid ""
 "Select this if the taxes should use cash basis, which will create an entry "
 "for such taxes on a given account during reconciliation."
 msgstr ""
+"Zvoľte, ak sa má pre daň používať hotovostný základ, ktorý vytvorí vstup pre"
+" túto daň na danom účte počas zlaďovania"
 
 #. module: account
 #: code:addons/account/wizard/account_invoice_state.py:21
@@ -9504,6 +9528,8 @@ msgid ""
 "Taxes, fiscal positions, chart of accounts &amp; legal statements for your "
 "country"
 msgstr ""
+"Dane, fiškálne pozície, účtovná osnova &amp; zákonné prepisy pre vašu "
+"krajinu"
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_move_line_balance
@@ -9966,7 +9992,7 @@ msgstr ""
 #: code:addons/account/models/company.py:94
 #, python-format
 msgid "The lock date for advisors is irreversible and can't be removed."
-msgstr ""
+msgstr "Uzávierka termínu pre poradcov je nenávratná a nemôže byť odstránená."
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_move_line_move_id
@@ -9995,6 +10021,7 @@ msgstr "Názov ktorý sa bude používať na riadkoch pohybov účtu"
 msgid ""
 "The new lock date for advisors must be set after the previous lock date."
 msgstr ""
+"Nová uzávierka termínov pre poradcov musí byť vytvorená po predchádzajúcej"
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_journal_refund_sequence_number_next
@@ -10129,6 +10156,8 @@ msgid ""
 "There are still unposted entries in the period you want to lock. You should "
 "either post or delete them."
 msgstr ""
+"V období na uzavretie sú stále nezaúčtované položky. Treba ich zaúčtovať "
+"alebo zmazať."
 
 #. module: account
 #: code:addons/account/models/account_bank_statement.py:179
@@ -11454,6 +11483,9 @@ msgid ""
 "You cannot define stricter conditions on advisors than on users. Please make"
 " sure that the lock date on advisor is set before the lock date for users."
 msgstr ""
+"Nemôžte definovať prísnejšie podmienky na poradcov ako na užívateľov. Prosím"
+" uistite sa že uzávierka pre poradcov je nastavená pred uzávierkami pre "
+"užívateľov."
 
 #. module: account
 #: code:addons/account/models/account_invoice.py:613
@@ -11532,6 +11564,9 @@ msgid ""
 "You cannot lock a period that is not finished yet. Please make sure that the"
 " lock date for advisors is not set after the last day of the previous month."
 msgstr ""
+"Nemôžte uzavrieť obdobie, ktoré ešte neskončilo. Prosím uistite sa, že "
+"uzávierka pre poradcov nie je nastavená po poslednom dni predchádzajúceho "
+"mesiaca."
 
 #. module: account
 #. openerp-web

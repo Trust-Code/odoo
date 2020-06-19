@@ -6,16 +6,18 @@
 # matjaz k <matjaz@mentis.si>, 2018
 # Vida Potočnik <vida.potocnik@mentis.si>, 2018
 # Dejan Sraka <dejan.sraka@picolabs.si>, 2018
-# Martin Trigaux, 2018
 # Matjaz Mozetic <m.mozetic@matmoz.si>, 2019
+# Martin Trigaux, 2019
+# Jasmina Macur <jasmina@hbs.si>, 2019
+# Tadej Lupšina <tadej@hbs.si>, 2019
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-03 15:07+0000\n"
+"POT-Creation-Date: 2019-07-17 15:01+0000\n"
 "PO-Revision-Date: 2017-09-20 10:20+0000\n"
-"Last-Translator: Matjaz Mozetic <m.mozetic@matmoz.si>, 2019\n"
+"Last-Translator: Tadej Lupšina <tadej@hbs.si>, 2019\n"
 "Language-Team: Slovenian (https://www.transifex.com/odoo/teams/41243/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -442,7 +444,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:payment.field_res_partner_payment_token_count
 #: model:ir.model.fields,field_description:payment.field_res_users_payment_token_count
 msgid "Count Payment Token"
-msgstr ""
+msgstr "Štetje plačilnega žetona"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_acquirer_country_ids
@@ -569,7 +571,7 @@ msgstr "Sporočilo napake"
 #: code:addons/payment/static/src/js/payment_form.js:428
 #, python-format
 msgid "Error: "
-msgstr ""
+msgstr "Napaka: "
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_transaction_fees
@@ -941,7 +943,7 @@ msgstr "Načini plačila"
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_transaction_payment_token_id
 msgid "Payment Token"
-msgstr ""
+msgstr "Plačilni žeton"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_res_partner_payment_token_ids
@@ -950,7 +952,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:payment.payment_token_tree_view
 #: model:ir.ui.view,arch_db:payment.payment_token_view_search
 msgid "Payment Tokens"
-msgstr ""
+msgstr "Plačilni žetoni"
 
 #. module: payment
 #: model:ir.model,name:payment.model_payment_transaction
@@ -984,7 +986,7 @@ msgstr ""
 #: code:addons/payment/controllers/portal.py:135
 #, python-format
 msgid "Payment transaction failed."
-msgstr ""
+msgstr "Plačilna transakcija ni uspela."
 
 #. module: payment
 #: model:ir.model,name:payment.model_account_payment
@@ -1049,13 +1051,13 @@ msgstr "Izberite opcijo za dodajanje novega načina plačila."
 #: model:payment.acquirer,post_msg:payment.payment_acquirer_custom
 #: model:payment.acquirer,post_msg:payment.payment_acquirer_transfer
 msgid "Please use the following transfer details"
-msgstr ""
+msgstr "Prosimo, uporabite naslednje podatke o prenosu"
 
 #. module: payment
 #: model:payment.acquirer,post_msg:payment.payment_acquirer_custom
 #: model:payment.acquirer,post_msg:payment.payment_acquirer_transfer
 msgid "Please use the order name as communication reference."
-msgstr ""
+msgstr "Prosimo, uporabite ime naročila kot referenco za komunikacijo."
 
 #. module: payment
 #: model:ir.ui.view,arch_db:payment.confirm
@@ -1073,6 +1075,20 @@ msgstr "Proizvodnja"
 #: model:ir.ui.view,arch_db:payment.acquirer_search
 msgid "Provider"
 msgstr "Ponudnik"
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/js/payment_translations.js:9
+#, python-format
+msgid "Publish"
+msgstr "Objavi"
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/js/payment_translations.js:8
+#, python-format
+msgid "Published"
+msgstr "Objavljeno"
 
 #. module: payment
 #: selection:payment.acquirer,payment_flow:0
@@ -1129,7 +1145,7 @@ msgstr "Shranjeni podatki o plačilih"
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_account_payment_payment_token_id
 msgid "Saved payment token"
-msgstr ""
+msgstr "Shranjen žeton plačila"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_acquirer_token_implemented
@@ -1152,7 +1168,7 @@ msgstr "Zaporedje"
 #: code:addons/payment/static/src/js/payment_form.js:367
 #, python-format
 msgid "Server Error"
-msgstr ""
+msgstr "Napaka strežnika"
 
 #. module: payment
 #: selection:payment.transaction,type:0
@@ -1164,7 +1180,7 @@ msgstr "Strežnik-strežnik"
 #: code:addons/payment/static/src/js/payment_form.js:300
 #, python-format
 msgid "Server error"
-msgstr ""
+msgstr "Napaka strežnika"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_token_short_name

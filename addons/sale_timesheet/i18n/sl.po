@@ -7,6 +7,8 @@
 # Martin Trigaux, 2018
 # Vida Potočnik <vida.potocnik@mentis.si>, 2018
 # Matjaz Mozetic <m.mozetic@matmoz.si>, 2019
+# Boris Kodelja <boris@hbs.si>, 2019
+# Jasmina Macur <jasmina@hbs.si>, 2019
 # 
 msgid ""
 msgstr ""
@@ -14,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-09-17 09:57+0000\n"
 "PO-Revision-Date: 2017-09-20 10:23+0000\n"
-"Last-Translator: Matjaz Mozetic <m.mozetic@matmoz.si>, 2019\n"
+"Last-Translator: Jasmina Macur <jasmina@hbs.si>, 2019\n"
 "Language-Team: Slovenian (https://www.transifex.com/odoo/teams/41243/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -50,12 +52,12 @@ msgstr ""
 #. module: sale_timesheet
 #: model:ir.ui.view,arch_db:sale_timesheet.timesheet_plan
 msgid "<b>Total</b>"
-msgstr ""
+msgstr "<b>Skupaj</b>"
 
 #. module: sale_timesheet
 #: model:ir.ui.view,arch_db:sale_timesheet.project_project_view_kanban_inherit_sale_timesheet
 msgid "<span class=\"o_label\">Overview</span>"
-msgstr ""
+msgstr "<span class=\"o_label\">Pregled</span>"
 
 #. module: sale_timesheet
 #: model:ir.model,name:sale_timesheet.model_account_analytic_line
@@ -101,7 +103,7 @@ msgstr ""
 #: model:ir.actions.act_window,name:sale_timesheet.timesheet_action_billing_report
 #: model:ir.ui.menu,name:sale_timesheet.menu_timesheet_billing_analysis
 msgid "By Billing Rate"
-msgstr ""
+msgstr "Po stopnji zaračunavanja"
 
 #. module: sale_timesheet
 #: model:ir.ui.view,arch_db:sale_timesheet.timesheet_plan
@@ -112,7 +114,7 @@ msgstr "Stroški"
 #: model:ir.actions.act_window,name:sale_timesheet.timesheet_action_report_cost_revenue
 #: model:ir.ui.menu,name:sale_timesheet.menu_timesheet_report_cost_revenue
 msgid "Costs and Revenues"
-msgstr ""
+msgstr "Stroški in prihodki"
 
 #. module: sale_timesheet
 #: selection:product.template,service_tracking:0
@@ -152,12 +154,12 @@ msgstr "Stalno"
 #. module: sale_timesheet
 #: model:ir.ui.view,arch_db:sale_timesheet.timesheet_view_search
 msgid "Fixed Price Projects"
-msgstr ""
+msgstr "Projekti s stalno ceno"
 
 #. module: sale_timesheet
 #: model:ir.ui.view,arch_db:sale_timesheet.product_template_search_view_sale_timesheet
 msgid "Fixed price services"
-msgstr ""
+msgstr "Storitve s stalno ceno"
 
 #. module: sale_timesheet
 #: model:ir.ui.view,arch_db:sale_timesheet.timesheet_plan
@@ -245,7 +247,7 @@ msgstr "Naročena količina"
 #: code:addons/sale_timesheet/models/project.py:45
 #, python-format
 msgid "Overview"
-msgstr ""
+msgstr "Pregled"
 
 #. module: sale_timesheet
 #: model:ir.model,name:sale_timesheet.model_product_template
@@ -279,7 +281,7 @@ msgstr ""
 #. module: sale_timesheet
 #: model:ir.ui.view,arch_db:sale_timesheet.view_order_form_inherit_sale_timesheet
 msgid "Project(s) Overview"
-msgstr ""
+msgstr "Povzetek projektov"
 
 #. module: sale_timesheet
 #: code:addons/sale_timesheet/models/sale_order.py:107
@@ -291,7 +293,7 @@ msgstr "Projekti"
 #. module: sale_timesheet
 #: model:ir.model.fields,help:sale_timesheet.field_sale_order_project_ids
 msgid "Projects used in this sales order."
-msgstr ""
+msgstr "Projekti uporabljeni v tem prodajnem nalogu."
 
 #. module: sale_timesheet
 #: model:ir.model,name:sale_timesheet.model_sale_order
@@ -358,7 +360,7 @@ msgstr "Sledljivost storitve"
 #. module: sale_timesheet
 #: model:ir.ui.view,arch_db:sale_timesheet.res_config_settings_view_form
 msgid "Setup your fixed price services"
-msgstr ""
+msgstr "Nastavi svoje storitve s stalno ceno"
 
 #. module: sale_timesheet
 #: model:ir.ui.view,arch_db:sale_timesheet.res_config_settings_view_form
@@ -368,7 +370,7 @@ msgstr "Nastavite svoje storitvene mejnike"
 #. module: sale_timesheet
 #: model:ir.ui.view,arch_db:sale_timesheet.res_config_settings_view_form
 msgid "Setup your time-based services"
-msgstr ""
+msgstr "Nastavi svoje storitve po času"
 
 #. module: sale_timesheet
 #: model:ir.model,name:sale_timesheet.model_project_task
@@ -382,6 +384,8 @@ msgstr "Opravilo"
 msgid ""
 "Task Created (%s): <a href=# data-oe-model=project.task data-oe-id=%d>%s</a>"
 msgstr ""
+"Opravilo ustvarjeno (%s): <a href=# data-oe-model=project.task data-oe-"
+"id=%d>%s</a>"
 
 #. module: sale_timesheet
 #: model:ir.model.fields,help:sale_timesheet.field_sale_order_line_task_id
@@ -414,6 +418,8 @@ msgid ""
 "This task has been created from: <a href=# data-oe-model=sale.order data-oe-"
 "id=%d>%s</a> (%s)"
 msgstr ""
+"To opravilo je bilo ustvarjeno iz: <a href=# data-oe-model=sale.order data-"
+"oe-id=%d>%s</a> (%s)"
 
 #. module: sale_timesheet
 #: model:ir.ui.view,arch_db:sale_timesheet.timesheet_plan
@@ -423,7 +429,7 @@ msgstr "Čas po kadrih"
 #. module: sale_timesheet
 #: model:ir.ui.view,arch_db:sale_timesheet.product_template_search_view_sale_timesheet
 msgid "Time-based services"
-msgstr ""
+msgstr "Storitve po času"
 
 #. module: sale_timesheet
 #. openerp-web
@@ -467,12 +473,12 @@ msgstr "Časovnice"
 #: code:addons/sale_timesheet/models/project.py:20
 #, python-format
 msgid "Timesheets of %s"
-msgstr ""
+msgstr "Časovnice od %s"
 
 #. module: sale_timesheet
 #: selection:product.template,service_policy:0
 msgid "Timesheets on tasks"
-msgstr ""
+msgstr "Časovnice na opravilih"
 
 #. module: sale_timesheet
 #: model:ir.ui.view,arch_db:sale_timesheet.timesheet_plan
@@ -500,4 +506,4 @@ msgstr ""
 #. module: sale_timesheet
 #: model:ir.ui.view,arch_db:sale_timesheet.hr_timesheet_employee_extd_form
 msgid "per hour"
-msgstr ""
+msgstr "na uro"

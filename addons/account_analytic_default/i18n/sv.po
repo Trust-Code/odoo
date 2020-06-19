@@ -3,18 +3,21 @@
 # * account_analytic_default
 # 
 # Translators:
-# Martin Trigaux <mat@odoo.com>, 2017
-# Kristoffer Grundström <kristoffer.grundstrom1983@gmail.com>, 2017
-# Anders Wallenquist <anders.wallenquist@vertel.se>, 2017
 # Daniel Forslund <daniel.forslund@gmail.com>, 2017
+# Kristoffer Grundström <lovaren@gmail.com>, 2017
 # Patrik Lermon <patrik.lermon@gmail.com>, 2017
+# Anders Wallenquist <anders.wallenquist@vertel.se>, 2017
+# Martin Trigaux, 2017
+# Johan Lönnqvist Gustafsson <johan@implefy.se>, 2020
+# Jakob Krabbe <jakob.krabbe@vertel.se>, 2020
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.saas~18\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-09-20 09:53+0000\n"
-"PO-Revision-Date: 2017-09-20 09:53+0000\n"
-"Last-Translator: Patrik Lermon <patrik.lermon@gmail.com>, 2017\n"
+"PO-Revision-Date: 2017-09-20 10:14+0000\n"
+"Last-Translator: Jakob Krabbe <jakob.krabbe@vertel.se>, 2020\n"
 "Language-Team: Swedish (https://www.transifex.com/odoo/teams/41243/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,7 +28,7 @@ msgstr ""
 #. module: account_analytic_default
 #: model:ir.ui.view,arch_db:account_analytic_default.view_account_analytic_default_kanban
 msgid "<i class=\"fa fa-calendar\"/> From"
-msgstr ""
+msgstr "<i class=\"fa fa-clock-o\"/> Från"
 
 #. module: account_analytic_default
 #: model:ir.ui.view,arch_db:account_analytic_default.view_account_analytic_default_kanban
@@ -35,7 +38,7 @@ msgstr "<strong>Kund</strong>"
 #. module: account_analytic_default
 #: model:ir.ui.view,arch_db:account_analytic_default.view_account_analytic_default_kanban
 msgid "<strong>Product</strong>"
-msgstr ""
+msgstr "<strong>Produkt</strong>"
 
 #. module: account_analytic_default
 #: model:ir.ui.view,arch_db:account_analytic_default.view_account_analytic_default_form_search
