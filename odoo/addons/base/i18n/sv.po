@@ -19,8 +19,8 @@
 # lasch a <bmail440@gmail.com>, 2019
 # Chrille Hedberg <hedberg.chrille@gmail.com>, 2019
 # Martin Trigaux, 2019
-# Anders Wallenquist <anders.wallenquist@vertel.se>, 2019
 # Kim Asplund <kim.asplund@gmail.com>, 2020
+# Anders Wallenquist <anders.wallenquist@vertel.se>, 2020
 # Jakob Krabbe <jakob.krabbe@vertel.se>, 2020
 # 
 msgid ""
@@ -5259,7 +5259,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.res_lang_form
 msgid "%Y - Year with century.\""
-msgstr ""
+msgstr "%Y - År med århundrade\""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.res_lang_form
@@ -8585,7 +8585,7 @@ msgstr "Färgindex"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_base_document_layout
 msgid "Colors"
-msgstr ""
+msgstr "Färger"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_model_fields__column1

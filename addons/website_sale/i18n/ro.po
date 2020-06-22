@@ -188,12 +188,12 @@ msgstr ""
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.product_buy_now
 msgid "<i class=\"fa fa-bolt\"/> Buy Now"
-msgstr ""
+msgstr "<i class=\"fa fa-bolt\"/>Cumpără acum"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
 msgid "<i class=\"fa fa-cart-plus\"/> Choose number of products"
-msgstr ""
+msgstr "<i class=\"fa fa-cart-plus\"/>Alegeți numărul de produse"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.address_kanban
@@ -804,7 +804,7 @@ msgstr ""
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_product_public_category__website_description
 msgid "Category Description"
-msgstr ""
+msgstr "Descriere categorie"
 
 #. module: website_sale
 #: model:product.public.category,name:website_sale.public_category_chairs
@@ -1629,12 +1629,12 @@ msgstr "Nu s-au găsit coșuri abandonate"
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.products
 msgid "No product defined"
-msgstr ""
+msgstr "Nu sunt produse definite"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.products
 msgid "No product defined in category \""
-msgstr ""
+msgstr "Nu sunt produse definite în categoria \""
 
 #. module: website_sale
 #: model_terms:ir.actions.act_window,help:website_sale.website_sale_visitor_product_action
@@ -2245,7 +2245,7 @@ msgstr "Raportare"
 #: model:ir.model.fields,help:website_sale.field_product_product__website_id
 #: model:ir.model.fields,help:website_sale.field_product_public_category__website_id
 msgid "Restrict publishing to this website."
-msgstr ""
+msgstr "Limitați publicarea pe acest site web."
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.payment
@@ -2395,6 +2395,8 @@ msgstr "Vindeți în mai multe valute"
 #: model_terms:ir.ui.view,arch_db:website_sale.res_config_settings_view_form
 msgid "Sell variants of a product using attributes (size, color, etc.)"
 msgstr ""
+"Vindeți variante ale unui produs folosind atribute (dimensiune, culoare "
+"etc.)"
 
 #. module: website_sale
 #: model:ir.actions.server,name:website_sale.ir_actions_server_sale_cart_recovery_email
@@ -2674,6 +2676,7 @@ msgstr ""
 #: model:ir.model.fields,help:website_sale.field_product_product__website_url
 msgid "The full URL to access the document through the website."
 msgstr ""
+"URL-ul complet pentru accesarea documentului prin intermediul site-ului web."
 
 #. module: website_sale
 #: code:addons/website_sale/models/sale_order.py:0
@@ -2772,7 +2775,7 @@ msgstr ""
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.product
 msgid "This product has no valid combination."
-msgstr ""
+msgstr "Combinația de atribute nu este validă pentru acest produs."
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.product

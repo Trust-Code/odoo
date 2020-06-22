@@ -17,13 +17,13 @@
 # Patrik Lermon <patrik.lermon@gmail.com>, 2019
 # Daniel Osser <danielosser@gmail.com>, 2019
 # Kristoffer Grundström <lovaren@gmail.com>, 2019
-# Anders Wallenquist <anders.wallenquist@vertel.se>, 2019
 # lasch a <bmail440@gmail.com>, 2019
 # Johan Bergquist <johan.bergquist@netip.se>, 2019
 # lynnliuying <lynn.liu1971@gmail.com>, 2019
 # Chrille Hedberg <hedberg.chrille@gmail.com>, 2019
 # Kim Asplund <kim.asplund@gmail.com>, 2020
 # Martin Trigaux, 2020
+# Anders Wallenquist <anders.wallenquist@vertel.se>, 2020
 # Jakob Krabbe <jakob.krabbe@vertel.se>, 2020
 # 
 msgid ""
@@ -1909,7 +1909,7 @@ msgstr "Objektrader"
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.res_config_settings_view_form
 msgid "Analytics"
-msgstr ""
+msgstr "Analyser"
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_invoice_send__no_auto_thread
@@ -3202,7 +3202,7 @@ msgstr ""
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.account_invoice_onboarding_panel
 msgid "Congratulations! You are all set."
-msgstr ""
+msgstr "Grattis allt är klart."
 
 #. module: account
 #: model:ir.model,name:account.model_res_partner
