@@ -2398,7 +2398,7 @@ msgstr "請求"
 #. module: account
 #: model:res.groups,name:account.group_account_manager
 msgid "Billing Administrator"
-msgstr ""
+msgstr "請求管理者"
 
 #. module: account
 #: model:ir.actions.act_window,name:account.action_move_in_invoice_type
@@ -3008,7 +3008,7 @@ msgstr "カラーインデクス"
 #: model:ir.model.fields,field_description:account.field_account_move__commercial_partner_id
 #: model:ir.model.fields,help:account.field_account_invoice_report__commercial_partner_id
 msgid "Commercial Entity"
-msgstr "商業体"
+msgstr "企業体"
 
 #. module: account
 #: model:ir.model,name:account.model_account_common_journal_report
@@ -10994,7 +10994,7 @@ msgstr ""
 msgid ""
 "There are still unposted entries in the period you want to lock. You should "
 "either post or delete them."
-msgstr ""
+msgstr "ロックしようとしている期間に未記帳の会計仕訳が存在します。先にこれらを記帳または削除してください。"
 
 #. module: account
 #: code:addons/account/models/account_payment.py:0
@@ -12139,6 +12139,7 @@ msgid ""
 "You cannot add/modify entries prior to and inclusive of the lock date %s. "
 "Check the company settings or ask someone with the 'Adviser' role"
 msgstr ""
+"ロック日 %s 以前の日付で仕訳を作成/修正することはできません。会社設定を確認するか、「請求マネジャー」権限を持つユーザにご相談ください。"
 
 #. module: account
 #: code:addons/account/models/company.py:0
@@ -12438,6 +12439,12 @@ msgid ""
 "You should configure the 'Loss Exchange Rate Account' in the accounting "
 "settings, to manage automatically the booking of accounting entries related "
 "to differences between exchange rates."
+msgstr ""
+
+#. module: account
+#: code:addons/account/models/account_cash_rounding.py:33
+#, python-format
+msgid "Please set a positive rounding value."
 msgstr ""
 
 #. module: account

@@ -2,6 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from odoo.exceptions import ValidationError
 from odoo import models, fields, api, _
+from odoo.osv import expression
 
 
 class AccountMove(models.Model):
@@ -46,7 +47,7 @@ class AccountMove(models.Model):
                         'base.cl') or self.partner_id.l10n_cl_sii_taxpayer_type == '4':
                     partner_domain += [('code', 'in', [])]
                 document_type_ids = self.env['l10n_latam.document.type'].search(partner_domain).ids
-            domain = [('id', 'in', document_type_ids)]
+            domain = expression.AND([domain, [('id', 'in', document_type_ids)]])
         return domain
 
     def _check_document_types_post(self):
@@ -100,3 +101,13 @@ class AccountMove(models.Model):
     def post(self):
         self._check_document_types_post()
         super().post()
+
+    def _get_name_invoice_report(self, report_xml_id):
+        self.ensure_one()
+        if self.l10n_latam_use_documents and self.company_id.country_id.code == 'CL':
+            custom_report = {
+                'account.report_invoice_document_with_payments': 'l10n_cl.report_invoice_document_with_payments',
+                'account.report_invoice_document': 'l10n_cl.report_invoice_document',
+            }
+            return custom_report.get(report_xml_id) or report_xml_id
+        return super()._get_name_invoice_report(report_xml_id)
