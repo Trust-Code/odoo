@@ -5338,20 +5338,24 @@ Fields:
                     elif comparator == 'not in':
                         ok = all(map(lambda x: x not in data, value))
                     elif comparator == 'not ilike':
+                        data = [(x or "") for x in data]
                         ok = all(map(lambda x: value.lower() not in x.lower(), data))
                     elif comparator == 'ilike':
-                        data = [x.lower() for x in data]
+                        data = [(x or "").lower() for x in data]
                         ok = bool(fnmatch.filter(data, '*'+(value_esc or '').lower()+'*'))
                     elif comparator == 'not like':
+                        data = [(x or "") for x in data]
                         ok = all(map(lambda x: value not in x, data))
                     elif comparator == 'like':
+                        data = [(x or "") for x in data]
                         ok = bool(fnmatch.filter(data, value and '*'+value_esc+'*'))
                     elif comparator == '=?':
                         ok = (value in data) or not value
                     elif comparator in ('=like'):
+                        data = [(x or "") for x in data]
                         ok = bool(fnmatch.filter(data, value_esc))
                     elif comparator in ('=ilike'):
-                        data = [x.lower() for x in data]
+                        data = [(x or "").lower() for x in data]
                         ok = bool(fnmatch.filter(data, value and value_esc.lower()))
                     else:
                         raise ValueError
@@ -6018,6 +6022,14 @@ Fields:
                     else:
                         # x2many fields: serialize value as commands
                         result[name] = commands = [(5,)]
+                        # The purpose of the following line is to enable the prefetching.
+                        # In the loop below, line._prefetch_ids actually depends on the
+                        # value of record[name] in cache (see prefetch_ids on x2many
+                        # fields).  But the cache has been invalidated before calling
+                        # diff(), therefore evaluating line._prefetch_ids with an empty
+                        # cache simply returns nothing, which discards the prefetching
+                        # optimization!
+                        record[name]
                         for line_snapshot in self[name]:
                             line = line_snapshot['<record>']
                             line = line._origin or line
