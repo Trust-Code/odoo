@@ -15,8 +15,9 @@
 # Jaroslav Bosansky <jaro.bosansky@ekoenergo.sk>, 2020
 # Jan Prokop, 2020
 # Filip Boskovič <filip.boskovic@26house.com>, 2020
-# karolína schusterová <karolina.schusterova@vdp.sk>, 2020
 # Rastislav Brencic <rastislav.brencic@azet.sk>, 2020
+# karolína schusterová <karolina.schusterova@vdp.sk>, 2020
+# Damian Brencic <brencicdamian12313@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
@@ -24,7 +25,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-23 15:12+0000\n"
 "PO-Revision-Date: 2019-08-26 09:06+0000\n"
-"Last-Translator: Rastislav Brencic <rastislav.brencic@azet.sk>, 2020\n"
+"Last-Translator: Damian Brencic <brencicdamian12313@gmail.com>, 2020\n"
 "Language-Team: Slovak (https://www.transifex.com/odoo/teams/41243/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2636,6 +2637,10 @@ msgid ""
 "================================\n"
 "\n"
 msgstr ""
+"\n"
+"Vytvárajte reporty pracovníkov v teréne\n"
+"================================\n"
+"\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_survey
@@ -4458,6 +4463,13 @@ msgid ""
 "(N+1, N+2, direct subordinates)\n"
 "        "
 msgstr ""
+"\n"
+"Organizačná štruktúra pre HR\n"
+"=======================\n"
+"\n"
+"Tento modul rozširuje formulár zamestnancov o organizačnú schému.\n"
+"(N+1, N+2, priami podriadení)\n"
+"        "
 
 #. module: base
 #: model:ir.module.module,description:base.module_event
@@ -4807,6 +4819,11 @@ msgid ""
 "Allows to automatically select analytic accounts based on Product\n"
 "    "
 msgstr ""
+"\n"
+"Nastavte predvolené hodnoty pre svoje analytické účty podľa vašich výdavkov.==================================================================\n"
+"\n"
+"Umožňuje automaticky vyberať analytické účty založené na produkte\n"
+"    "
 
 #. module: base
 #: model:ir.module.module,description:base.module_account_analytic_default
@@ -4890,6 +4907,12 @@ msgid ""
 "This module introduces skills and resumé management for employees.\n"
 "        "
 msgstr ""
+"\n"
+"Zručnosti a životopis pre HR\n"
+"========================\n"
+"\n"
+"Tento modul predstavuje pre zamestnancov riadenie zručností a životopisu.\n"
+"        "
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_es
@@ -5860,6 +5883,10 @@ msgid ""
 "On a simple click, your visitors can subscribe to mailing lists managed in the Email Marketing app.\n"
 "    "
 msgstr ""
+"\n"
+"Tento modul prináša nový stavebný blok s prepojením na mailový zoznam, ktorý je možné umiestniť na ľubovoľnú stránku vášho webu. \n"
+"Návštevníci sa môžu jednoduchým kliknutím prihlásiť na odber mailových zoznamov spravovaných v aplikácii email marketing.\n"
+"    "
 
 #. module: base
 #: model:ir.module.module,description:base.module_sale
@@ -6358,6 +6385,9 @@ msgid ""
 "Validate stock moves for Field Service\n"
 "======================================\n"
 msgstr ""
+"\n"
+"Validujte pohyby zásob pre pracovníkov v teréne\n"
+"======================================\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_fleet
@@ -6600,7 +6630,7 @@ msgstr "%S - Sekundy [00,61].\""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.res_lang_form
 msgid "%Y - Year with century.\""
-msgstr "%Y - Rok so storočím\""
+msgstr "%R - Rok so storočím\""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.res_lang_form
@@ -6696,12 +6726,12 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
 msgid "), are you sure to create a new one?"
-msgstr ""
+msgstr "), ste si istý, že chcete vytvoriť nový zápis?"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.layout_preview
 msgid "+1 (650) 691-3277"
-msgstr ""
+msgstr "+1 (650) 691-3277"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.wizard_lang_export
@@ -6770,7 +6800,7 @@ msgstr "- vzťah ="
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.report_irmodeloverview
 msgid "- selection = ["
-msgstr ""
+msgstr "- výber = ["
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.report_irmodeloverview
@@ -6865,27 +6895,27 @@ msgstr "3. %y, %Y         ==&gt; 08, 2008"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.res_lang_form
 msgid "4. %d, %m         ==&gt; 05, 12"
-msgstr ""
+msgstr "4. %d, %m         ==&gt; 05, 12"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.res_lang_form
 msgid "5. %H:%M:%S      ==&gt; 18:25:20"
-msgstr ""
+msgstr "5. %H:%M:%S      ==&gt; 18:25:20"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.res_lang_form
 msgid "6. %I:%M:%S %p  ==&gt; 06:25:20 PM"
-msgstr ""
+msgstr "6. %I:%M:%S %p  ==&gt; 06:25:20 PM"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.res_lang_form
 msgid "7. %j              ==&gt; 340"
-msgstr ""
+msgstr "7. %j              ==&gt; 340"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.res_lang_form
 msgid "8. %S              ==&gt; 20"
-msgstr ""
+msgstr "8. %S              ==&gt; 20"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.res_lang_form
@@ -6902,6 +6932,12 @@ msgid ""
 "                                <b attrs=\"{'invisible': [('type', '!=', 'private')]}\">Private Address</b>\n"
 "                                <b attrs=\"{'invisible': [('type', '!=', False)]}\">Address</b>"
 msgstr ""
+"<b attrs=\"{'invisible': [('type', '!=', 'contact')]}\">Adresa firmy</b>\n"
+"                                <b attrs=\"{'invisible': [('type', '!=', 'invoice')]}\">Fakturačná adresa</b>\n"
+"                                <b attrs=\"{'invisible': [('type', '!=', 'delivery')]}\">Adresa dodania</b>\n"
+"                                <b attrs=\"{'invisible': [('type', '!=', 'other')]}\">Iná adresa</b>\n"
+"                                <b attrs=\"{'invisible': [('type', '!=', 'private')]}\">Súkromná adresa</b>\n"
+"                                <b attrs=\"{'invisible': [('type', '!=', False)]}\">Adresa</b>"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_partner_short_form
@@ -6973,6 +7009,8 @@ msgid ""
 "<code>records</code>: recordset of all records on which the action is "
 "triggered in multi mode; may be void"
 msgstr ""
+"<code>záznamy</code>: sada záznamov všetkých záznamov, pri ktorých sa spustí"
+" akcia v režime viacerých režimov; môže byť neplatný"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_model_fields_form
@@ -7010,12 +7048,12 @@ msgstr "<i class=\"fa fa-circle\" role=\"img\" aria-label=\"Invalid\" title=\"In
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_res_users_kanban
 msgid "<i class=\"fa fa-circle\" role=\"img\" aria-label=\"Ok\" title=\"Ok\"/>"
-msgstr ""
+msgstr "<i class=\"fa fa-circle\" role=\"img\" aria-label=\"Ok\" title=\"Ok\"/>"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_res_users_kanban
 msgid "<i class=\"fa fa-envelope\" role=\"img\" aria-label=\"Login\"/>"
-msgstr ""
+msgstr "<i class=\"fa fa-envelope\" role=\"img\" aria-label=\"Login\"/>"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_rule_form
@@ -7023,16 +7061,18 @@ msgid ""
 "<i class=\"fa fa-info fa-3x text-info float-left\" role=\"img\" aria-"
 "label=\"Info\" title=\"Info\"/>"
 msgstr ""
+"<i class=\"fa fa-info fa-3x text-info float-left\" role=\"img\" aria-"
+"label=\"Info\" title=\"Info\"/>"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.onboarding_container
 msgid "<i class=\"fa fa-times\" title=\"Close the onboarding panel\"/>"
-msgstr ""
+msgstr "<i class=\"fa fa-times\" title=\"Close the onboarding panel\"/>"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.onboarding_container
 msgid "<span aria-label=\"Close\">&amp;times;</span>"
-msgstr ""
+msgstr "<span aria-label=\"Close\">&amp;krát;</span>"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.reset_view_arch_wizard_view
@@ -7170,7 +7210,7 @@ msgstr "<span>Verzia</span>"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.report_irmodulereference
 msgid "<span>Web</span>"
-msgstr ""
+msgstr "<span>Web</span>"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_currency_kanban
@@ -7230,7 +7270,7 @@ msgstr "<strong>Meno</strong> "
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_res_company_kanban
 msgid "<strong>Phone:</strong>"
-msgstr ""
+msgstr "<strong>Telefón:</strong>"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_res_company_kanban
@@ -7394,7 +7434,7 @@ msgstr ""
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_A
 msgid "A AGRICULTURE, FORESTRY AND FISHING"
-msgstr ""
+msgstr "POĽNOHOSPODÁRSTVO, LESNÍCTVO A RYBOLOV"
 
 #. module: base
 #: model:ir.module.module,description:base.module_website_slides_forum
@@ -7434,7 +7474,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_hw_posbox_homepage
 msgid "A homepage for the IoT Box"
-msgstr ""
+msgstr "A domovská stránka IoT Box"
 
 #. module: base
 #: model:ir.module.module,description:base.module_test_exceptions
@@ -7445,7 +7485,7 @@ msgstr "Modul na generovanie výnimok."
 #. module: base
 #: model:ir.module.module,description:base.module_test_lint
 msgid "A module to test Odoo code with various linters."
-msgstr ""
+msgstr "Modul na testovanie kódu Odoo s rôznymi lintermi."
 
 #. module: base
 #: model:ir.module.module,description:base.module_test_impex
@@ -7460,7 +7500,7 @@ msgstr "Modul na testovanie API."
 #. module: base
 #: model:ir.module.module,description:base.module_test_rpc
 msgid "A module to test the RPC requests."
-msgstr ""
+msgstr "Modul na testovanie požiadaviek RPC."
 
 #. module: base
 #: model:ir.module.module,description:base.module_test_uninstall
@@ -7475,7 +7515,7 @@ msgstr "Modul na testovanie importu prekladu."
 #. module: base
 #: model:ir.module.module,description:base.module_test_xlsx_export
 msgid "A module to test xlsx export."
-msgstr ""
+msgstr "Modul na testovanie exportu xlsx."
 
 #. module: base
 #: model:ir.module.module,description:base.module_test_assetsbundle
@@ -7509,6 +7549,8 @@ msgid ""
 "A partner with the same <span><span class=\"o_vat_label\">Tax "
 "ID</span></span> already exists ("
 msgstr ""
+"Spoločnosť s rovnakými <span><span class=\"o_vat_label\">DIČ</span></span> "
+"už existuje ("
 
 #. module: base
 #: model_terms:res.partner,website_description:base.res_partner_10
@@ -7574,7 +7616,7 @@ msgstr "A9 13 37 x 52 mm"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_au_aba
 msgid "ABA Credit Transfer"
-msgstr ""
+msgstr "Kreditný prevod ABA"
 
 #. module: base
 #: code:addons/fields.py:0
@@ -7658,12 +7700,12 @@ msgstr "Prístup k súkromným adresám"
 #: code:addons/api.py:0 code:addons/api.py:0
 #, python-format
 msgid "Access to unauthorized or invalid companies."
-msgstr ""
+msgstr "Prístup k neautorizovaným alebo neplatným spoločnostiam."
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_analytic_default
 msgid "Account Analytic Defaults"
-msgstr "Predvoľby Analytického Účtu"
+msgstr "Predvoľby analytického účtu"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_analytic_default_purchase
@@ -7673,12 +7715,12 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_analytic_default_hr_expense
 msgid "Account Analytic Defaults for expenses."
-msgstr ""
+msgstr "Predvolené analytické náklady."
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_auto_transfer
 msgid "Account Automatic Transfers"
-msgstr ""
+msgstr "Automatické prevody účtov"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_generic_auto_transfer_demo
@@ -7708,7 +7750,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_partner_bank__partner_id
 msgid "Account Holder"
-msgstr "Majiteľ Účtu"
+msgstr "Majiteľ účtu"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_partner_bank__acc_holder_name
@@ -8002,7 +8044,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_website_form_project
 msgid "Add a task suggestion form to your website"
-msgstr ""
+msgstr "Pridajte na svoj web formulár s návrhom úlohy"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_delivery_barcode
@@ -8058,6 +8100,8 @@ msgstr "Pridá 'Tlač' ponuku"
 #: model:ir.module.module,summary:base.module_mass_mailing_crm
 msgid "Add lead / opportunities UTM info on mass mailing"
 msgstr ""
+"Pridajte informácie o potenciálnych zákazníkoch / príležitostiach UTM pri "
+"hromadnom zasielaní"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_im_livechat_mail_bot
@@ -8073,6 +8117,7 @@ msgstr ""
 #: model:ir.module.module,summary:base.module_mass_mailing_sale
 msgid "Add sale order UTM info on mass mailing"
 msgstr ""
+"Pridajte informácie o objednávke UTM na predaj pri hromadnom zasielaní"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_sale_product_matrix
@@ -8215,12 +8260,12 @@ msgstr "Na odinštalovanie modulu je potrebný prístup administrátora"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_country_form
 msgid "Advanced Address Formatting"
-msgstr "Pokročilé Formátovanie Adresy"
+msgstr "Pokročilé formátovanie adresy"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_event_track
 msgid "Advanced Events"
-msgstr "Pokročilé Udalosti"
+msgstr "Pokročilé udalosti"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_event_track_gantt
@@ -8242,7 +8287,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_model_fields_form
 #: model_terms:ir.ui.view,arch_db:base.view_model_form
 msgid "Advanced Properties"
-msgstr "Pokročilé Vlastnosti"
+msgstr "Pokročilé vlastnosti"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_crm_enterprise
@@ -8530,18 +8575,18 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_analytic
 msgid "Analytic Accounting"
-msgstr "Analytické Účtovníctvo"
+msgstr "Analytické účtovníctvo"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_analytic_enterprise
 msgid "Analytic Accounting Enterprise"
-msgstr "Analytické účtovníctvo Enterprise"
+msgstr "Analytické účtovníctvo enterprise"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_mrp_account
 #: model:ir.module.module,summary:base.module_mrp_account_enterprise
 msgid "Analytic accounting in Manufacturing"
-msgstr "Analytické účtovníctvo vo Výrobe"
+msgstr "Analytické účtovníctvo vo výrobe"
 
 #. module: base
 #: model:res.country,name:base.ad
@@ -8829,7 +8874,7 @@ msgstr "Dochádzky"
 #. module: base
 #: model:ir.module.module,summary:base.module_website_mass_mailing
 msgid "Attract visitors to subscribe to mailing lists"
-msgstr "Prilákajte návštevníkov, aby sa prihlásili na odber mailing listov"
+msgstr "Prilákajte návštevníkov, aby sa prihlásili na odber mailový zoznam"
 
 #. module: base
 #: model:res.country,name:base.au
@@ -8886,7 +8931,7 @@ msgstr "Meno Autora"
 #: model:ir.module.module,description:base.module_payment_authorize
 #: model:ir.module.module,shortdesc:base.module_payment_authorize
 msgid "Authorize.Net Payment Acquirer"
-msgstr "Authorizované. Čistý príjemca platby"
+msgstr "Authorizované. Príjemca čistej platby"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_module_module_dependency__auto_install_required
@@ -9245,7 +9290,7 @@ msgstr "Základný pohľad"
 #: model:ir.cron,cron_name:base.autovacuum_job
 #: model:ir.cron,name:base.autovacuum_job
 msgid "Base: Auto-vacuum internal data"
-msgstr "Základňa: Automatcko-vákuové interné údaje"
+msgstr "Základňa: automaticko-vákuové interné údaje"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_web_grid
@@ -9761,6 +9806,12 @@ msgstr ""
 msgid ""
 "Cannot create new '%s' records from their name alone. Please create those "
 "records manually and try importing again."
+msgstr ""
+
+#. module: base
+#: code:addons/base/models/res_lang.py:0
+#, python-format
+msgid "Cannot deactivate a language that is currently used by contacts."
 msgstr ""
 
 #. module: base
@@ -10432,7 +10483,7 @@ msgstr "Nastavenie krokov sprievodcu"
 #. module: base
 #: model:ir.actions.server,name:base.action_run_ir_action_todo
 msgid "Config: Run Remaining Action Todo"
-msgstr ""
+msgstr "Konfigurácia: Spustiť zostávajúcu úlohu"
 
 #. module: base
 #: model:ir.ui.menu,name:base.menu_reporting_config
@@ -10470,7 +10521,7 @@ msgstr "Nakonfigurovať usporiadanie dokumentu"
 #. module: base
 #: model:ir.module.module,summary:base.module_sale_product_configurator
 msgid "Configure your products"
-msgstr ""
+msgstr "Nastavenie produktov"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_base_module_uninstall
@@ -10721,7 +10772,7 @@ msgstr "Štát"
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_country__phone_code
 msgid "Country Calling Code"
-msgstr "Kód Volania Štátu"
+msgstr "Kód volania štátu"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_country__code
@@ -10807,7 +10858,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_industry_fsm_report
 msgid "Create Reports for Field service workers"
-msgstr ""
+msgstr "Vytvárajte reporty pracovníkov v teréne"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_crm_helpdesk
@@ -10863,7 +10914,7 @@ msgstr "Vytvorte nového zákazníka v adresári"
 #. module: base
 #: model_terms:ir.actions.act_window,help:base.res_partner_industry_action
 msgid "Create a new industry"
-msgstr ""
+msgstr "Vytvorte nové odvetvie"
 
 #. module: base
 #: model_terms:ir.actions.act_window,help:base.action_partner_supplier_form
@@ -11233,7 +11284,7 @@ msgstr "Vlastné"
 #. module: base
 #: model:ir.model.fields,field_description:base.field_base_document_layout__custom_colors
 msgid "Custom Colors"
-msgstr ""
+msgstr "Voliťelné Farby"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_model_fields__state__manual
@@ -11463,7 +11514,7 @@ msgstr "DateTime"
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_cron__interval_type__days
 msgid "Days"
-msgstr "Dní"
+msgstr "Dni"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_debit_note
@@ -13014,17 +13065,17 @@ msgstr "Názov Poľa"
 #: model:ir.module.category,name:base.module_category_operations_field_service
 #: model:ir.module.module,shortdesc:base.module_industry_fsm
 msgid "Field Service"
-msgstr ""
+msgstr "Manažment pracovníkov v teréne"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_industry_fsm_report
 msgid "Field Service Reports"
-msgstr ""
+msgstr "Reporty pracovníkov v teréne"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_industry_fsm_stock
 msgid "Field Service Stock"
-msgstr ""
+msgstr "Sklad pracovníkov v teréne"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_model_fields__ttype
@@ -13472,7 +13523,7 @@ msgstr "Piatok"
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_sequence_date_range__date_from
 msgid "From"
-msgstr "Z"
+msgstr "Od"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_sale_management
@@ -13634,7 +13685,7 @@ msgstr "Generuj Chýbajúce Výrazy"
 #. module: base
 #: model:ir.module.module,summary:base.module_website_crm
 msgid "Generate leads from a contact form"
-msgstr ""
+msgstr "Generujte potenciálnych zákazníkov z kontaktného formulára"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_sale_subscription
@@ -14025,7 +14076,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr_holidays_attendance
 msgid "HR Attendance Holidays"
-msgstr ""
+msgstr "HR dovolenky"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr_contract_salary
@@ -14251,6 +14302,8 @@ msgid ""
 "Helps you manage your mass mailing to design\n"
 "professional emails and reuse templates."
 msgstr ""
+"Pomáha vám spravovať hromadnú poštu podľa návrhu\n"
+"profesionálne e-maily a opätovné použitie šablón."
 
 #. module: base
 #: model:ir.module.category,description:base.module_category_human_resources_payroll
@@ -14304,7 +14357,7 @@ msgstr "Tu je exportovaný prekladový súbor:"
 #: code:addons/base/models/ir_qweb_fields.py:0
 #, python-format
 msgid "Hide badges"
-msgstr ""
+msgstr "Skryť odznaky"
 
 #. module: base
 #: code:addons/base/models/ir_qweb_fields.py:0
@@ -15340,7 +15393,7 @@ msgstr "Neplatné kritérium hľadania"
 #: code:addons/template_inheritance.py:0
 #, python-format
 msgid "Invalid specification for moved nodes: '%s'"
-msgstr ""
+msgstr "Neplatná špecifikácia pre presunuté uzly: '%s'"
 
 #. module: base
 #: code:addons/base/models/ir_property.py:0
@@ -15415,7 +15468,7 @@ msgstr "Faktúry & platby"
 #. module: base
 #: model:ir.module.module,summary:base.module_documents_account
 msgid "Invoices from Documents"
-msgstr ""
+msgstr "Faktúry z dokumentov"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account
@@ -16854,12 +16907,12 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_test_mass_mailing
 msgid "Mass Mail Tests"
-msgstr ""
+msgstr "Testy hromadnej pošty"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_test_mass_mailing
 msgid "Mass Mail Tests: feature and performance tests for mass mailing"
-msgstr ""
+msgstr "Testy hromadnej pošty: testy funkcií a výkonu hromadnej pošty"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_mass_mailing_themes
@@ -16869,27 +16922,28 @@ msgstr "Témy hromadných mailov"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_mass_mailing_event
 msgid "Mass mailing on attendees"
-msgstr ""
+msgstr "Hromadné zasielanie pošty na účastníkov"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_mass_mailing_slides
 msgid "Mass mailing on course members"
-msgstr ""
+msgstr "Hromadné zasielanie pošty členom kurzu"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_mass_mailing_crm
 msgid "Mass mailing on lead / opportunities"
 msgstr ""
+"Hromadné zasielanie informácií o potenciálnych zákazníkoch / príležitostí"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_mass_mailing_sale
 msgid "Mass mailing on sale orders"
-msgstr ""
+msgstr "Hromadné zasielanie objednávok na predaj"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_mass_mailing_event_track
 msgid "Mass mailing on track speakers"
-msgstr ""
+msgstr "Hromadné zasielanie pošty na stopové reproduktory"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_mrp_mps
@@ -17337,7 +17391,7 @@ msgstr "Model, na ktorom beží akcia servera."
 #: code:addons/model.py:0 code:addons/model.py:0
 #, python-format
 msgid "Model:"
-msgstr ""
+msgstr "Model:"
 
 #. module: base
 #: model:ir.actions.act_window,name:base.action_model_model
@@ -19332,7 +19386,7 @@ msgstr "Operácie"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_crm
 msgid "Opportunity to Quotation"
-msgstr "Obchodný prípad na cenovú ponuku"
+msgstr "Obchodná príležitosť na cenovú ponuku"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__base_partner_merge_automatic_wizard__state__option
@@ -20951,12 +21005,12 @@ msgstr ""
 #. module: base
 #: model:res.country,vat_label:base.mx
 msgid "RFC"
-msgstr ""
+msgstr "RFC"
 
 #. module: base
 #: model:res.country,vat_label:base.do
 msgid "RNC"
-msgstr ""
+msgstr "RNC"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_company__font__raleway
@@ -21102,7 +21156,7 @@ msgstr "Dátum referencie"
 #. module: base
 #: model:ir.module.category,name:base.module_category_human_resources_referrals
 msgid "Referrals"
-msgstr ""
+msgstr "Odporúčania"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_partner__parent_id
@@ -21539,7 +21593,7 @@ msgstr "Kreditný prevod SEPA"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_sepa_direct_debit
 msgid "SEPA Direct Debit"
-msgstr ""
+msgstr "SEPA inkaso"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr_payroll_account_sepa
@@ -21639,7 +21693,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_hr_contract_salary
 msgid "Salary Package Configurator"
-msgstr ""
+msgstr "Konfigurátor balíkov platov"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_be_sale_intrastat
@@ -22018,17 +22072,17 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_res_partner__self
 #: model:ir.model.fields,field_description:base.field_res_users__self
 msgid "Self"
-msgstr ""
+msgstr "Ja"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_sale_slides
 msgid "Sell Courses"
-msgstr ""
+msgstr "Predať kurzy"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_helpdesk_sale_timesheet
 msgid "Sell Helpdesk Timesheet"
-msgstr ""
+msgstr "Predajte časový rozvrh technickej podpory"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_sale_timesheet
@@ -22038,17 +22092,17 @@ msgstr "Predaj založený na časových rozvrhoch"
 #. module: base
 #: model:ir.module.module,summary:base.module_website_sale_digital
 msgid "Sell digital products in your eCommerce store"
-msgstr ""
+msgstr "Predávajte digitálne produkty vo svojom obchode eCommerce"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_website_event_sale
 msgid "Sell event tickets online"
-msgstr ""
+msgstr "Predajte vstupenky na udalosti online"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_website_sale_slides
 msgid "Sell your courses online"
-msgstr ""
+msgstr "Predajte svoje kurzy online"
 
 #. module: base
 #: model:ir.module.module,description:base.module_website_sale_slides
@@ -22058,17 +22112,17 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_website_sale
 msgid "Sell your products online"
-msgstr ""
+msgstr "Predávajte svoje výrobky online"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_sms
 msgid "Send SMS to Visitor"
-msgstr ""
+msgstr "Pošlite SMS návštevníkovi"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_crm_sms
 msgid "Send SMS to Visitor with leads"
-msgstr ""
+msgstr "Pošlite SMS návštevníkovi s potenciálnymi zákazníkmi"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_sign
@@ -22168,7 +22222,7 @@ msgstr "Kód postupnosti"
 #. module: base
 #: model:ir.model,name:base.model_ir_sequence_date_range
 msgid "Sequence Date Range"
-msgstr ""
+msgstr "Rozsah dátumov sekvencií"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_sequence__padding
@@ -22300,7 +22354,7 @@ msgstr "Zdieľať skupinu"
 #: model:ir.model.fields,field_description:base.field_res_partner__partner_share
 #: model:ir.model.fields,field_description:base.field_res_users__partner_share
 msgid "Share Partner"
-msgstr ""
+msgstr "Zdieľať partnera"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_users__share
@@ -22315,7 +22369,7 @@ msgstr "Zdieľané"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_sale_wishlist
 msgid "Shopper's Wishlist"
-msgstr ""
+msgstr "Zoznam želaní nakupujúceho"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_base_module_uninstall__show_all
@@ -22335,12 +22389,12 @@ msgstr "Ukázať neaktívne meny"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_base_module_uninstall
 msgid "Show technical modules"
-msgstr ""
+msgstr "Zobraziť technické moduly"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_website_google_map
 msgid "Show your company address on Google Maps"
-msgstr ""
+msgstr "Zobrazte adresu svojej spoločnosti v Google mapách"
 
 #. module: base
 #: model:res.country,name:base.sl
@@ -22401,17 +22455,17 @@ msgstr "Veľkosť poľa nemôže byť záporná."
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr_skills_survey
 msgid "Skills Certification"
-msgstr ""
+msgstr "Certifikácia zručností"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr_skills
 msgid "Skills Management"
-msgstr ""
+msgstr "Manažment zručností"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr_skills_slides
 msgid "Skills e-learning"
-msgstr ""
+msgstr "Zručnosti e-learning"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.res_config_installer
@@ -22441,33 +22495,33 @@ msgstr "Slovinčina / slovenščina"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_snailmail
 msgid "Snail Mail"
-msgstr ""
+msgstr "Pomalá pošta "
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_snailmail_account_followup
 msgid "Snail Mail Follow-Up"
-msgstr ""
+msgstr "Kontrola pomalej pošty"
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_marketing_social
 #: model:ir.module.category,name:base.module_category_social
 msgid "Social"
-msgstr ""
+msgstr "Sociálna"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_social_facebook
 msgid "Social Facebook"
-msgstr ""
+msgstr "Sociálny Facebook"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_social_linkedin
 msgid "Social LinkedIn"
-msgstr ""
+msgstr "Social LinkedIn"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_social
 msgid "Social Marketing"
-msgstr ""
+msgstr "Sociálny marketing"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_social_media
@@ -22482,7 +22536,7 @@ msgstr "Push notifikácie na sociálnych sieťach"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_social_twitter
 msgid "Social Twitter"
-msgstr ""
+msgstr "Sociálny Twitter"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_social_media
@@ -22575,7 +22629,7 @@ msgstr "Zdrojový výraz"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.layout_preview
 msgid "Source:"
-msgstr ""
+msgstr "Zdroj:"
 
 #. module: base
 #: model:res.country,name:base.za
@@ -22585,7 +22639,7 @@ msgstr "Juhoafrická Republika"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_za
 msgid "South Africa - Accounting"
-msgstr ""
+msgstr "Južná Afrika - účtovníctvo"
 
 #. module: base
 #: model:res.country.group,name:base.south_america
@@ -22625,7 +22679,7 @@ msgstr "Spain - Accounting (PGCE 2008) Reports"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_base_sparse_field
 msgid "Sparse Fields"
-msgstr ""
+msgstr "Riedke polia"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_res_users__new_password
@@ -22750,37 +22804,37 @@ msgstr "Prilepovacie poznámky, spolupracujúce"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_stock_sms
 msgid "Stock - SMS"
-msgstr ""
+msgstr "Sklad - SMS"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_stock_barcode_mobile
 msgid "Stock Barcode in Mobile"
-msgstr ""
+msgstr "Skladové skenovanie v mobile"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_stock_barcode_mobile
 msgid "Stock Barcode scan in Mobile"
-msgstr ""
+msgstr "Skladové skenovanie čiarových kódov v mobile"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_stock_intrastat
 msgid "Stock Intrastat"
-msgstr ""
+msgstr "Skladový Intrastat"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_stock_account_enterprise
 msgid "Stock account enterprise"
-msgstr ""
+msgstr "Akciový účet podniku"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_stock_enterprise
 msgid "Stock enterprise"
-msgstr ""
+msgstr "Akciový podnik"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_documents_hr_contract
 msgid "Store employee contracts in the Document app"
-msgstr ""
+msgstr "Ukladajte zamestnanecké zmluvy v aplikácii Dokument"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_documents_hr_payroll
@@ -22843,17 +22897,17 @@ msgstr "Ulica2"
 #: model:ir.module.module,description:base.module_payment_stripe
 #: model:ir.module.module,shortdesc:base.module_payment_stripe
 msgid "Stripe Payment Acquirer"
-msgstr ""
+msgstr "Prúžkový odberateľ platieb"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_translation__type__model_terms
 msgid "Structured Model Field"
-msgstr ""
+msgstr "Pole štruktúrovaného modelu"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_web_studio
 msgid "Studio"
-msgstr ""
+msgstr "Štúdio"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_mrp_subcontracting
@@ -22884,7 +22938,7 @@ msgstr "Predplatné"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_subscription_sepa_direct_debit
 msgid "Subscription SEPA Direct Debit"
-msgstr ""
+msgstr "Predplatné SEPA inkaso"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_subscription
@@ -22955,7 +23009,7 @@ msgstr "Prieskumy"
 #. module: base
 #: model:res.country,name:base.sj
 msgid "Svalbard and Jan Mayen"
-msgstr ""
+msgstr "Svalbard a Jan Mayen"
 
 #. module: base
 #: model:res.country,name:base.sz
@@ -22970,17 +23024,17 @@ msgstr "Švédsko"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_se_reports
 msgid "Sweden - Accounting Reports"
-msgstr ""
+msgstr "Švédsko - účtovné správy"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_se_ocr
 msgid "Sweden - Structured Communication OCR"
-msgstr ""
+msgstr "Švédsko - štruktúrovaná komunikácia OCR"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_se
 msgid "Swedish - Accounting"
-msgstr ""
+msgstr "Švédske - účtovníctvo"
 
 #. module: base
 #: model:res.country,name:base.ch
@@ -23135,17 +23189,17 @@ msgstr "DIČ"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_sale_taxcloud_delivery
 msgid "TaxCloud and Delivery - Ecommerce"
-msgstr ""
+msgstr "TaxCloud a doručenie - Elektronický obchod"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_subscription_taxcloud
 msgid "TaxCloud and Subscriptions"
-msgstr ""
+msgstr "TaxCloud a predplatné"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_account_taxcloud
 msgid "TaxCloud make it easy for business to comply with sales tax law"
-msgstr ""
+msgstr "TaxCloud uľahčuje podnikom dodržiavanie zákonov o dani z obratu"
 
 #. module: base
 #: model:ir.ui.menu,name:base.menu_custom
@@ -23198,13 +23252,13 @@ msgstr "API test"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_test_action_bindings
 msgid "Test Action Bindings"
-msgstr ""
+msgstr "Vyskúšajte väzby akcií"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_test_l10n_be_hr_payroll_account
 #: model:ir.module.module,summary:base.module_test_l10n_be_hr_payroll_account
 msgid "Test Belgian Payroll"
-msgstr ""
+msgstr "Vyskúšajte Belgické mzdy"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.ir_mail_server_form
@@ -23214,17 +23268,17 @@ msgstr "Test pripojenia"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_test_website_slides_full
 msgid "Test Full eLearning Flow"
-msgstr ""
+msgstr "Vyskúšajte celý tok eLearningu"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_test_main_flows
 msgid "Test Main Flow"
-msgstr ""
+msgstr "Vyskúšajte hlavný tok"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_payment_test
 msgid "Test Payment Acquirer"
-msgstr ""
+msgstr "Vyskúšajte nadobúdateľa platby"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_test_performance
@@ -23234,17 +23288,17 @@ msgstr "Test výkonnosti"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_test_rpc
 msgid "Test RPC"
-msgstr ""
+msgstr "Vyskúšajte RPC"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_test_marketing_automation
 msgid "Test Suits for Automated Marketing Campaigns"
-msgstr ""
+msgstr "Testujte obleky pre automatizované marketingové kampane"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_test_testing_utilities
 msgid "Test testing utilities"
-msgstr ""
+msgstr "Testovacie testovacie nástroje"
 
 #. module: base
 #: model:ir.module.module,description:base.module_test_access_rights
@@ -23260,7 +23314,7 @@ msgstr "Testy"
 #. module: base
 #: model:ir.module.module,description:base.module_test_read_group
 msgid "Tests for read_group"
-msgstr ""
+msgstr "Testy pre skupinu read_group"
 
 #. module: base
 #: model:ir.module.module,description:base.module_test_converter
@@ -23287,7 +23341,7 @@ msgstr "Thajsko - účtovníctvo"
 #: code:addons/base/models/res_users.py:0
 #, python-format
 msgid "The \"App Switcher\" action cannot be selected as home action."
-msgstr ""
+msgstr "Akciu „Prepínač aplikácií“ nie je možné zvoliť ako domácu akciu."
 
 #. module: base
 #: model:ir.model.fields,help:base.field_res_country__code
@@ -23296,7 +23350,7 @@ msgid ""
 "You can use this field for quick search."
 msgstr ""
 "ISO kód krajiny v dvoch znakoch.\n"
-"Môžete použiť toto pole pre rýchle hľadanie."
+"Môžete použiť toto pole pre rýchle vyhľadanie."
 
 #. module: base
 #: model_terms:res.partner,website_description:base.res_partner_10
@@ -23320,7 +23374,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,help:base.field_res_lang__url_code
 msgid "The Lang Code displayed in the URL"
-msgstr ""
+msgstr "Lang kód zobrazený v adrese URL"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_res_lang__grouping
@@ -23355,7 +23409,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.constraint,message:base.constraint_res_lang_url_code_uniq
 msgid "The URL code of the language must be unique !"
-msgstr ""
+msgstr "URL kód jazyka musí byť jedinečný!"
 
 #. module: base
 #: code:addons/base/models/ir_module.py:0
@@ -23436,12 +23490,12 @@ msgstr "Kurz meny musí byť prísne kladný."
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_attachment__res_model
 msgid "The database object this attachment will be attached to."
-msgstr ""
+msgstr "Databázový objekt, ku ktorému bude pripojená táto príloha."
 
 #. module: base
 #: model:ir.model.fields,help:base.field_res_users__company_id
 msgid "The default company for this user."
-msgstr ""
+msgstr "Predvolená spoločnosť pre tohto používateľa."
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.demo_failures_dialog
@@ -23811,7 +23865,7 @@ msgstr "Téma"
 #: model:ir.ui.menu,name:base.menu_theme_store
 #: model:ir.ui.menu,name:base.theme_store
 msgid "Theme Store"
-msgstr ""
+msgstr "Tematický obchod"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.base_partner_merge_automatic_wizard_form
@@ -23832,7 +23886,7 @@ msgstr ""
 #: model:ir.actions.act_url,name:base.action_third_party
 #: model:ir.ui.menu,name:base.menu_third_party
 msgid "Third-Party Apps"
-msgstr ""
+msgstr "Aplikácie tretích strán"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_res_lang__iso_code
@@ -23987,6 +24041,9 @@ msgid ""
 "are contained in a separate module to use specific test models defined in\n"
 "test_mail. "
 msgstr ""
+"Tento modul obsahuje testy týkajúce sa hromadnej pošty. Tých\n"
+"sú obsiahnuté v samostatnom module na použitie špecifických testovacích modelov definovaných v\n"
+"test_mail."
 
 #. module: base
 #: model:ir.module.module,description:base.module_test_mail_full
@@ -24035,6 +24092,8 @@ msgid ""
 "This module lets you use the full power of certifications within your "
 "courses."
 msgstr ""
+"Tento modul vám umožní využívať celú silu certifikácií v rámci vašich "
+"kurzov."
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_base_module_upgrade
@@ -24048,6 +24107,8 @@ msgid ""
 "This operation is allowed for the groups:\n"
 "%(groups_list)s"
 msgstr ""
+"Táto operácia je povolená pre skupiny:\n"
+"%(groups_list)s"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_lang__thousands_sep
@@ -24062,12 +24123,12 @@ msgstr "Štvrtok"
 #. module: base
 #: model:ir.module.module,summary:base.module_website_helpdesk_livechat
 msgid "Ticketing, Support, Livechat"
-msgstr ""
+msgstr "Predaj lístkov, podpora, živý čet"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_website_helpdesk_slides
 msgid "Ticketing, Support, Slides"
-msgstr ""
+msgstr "Predaj lístkov, podpora, prezentácia"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_lang__time_format
@@ -24136,7 +24197,7 @@ msgstr "Odchýlka časovej zóny"
 #. module: base
 #: model:res.country,name:base.tl
 msgid "Timor-Leste"
-msgstr ""
+msgstr "Timor-Leste"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_partner__title
@@ -24194,7 +24255,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_server_action_form
 msgid "To return an action, assign: <code>action = {...}</code>"
-msgstr ""
+msgstr "Akciu chcete vrátiť, priraďte ju: <code>akcia = {...}</code>"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.ir_actions_todo_tree
@@ -24252,7 +24313,7 @@ msgstr "Prehliadky"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_mass_mailing_event_track_sms
 msgid "Track Speakers SMS Marketing"
-msgstr ""
+msgstr "Sledovanie hovoriacich prostredníctvom SMS marketingu"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_hr_attendance
@@ -24467,7 +24528,7 @@ msgstr "Tuvalu"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_twitter
 msgid "Twitter Snippet"
-msgstr ""
+msgstr "Úryvok z Twitteru"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_twitter_wall
@@ -24477,7 +24538,7 @@ msgstr "Twitter stena"
 #. module: base
 #: model:ir.module.module,summary:base.module_website_twitter
 msgid "Twitter scroller snippet in website"
-msgstr ""
+msgstr "Úryvok scrollovača Twitteru na webe"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_attachment__type
@@ -24550,7 +24611,7 @@ msgstr "U.K. - účtovné výkazy"
 #: model:ir.module.module,shortdesc:base.module_product_unspsc
 #: model:ir.module.module,summary:base.module_product_unspsc
 msgid "UNSPSC product codes"
-msgstr ""
+msgstr "Kódy produktov UNSPSC"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_delivery_ups
@@ -24560,7 +24621,7 @@ msgstr "UPS preprava"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_delivery_ups
 msgid "UPS: Bill My Account"
-msgstr ""
+msgstr "UPS: fakturácia môjho účtu"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_module_module__url
@@ -24572,17 +24633,17 @@ msgstr "URL"
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_lang__url_code
 msgid "URL Code"
-msgstr ""
+msgstr "URL Kód"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_us_reports
 msgid "US - Accounting Reports"
-msgstr ""
+msgstr "USA - účtovné správy"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_us_check_printing
 msgid "US Checks Layout"
-msgstr ""
+msgstr "USA kontrola rozloženia"
 
 #. module: base
 #: model:res.country,name:base.um
@@ -24592,7 +24653,7 @@ msgstr "Menšie odľahlé ostrovy USA"
 #. module: base
 #: model:res.country,vat_label:base.at
 msgid "USt"
-msgstr ""
+msgstr "USt"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_utm
@@ -24603,21 +24664,23 @@ msgstr "UTM sledovače"
 #: model:ir.module.module,description:base.module_mass_mailing_crm
 msgid "UTM and mass mailing on lead / opportunities"
 msgstr ""
+"UTM a hromadné zasielanie informácií o potenciálnych zákazníkoch / "
+"príležitostiach"
 
 #. module: base
 #: model:ir.module.module,description:base.module_mass_mailing_sale
 msgid "UTM and mass mailing on sale orders"
-msgstr ""
+msgstr "UTM a hromadné zasielanie objednávok na predaj"
 
 #. module: base
 #: model:ir.module.module,description:base.module_social_sale
 msgid "UTM and post on sale orders"
-msgstr ""
+msgstr "UTM a objednávky na predaj"
 
 #. module: base
 #: model:ir.module.module,description:base.module_social_crm
 msgid "UTM and posts on crm"
-msgstr ""
+msgstr "UTM a príspevky na crm"
 
 #. module: base
 #: model:res.country,name:base.ug
@@ -24632,7 +24695,7 @@ msgstr "Ukrajina"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ua
 msgid "Ukraine - Accounting"
-msgstr ""
+msgstr "Ukrajina - Účtovníctvo"
 
 #. module: base
 #: code:addons/models.py:0
@@ -24754,7 +24817,7 @@ msgstr "Neznáme"
 #: code:addons/models.py:0
 #, python-format
 msgid "Unknown database error: '%s'"
-msgstr ""
+msgstr "Neznáma chyba databázy: '%s'"
 
 #. module: base
 #: code:addons/models.py:0
@@ -24807,7 +24870,7 @@ msgstr ""
 #: code:addons/base/static/src/js/res_config_settings.js:0
 #, python-format
 msgid "Unsaved changes"
-msgstr ""
+msgstr "Neuložené zmeny"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_web_unsplash
@@ -24926,17 +24989,17 @@ msgstr "Použite čiarku namiesto tagu <br> pre zobrazenie adresy"
 #. module: base
 #: model:ir.module.module,summary:base.module_website_sale_coupon
 msgid "Use coupon & promotion programs in your eCommerce store"
-msgstr ""
+msgstr "Využite kupónové a propagačné programy vo svojom obchode eCommerce"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_sale_coupon
 msgid "Use discount coupons in sales orders"
-msgstr ""
+msgstr "V objednávkach používajte zľavové kupóny"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_account_tax_python
 msgid "Use python code to define taxes"
-msgstr ""
+msgstr "Na definovanie daní použite kód v jazyku Python"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_sequence__use_date_range
@@ -25057,7 +25120,7 @@ msgstr "Používateľom definované filtre"
 #. module: base
 #: model:ir.module.module,summary:base.module_point_of_sale
 msgid "User-friendly PoS interface for shops and restaurants"
-msgstr ""
+msgstr "Užívateľsky prívetivé rozhranie PoS pre obchody a reštaurácie"
 
 #. module: base
 #: code:addons/base/models/ir_model.py:0 code:addons/models.py:0
@@ -25149,12 +25212,12 @@ msgstr "VOIP"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_voip_onsip
 msgid "VOIP OnSIP"
-msgstr ""
+msgstr "VOIP NaSIP"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_voip_crm
 msgid "VOIP for crm"
-msgstr ""
+msgstr "VOIP pre crm"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_phone_validation
@@ -25167,6 +25230,8 @@ msgid ""
 "Validate stock moves for product added on sales orders through Field Service"
 " Management App"
 msgstr ""
+"Validujte pohyby zásob produktu pridaného k objednávkam prostredníctvom "
+"aplikácie Manažment pracovníkov v teréne"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_config_parameter__value
@@ -25222,7 +25287,7 @@ msgstr "Hodnota textu"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_pos_mercury
 msgid "Vantiv Payment Services"
-msgstr ""
+msgstr "Platobné služby Vantiv"
 
 #. module: base
 #: model:res.country,name:base.vu
@@ -25335,7 +25400,7 @@ msgstr "Zobraziť dedičný mód"
 #. module: base
 #: model:ir.module.module,summary:base.module_website_crm_livechat
 msgid "View livechat sessions for leads"
-msgstr ""
+msgstr "Zobraziť relácie živý čet pre potenciálnych zákazníkov"
 
 #. module: base
 #: code:addons/base/models/ir_model.py:0
@@ -25402,7 +25467,7 @@ msgstr "WMS náklady pri dodaní"
 #. module: base
 #: model:res.country,name:base.wf
 msgid "Wallis and Futuna"
-msgstr ""
+msgstr "Wallis a Futuna"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_stock_picking_batch
@@ -25459,7 +25524,7 @@ msgstr "Web"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_test_web_cohort
 msgid "Web Cohort Tests"
-msgstr ""
+msgstr "Testy webovej kohorty"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_web_editor
@@ -25469,7 +25534,7 @@ msgstr "Webový editor"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_web_enterprise
 msgid "Web Enterprise"
-msgstr ""
+msgstr "Webový eshop"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_web_gantt
@@ -25495,7 +25560,7 @@ msgstr "Smerovanie webu"
 #. module: base
 #: model:ir.module.module,summary:base.module_test_web_cohort
 msgid "Web cohort Test"
-msgstr ""
+msgstr "Test webovej kohorty"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_translation_search
@@ -25526,17 +25591,17 @@ msgstr "Správy webovej stránky"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_form
 msgid "Website Form"
-msgstr ""
+msgstr "Forma webstránky"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_helpdesk
 msgid "Website Helpdesk"
-msgstr ""
+msgstr "Webstránka Helpdesk"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_helpdesk_livechat
 msgid "Website IM Livechat Helpdesk"
-msgstr ""
+msgstr "Webstránka IM živý chat Helpdesk"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_company__website
@@ -25558,7 +25623,7 @@ msgstr "Pošta webstránky"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_mail_channel
 msgid "Website Mail Channels"
-msgstr ""
+msgstr "E-mailové kanály webstránok"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_website_mail
@@ -25583,22 +25648,22 @@ msgstr "Hodnotenie webovej stránky"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_sale_product_configurator
 msgid "Website Sale Product Configurator"
-msgstr ""
+msgstr "Konfigurátor produktu predaja webstránok"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_sale_stock_product_configurator
 msgid "Website Sale Stock Product Configurator"
-msgstr ""
+msgstr "Konfigurátor akciových produktov na predaj webových stránok"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_sale_dashboard
 msgid "Website Sales Dashboard"
-msgstr ""
+msgstr "Panel predaja webstránok"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_helpdesk_slides
 msgid "Website Slides Helpdesk"
-msgstr ""
+msgstr "Helpdesk pre prezentácie webstránok"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_studio
@@ -25613,12 +25678,12 @@ msgstr "Test webstránky"
 #. module: base
 #: model:ir.module.module,summary:base.module_test_website
 msgid "Website Test, mainly for module install/uninstall tests"
-msgstr ""
+msgstr "Test webstránok, hlavne na testy inštalácie a odinštalovania modulov"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_theme_install
 msgid "Website Theme Install"
-msgstr ""
+msgstr "Inštalácia témy webstránok"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_profile
@@ -25760,12 +25825,12 @@ msgstr "Wkhtmltopdf zlyhal (kód chyby: %s). Správa: %s"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr_work_entry
 msgid "Work Entries"
-msgstr ""
+msgstr "Pracovné záznamy"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_mrp_workorder
 msgid "Work Orders, Planning, Stock Reports."
-msgstr ""
+msgstr "Pracovné objednávky, plánovanie, správy o skladoch."
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_payment_sips
@@ -25787,7 +25852,7 @@ msgstr "Právo zapisovacieho prístupu"
 #: model:ir.model.fields,field_description:base.field_ir_model_constraint__write_date
 #: model:ir.model.fields,field_description:base.field_ir_model_relation__write_date
 msgid "Write Date"
-msgstr ""
+msgstr "Napíš dátum"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_actions_server__code
@@ -25962,7 +26027,7 @@ msgstr ""
 #: code:addons/base/models/ir_actions.py:0
 #, python-format
 msgid "You don't have enough access rights to run this action."
-msgstr ""
+msgstr "Na vykonanie tejto akcie nemáte dostatok prístupových práv."
 
 #. module: base
 #: code:addons/base/wizard/base_partner_merge.py:0
@@ -26063,12 +26128,12 @@ msgstr "PSČ"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.layout_preview
 msgid "[SKU001] Server"
-msgstr ""
+msgstr "[SKU001] Server"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.layout_preview
 msgid "[SKU002] Computer"
-msgstr ""
+msgstr "[SKU002] Počítač"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_base_import_language
@@ -26088,23 +26153,23 @@ msgstr "account_plaid"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_ponto
 msgid "account_ponto"
-msgstr ""
+msgstr "účet _ponto"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_l10n_lt
 msgid "accounting, Lithuanian"
-msgstr ""
+msgstr "účtovníctvo, Litovčina"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_l10n_lt_reports
 msgid "accounting, report, Lithuanian"
-msgstr ""
+msgstr "účtovníctvo, správa, Litovčina"
 
 #. module: base
 #: code:addons/models.py:0
 #, python-format
 msgid "allowed for groups %s"
-msgstr ""
+msgstr "povolené pre skupiny%s"
 
 #. module: base
 #: code:addons/base/models/res_currency.py:0
@@ -26130,7 +26195,7 @@ msgstr "boolean"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_delivery_bpost
 msgid "bpost Shipping"
-msgstr ""
+msgstr "bpost preprava"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_model_fields__ttype__char
@@ -26188,7 +26253,7 @@ msgstr "napr. Globálne obchodné riešenia"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
 msgid "e.g. Mister"
-msgstr ""
+msgstr "napr. Pán"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
@@ -26242,7 +26307,7 @@ msgstr "eCommerce dodanie"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_slides
 msgid "eLearning"
-msgstr ""
+msgstr "eLearning"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_users_simple_form
@@ -26252,7 +26317,7 @@ msgstr "email@vasaspolocnost.com"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.layout_preview
 msgid "example.com"
-msgstr ""
+msgstr "example.com"
 
 #. module: base
 #: code:addons/base/models/ir_fields.py:0
@@ -26285,13 +26350,13 @@ msgstr ""
 #: code:addons/models.py:0
 #, python-format
 msgid "forbidden for groups %s"
-msgstr ""
+msgstr "zakázané pre skupiny %s"
 
 #. module: base
 #: code:addons/base/models/res_lang.py:0
 #, python-format
 msgid "format() must be given exactly one %char format specifier"
-msgstr ""
+msgstr "formát() musí byť uvedený presne jeden špecifikátor formátu %c char"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__base_language_export__state__get
@@ -26306,7 +26371,7 @@ msgstr "html"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.layout_preview
 msgid "info@example.com"
-msgstr ""
+msgstr "info@example.com"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__base_language_install__state__init
@@ -26347,22 +26412,22 @@ msgstr "ir.actions.server"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_es_real_estates
 msgid "l10n_es_real_estates"
-msgstr ""
+msgstr "l10n_es_nehnuteľnosti"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_model_fields__ttype__many2many
 msgid "many2many"
-msgstr ""
+msgstr "many2many"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_model_fields__ttype__many2one
 msgid "many2one"
-msgstr ""
+msgstr "many2one"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_model_fields__ttype__many2one_reference
 msgid "many2one_reference"
-msgstr ""
+msgstr "many2one_odkaz"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.demo_failures_dialog
@@ -26377,7 +26442,7 @@ msgstr "Monetárne"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_mrp_subcontracting
 msgid "mrp_subcontracting"
-msgstr ""
+msgstr "mrp_subdodávky"
 
 #. module: base
 #: code:addons/base/models/ir_ui_view.py:0
@@ -26415,22 +26480,22 @@ msgstr "pos_cache"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_pos_epson_printer
 msgid "pos_epson_printer"
-msgstr ""
+msgstr "pos_epson_tlačiareň"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_pos_epson_printer_restaurant
 msgid "pos_epson_printer_restaurant"
-msgstr ""
+msgstr "pos_epson_tlačiareň_reštaurácia"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_pos_hr
 msgid "pos_hr"
-msgstr ""
+msgstr "pos_hr"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_pos_sale
 msgid "pos_sale"
-msgstr ""
+msgstr "pos_zľava"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_model_fields__ttype__reference
@@ -26450,7 +26515,7 @@ msgstr "snailmail_účet"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_test_mimetypes
 msgid "test mimetypes-guessing"
-msgstr ""
+msgstr "otestujte hádanie-mimetypov"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_test_access_rights
@@ -26460,17 +26525,17 @@ msgstr "test prístupových práv a pravidiel"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_test_read_group
 msgid "test read_group"
-msgstr ""
+msgstr "test prečítaná_skupina"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_test_xlsx_export
 msgid "test xlsx export"
-msgstr ""
+msgstr "test xlsx export"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_test_assetsbundle
 msgid "test-assetsbundle"
-msgstr ""
+msgstr "test-balík aktív"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_test_exceptions
@@ -26500,7 +26565,7 @@ msgstr "test-inherits"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_test_inherits_depends
 msgid "test-inherits-depends"
-msgstr ""
+msgstr "test-dedičstvo-závislosti"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_test_limits
@@ -26510,7 +26575,7 @@ msgstr "test-limits"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_test_lint
 msgid "test-lint"
-msgstr ""
+msgstr "test-lint"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_test_translation_import
@@ -26546,7 +26611,7 @@ msgstr "pravda"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_web_dashboard
 msgid "web_dashboard"
-msgstr ""
+msgstr "webová_kontrolný panel"
 
 #. module: base
 #: code:addons/base/models/ir_fields.py:0

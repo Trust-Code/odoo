@@ -250,7 +250,7 @@ msgid ""
 "aria-label=\"Goal Failed\"/>"
 msgstr ""
 "<i role=\"img\" class=\"o_red fa fa-times fa-3x\" title=\"Obiettivo "
-"raggiunto\" aria-label=\"Goal Failed\"/>"
+"fallito\" aria-label=\"Goal Failed\"/>"
 
 #. module: gamification
 #: model_terms:ir.ui.view,arch_db:gamification.challenge_form_view
@@ -549,7 +549,7 @@ msgstr "Compare in"
 #: model_terms:ir.ui.view,arch_db:gamification.badge_form_view
 #: model_terms:ir.ui.view,arch_db:gamification.gamification_badge_view_search
 msgid "Archived"
-msgstr "Archiviato"
+msgstr "In archivio"
 
 #. module: gamification
 #: model_terms:ir.ui.view,arch_db:gamification.challenge_form_view
@@ -611,7 +611,7 @@ msgstr "Descrizione riconoscimento"
 #. module: gamification
 #: model:ir.model.fields,field_description:gamification.field_gamification_badge_user__level
 msgid "Badge Level"
-msgstr ""
+msgstr "Livello riconoscimento"
 
 #. module: gamification
 #: model_terms:ir.ui.view,arch_db:gamification.badge_list_view

@@ -4,10 +4,10 @@
 # 
 # Translators:
 # Giovanni Perteghella <giovanni@perteghella.org>, 2019
-# Paolo Valier, 2019
 # Léonie Bouchat <lbo@odoo.com>, 2019
 # Stefano Consolaro <stefano.consolaro@mymage.it>, 2019
 # Martin Trigaux, 2019
+# Paolo Valier, 2020
 # Sergio Zanchetta <primes2h@gmail.com>, 2020
 # 
 msgid ""
@@ -96,7 +96,7 @@ msgstr "Aggiungi un nuovo modello"
 #. module: google_drive
 #: model_terms:ir.ui.view,arch_db:google_drive.google_drive_config_view_search
 msgid "Archived"
-msgstr "Archiviato"
+msgstr "In archivio"
 
 #. module: google_drive
 #: code:addons/google_drive/models/google_drive.py:0
@@ -147,6 +147,7 @@ msgstr "Creato il"
 #, python-format
 msgid "Creating google drive may only be done by one at a time."
 msgstr ""
+"La creazione di un google drive può essere fatta uno documento alla volta."
 
 #. module: google_drive
 #: model:ir.filters,name:google_drive.filter_partner
@@ -168,7 +169,7 @@ msgstr "Filtro"
 #: code:addons/google_drive/models/google_drive.py:0
 #, python-format
 msgid "Go to the configuration panel"
-msgstr "Apri pannello di configurazione"
+msgstr "Vai al pannello di configurazione"
 
 #. module: google_drive
 #: model:ir.model.fields,field_description:google_drive.field_google_drive_config__google_drive_client_id

@@ -14,7 +14,6 @@
 # Manuela Feliciani <mfeliciani@alice.it>, 2019
 # David Minneci <david@numeko.it>, 2019
 # Léonie Bouchat <lbo@odoo.com>, 2019
-# Davide Speranza <dsp@odoo.com>, 2019
 # Lorenzo Battistini <lb@takobi.online>, 2020
 # Iacopo Simonelli <lsi@odoo.com>, 2020
 # Sergio Zanchetta <primes2h@gmail.com>, 2020
@@ -326,7 +325,7 @@ msgstr "Attività"
 #. module: hr_recruitment
 #: model:ir.model.fields,field_description:hr_recruitment.field_hr_applicant__activity_exception_decoration
 msgid "Activity Exception Decoration"
-msgstr "Eccezione"
+msgstr "Decorazione eccezione attività"
 
 #. module: hr_recruitment
 #: model:ir.model.fields,field_description:hr_recruitment.field_hr_applicant__activity_state
@@ -416,7 +415,7 @@ msgstr "Candidato assunto"
 #. module: hr_recruitment
 #: model_terms:ir.ui.view,arch_db:hr_recruitment.applicant_hired_template
 msgid "Applicant hired<br/>"
-msgstr ""
+msgstr "Candidato assunto<br/>"
 
 #. module: hr_recruitment
 #: model:ir.model.fields,field_description:hr_recruitment.field_hr_applicant__partner_name
@@ -509,7 +508,7 @@ msgstr "Valutazione"
 #: model_terms:ir.ui.view,arch_db:hr_recruitment.hr_applicant_view_search
 #: model_terms:ir.ui.view,arch_db:hr_recruitment.hr_applicant_view_search_bis
 msgid "Archived"
-msgstr "Archiviati"
+msgstr "In archivio"
 
 #. module: hr_recruitment
 #: model_terms:ir.ui.view,arch_db:hr_recruitment.hr_applicant_view_form
@@ -827,7 +826,7 @@ msgstr "Nome visualizzato"
 #, python-format
 msgid "Do not have access, skip this data for user's digest email"
 msgstr ""
-"Accesso non consentito, non utilizzare questi dati nell'e-mail di riepilogo "
+"Accesso non consentito, saltare questi dati nell'e-mail di riepilogo "
 "dell'utente"
 
 #. module: hr_recruitment
@@ -930,7 +929,7 @@ msgstr "Eccellente"
 #. module: hr_recruitment
 #: model:ir.model.fields,field_description:hr_recruitment.field_hr_department__expected_employee
 msgid "Expected Employee"
-msgstr ""
+msgstr "Dipendente previsto"
 
 #. module: hr_recruitment
 #: model:ir.model.fields,field_description:hr_recruitment.field_hr_applicant__salary_expected
@@ -1204,7 +1203,7 @@ msgstr "Posizioni lavorative"
 #. module: hr_recruitment
 #: model_terms:ir.ui.view,arch_db:hr_recruitment.res_config_settings_view_form
 msgid "Job Posting"
-msgstr ""
+msgstr "Pubblicazione lavori"
 
 #. module: hr_recruitment
 #: model:ir.model.fields,field_description:hr_recruitment.field_hr_recruitment_stage__job_ids
@@ -1491,7 +1490,7 @@ msgstr "Numero di allegati"
 msgid ""
 "Number of applications that are new in the flow (typically at first step of "
 "the flow)"
-msgstr "Numero di candidature nuove nel flusso (di solito al primo stadio)"
+msgstr "Numero di candidature nuove nel flusso (di solito nella prima fase)"
 
 #. module: hr_recruitment
 #: model:ir.model.fields,help:hr_recruitment.field_hr_applicant__delay_close
