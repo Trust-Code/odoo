@@ -247,6 +247,8 @@ class PosSession(models.Model):
     def action_pos_session_closing_control(self):
         self._check_pos_session_balance()
         for session in self:
+            if session.state == 'closed':
+                raise UserError(_('This session is already closed.'))
             session.write({'state': 'closing_control', 'stop_at': fields.Datetime.now()})
             if not session.config_id.cash_control:
                 session.action_pos_session_close()
@@ -282,6 +284,8 @@ class PosSession(models.Model):
 
     def _validate_session(self):
         self.ensure_one()
+        if self.state == 'closed':
+             raise UserError(_('This session is already closed.'))
         self._check_if_no_draft_orders()
         # Users without any accounting rights won't be able to create the journal entry. If this
         # case, switch to sudo for creation and posting.
@@ -312,6 +316,38 @@ class PosSession(models.Model):
             'params': {'menu_id': self.env.ref('point_of_sale.menu_point_root').id},
         }
 
+    def _create_balancing_line(self, data):
+        imbalance_amount = 0
+        for line in self.move_id.line_ids:
+            # it is an excess debit so it should be credited
+            imbalance_amount += line.debit - line.credit
+
+        if (not float_is_zero(imbalance_amount, precision_rounding=self.currency_id.rounding)):
+            balancing_vals = self._prepare_balancing_line_vals(imbalance_amount, self.move_id)
+            MoveLine = data.get('MoveLine')
+            MoveLine.create(balancing_vals)
+
+        return data
+
+    def _prepare_balancing_line_vals(self, imbalance_amount, move):
+        account = self._get_balancing_account()
+        partial_vals = {
+            'name': _('Difference at closing PoS session'),
+            'account_id': account.id,
+            'move_id': move.id,
+            'partner_id': False,
+        }
+        # `imbalance_amount` is already in terms of company currency so it is the amount_converted
+        # param when calling `_credit_amounts`. amount param will be the converted value of
+        # `imbalance_amount` from company currency to the session currency.
+        imbalance_amount_session = 0
+        if (not self.is_in_company_currency):
+            imbalance_amount_session = self.company_id.currency_id._convert(imbalance_amount, self.currency_id, self.company_id, fields.Date.context_today(self))
+        return self._credit_amounts(partial_vals, imbalance_amount_session, imbalance_amount)
+
+    def _get_balancing_account(self):
+        return self.company_id.account_default_pos_receivable_account_id or self.env['ir.property'].get('property_account_receivable_id', 'res.partner')
+
     def _create_account_move(self):
         """ Create account.move and account.move.line records for this session.
 
@@ -337,6 +373,7 @@ class PosSession(models.Model):
         data = self._create_invoice_receivable_lines(data)
         data = self._create_stock_output_lines(data)
         data = self._create_extra_move_lines(data)
+        data = self._create_balancing_line(data)
         data = self._reconcile_account_move_lines(data)
 
     def _accumulate_amounts(self, data):
@@ -435,7 +472,8 @@ class PosSession(models.Model):
                         stock_output[out_key] = self._update_amounts(stock_output[out_key], {'amount': amount}, move.picking_id.date, force_company_currency=True)
 
                 # Increasing current partner's customer_rank
-                order.partner_id._increase_rank('customer_rank')
+                partners = (order.partner_id | order.partner_id.commercial_partner_id)
+                partners._increase_rank('customer_rank')
 
         MoveLine = self.env['account.move.line'].with_context(check_move_validity=False)
 
